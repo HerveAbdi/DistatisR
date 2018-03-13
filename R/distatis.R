@@ -67,6 +67,9 @@
 #' distance matrices.
 #' \item \code{res.Splus$Splus} * The compromise (linear
 #' combination of the SCP's')
+#'  \item \code{res.Splus$eigValues} * The eigenvalues of the compromise)
+#' \item \code{res.Splus$tau} * The percentage 
+#' of explained intertia of the eigenValues)
 #' \item \code{res.Splus$ProjectionMatrix} The
 #' projection matrix used to compute factor
 #' scores and partial factor scores.
@@ -260,12 +263,20 @@ ComputeSplus <- function(CubeCP,alpha){# Compute the comprise matrix for STATIS/
     # pack up the information to send back
     # Will try to Keep a structure similar to  Cherise Chin Fatt MExPosition
     # in the meantime go for fast and match matlab
-     	 res.Cmat <- list(C = C, eigVector = eigC$vector,eigValues = eigC$values,
-                   tau = eigC$tau, G = eigC$G, alpha=alpha, compact=compact)
+     	 res.Cmat <- list(C = C, eigVector = eigC$vector,
+     	                  eigValues = eigC$values,
+                   tau = eigC$tau, G = eigC$G, alpha=alpha, 
+                   compact=compact)
          class(res.Cmat) <- c("Cmat","list")
-    	 res.Splus <- list(SCP = CP3,F = F, PartialF = PartialF, ProjectionMatrix = Proj,Splus=Splus, compact=compact)
+    	 res.Splus <- list(SCP = CP3,
+    	                   eigValues = eigenSplus$values,
+    	                   tau   = eigenSplus$tau,
+    	                   F = F, PartialF = PartialF, 
+    	                   ProjectionMatrix = Proj,
+    	                   Splus=Splus, compact=compact)
          class(res.Splus) <- c("Splus","list")
-		res.distatis <- list(res4Cmat= res.Cmat,res4Splus =res.Splus, compact=compact)
+		res.distatis <- list(res4Cmat= res.Cmat,res4Splus =res.Splus, 
+		                     compact=compact)
 		class(res.distatis) <- c("DistatisR","list")
      } # End of if compact == FALSE
      else {# What do you do when it TRUE send back only the compact information
@@ -273,7 +284,8 @@ ComputeSplus <- function(CubeCP,alpha){# Compute the comprise matrix for STATIS/
          class(res.Cmat) <- c("Cmat","list")
 	     res.Splus <- list(Splus=Splus, compact=compact)
          class(res.Splus) <- c("Splus","list")
-		 res.distatis <- list(res4Cmat= res.Cmat,res4Splus =res.Splus, compact=compact)
+		 res.distatis <- list(res4Cmat= res.Cmat,res4Splus =res.Splus, 
+		                      compact=compact)
 		class(res.distatis) <- c("DistatisR","list")
      }
 
