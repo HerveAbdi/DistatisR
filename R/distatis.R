@@ -26,8 +26,9 @@
 #'
 #' @aliases distatis DiSTATIS CovSTATIS covstatis
 #' @param LeCube2Distance an "observations \eqn{\times}{*} observations
-#' \eqn{\times}{*} distance matrices" array of dimensions \eqn{I\times I \times
-#' K}{I*I*K}.  Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
+#' \eqn{\times}{*} distance matrices" array of dimensions 
+#' \eqn{I\times I \times  K}{I*I*K}.  
+#' Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
 #' distance (or covariance) matrix describing the \eqn{I} observations.
 #' @param Norm Type of normalization used for each cross-product matrix derived
 #' from the distance (or covariance) matrices.  Current options are \code{NONE}
@@ -38,7 +39,7 @@
 #' @param RV if \code{TRUE} (\code{default}) we use the \eqn{R_V}{Rv} coefficient to
 #' compute the \eqn{\alpha}{weights}, if \code{FALSE}
 #' we use the matrix scalar product
-#' @param nfact2keep Numner of factors to keep for the computation of the
+#' @param nfact2keep Number of factors to keep for the computation of the
 #' factor scores of the observations.
 #' @param compact if \code{FALSE} (default),
 #'  \code{distatis} provides detailled output, if
@@ -75,7 +76,7 @@
 #' scores and partial factor scores.
 #' \item \code{res.Splus$F} The factor scores for the observations.
 #' \item \code{res.Splus$PartialF} an
-#' \eqn{I\times \code{nf2keep} \timesK}{I*nf2keep*K} array.
+#' \eqn{I\times \code{nf2keep} \times K}{I*nf2keep*K} array.
 #' Contains the partial factors for the distance
 #' matrices.}
 #' @author Herve Abdi

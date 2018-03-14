@@ -100,7 +100,6 @@
 #' \emph{Selected contributions in data analysis and classification, COMPSTAT
 #' 2006}.  Heidelberg: Springer Verlag.
 #'
-#' %% ~put references to the literature/web site here ~
 #' @keywords sample bootstrap
 #' @examples
 #' # 1. Load the Sort data set from the SortingBeer example

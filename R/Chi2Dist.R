@@ -6,10 +6,12 @@
 #' Computes 
 #' the \eqn{I\times I}{I*I} matrix \bold{D} which is the
 #' \eqn{\chi^2}{chi2} distance matrix between 
-#' the rows of an \eqn{I\times
-#' J}{I*J} rectangular matrix \bold{X} (with non-negative elements), and
-#' provides the \eqn{I\times 1}{I*1} \bold{m} vector of mass (where the mass of
-#' a row is the sum of the entries of this row divided by the grand total of
+#' the rows of an \eqn{I\times J}{I*J} rectangular matrix \bold{X} 
+#' (with non-negative elements), and
+#' provides the \eqn{I\times 1}{I*1} \bold{m} 
+#' vector of mass (where the mass of
+#' a row is the sum of the entries of
+#'  this row divided by the grand total of
 #' the matrix). 
 #' When the distance matrix and the associated vector of masses
 #' are used as input to the function \code{\link{mmds}} 
@@ -30,9 +32,12 @@
 #' @author Herve Abdi
 #' @seealso \code{\link{Chi2DistanceFromSort}} \code{\link{distatis}}
 #' \code{\link{mmds}}
-#' @references The procedure and references are detailled in (Paper available
-#' from \url{www.utdallas.edu/~herve}): Abdi, H. (2007). Distance.  In N.J.
-#' Salkind (Ed.): \emph{Encyclopedia of Measurement and Statistics}. Thousand
+#' @references The procedure and references 
+#' are detailled in (Paper available
+#' from \url{www.utdallas.edu/~herve}): 
+#' Abdi, H. (2007). Distance.  In N.J.
+#' Salkind (Ed.): \emph{Encyclopedia 
+#' of Measurement and Statistics}. Thousand
 #' Oaks (CA): Sage. pp. 304--308.
 #' 
 #' And in:\cr Abdi, H., & Valentin, D. (2006). 

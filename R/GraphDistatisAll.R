@@ -6,28 +6,33 @@
 #' scores plot, (3) a bootstrap confidence intervals plot, and (4) a Rv map.
 #'
 #'
-#' @param FS The factor scores of the observations (\code{$res4Splus$F}from
+#' @param FS The factor scores of the observations
+#'  (\code{$res4Splus$F}from
 #' \code{distatis})
 #' @param PartialFS The partial factor scores of the observations
 #' (\code{$res4Splus$PartialF} from \code{distatis})
-#' @param FBoot is the bootstrapped factor scores array (\code{FBoot} obtained
-#' from \code{\link{BootFactorScores}} or \code{\link{BootFromCompromise}})
-#' @param RvFS The factor scores of the distance matrices (\code{$res4Cmat$G}
+#' @param FBoot is the bootstrapped factor scores array 
+#' (\code{FBoot} obtained
+#' from \code{\link{BootFactorScores}} or 
+#' \code{\link{BootFromCompromise}})
+#' @param RvFS The factor scores
+#'  of the distance matrices (\code{$res4Cmat$G}
 #' from \code{distatis})
 #' @param axis1 The dimension for the horizontal axis of the plots.
 #' @param axis2 The dimension for the vertical axis of the plots.
 #' @param constraints constraints for the axes
-#' @param item.colors A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
-#' observations) of color names for the observations. If NULL (default),
+#' @param item.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
+#' observations) of color names for the observations. 
+#' If \code{NULL} (default),
 #' \code{prettyGraphs} chooses.
-#' @param participant.colors A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+#' @param participant.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 #' participants) of color names for the observations. If NULL (default),
 #' \code{prettyGraphs} chooses.
 #' @param ZeTitleBase General title for the plots.
 #' @param nude When \code{nude} is \code{TRUE} the labels for the observations
 #' are not plotted (useful when editing the graphs for publication).
 #' @param Ctr Contributions of each observation. If NULL (default), these are
-#' computed from FS
+#' computed from \code{FS}
 #' @param RvCtr Contributions of each participant. If NULL (default), these are
 #' computed from RvFS
 #' @param color.by.observations if \code{TRUE} (default), the partial factor
@@ -38,11 +43,14 @@
 #' the observation.
 #' @param lwd Thickness of the line plotting the ellipse or hull.
 #' @param ellipses a boolean. When \code{TRUE} will plot ellipses (from
-#' \code{car} package). When \code{FALSE} will plot peeled hulls (from
+#' \code{car} package). When \code{FALSE} (default) 
+#' will plot peeled hulls (from
 #' \code{prettyGraphs} package).
-#' @param fill when \code{TRUE}, fill in the ellipse with color. Related to
+#' @param fill when \code{TRUE}, fill in the ellipse with color. 
+#' Relevant for
 #' ellipses only.
-#' @param fill.alpha transparency index when filling in the ellipses.  Related
+#' @param fill.alpha transparency index when filling in the ellipses.  
+#' Relevant
 #' to ellipses only.
 #' @param percentage A value to determine the percent coverage of the bootstrap
 #' partial factor scores to provide ellipse or hull confidence intervals.

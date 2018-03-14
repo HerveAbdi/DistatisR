@@ -18,7 +18,7 @@ from \code{distatis}).}
 
 \item{ZeTitle}{General title for the plots.}
 
-\item{participant.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+\item{participant.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 participants) of color names for the observations. If NULL (default),
 \code{prettyGraphs} chooses.}
 

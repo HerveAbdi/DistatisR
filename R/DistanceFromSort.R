@@ -11,7 +11,7 @@
 #' these distance matrices, a value of 0 at the intersection of a row and a
 #' column means that the object represented by the row and the object
 #' represented by the column were sorted together (i.e., they are a distance of
-#' 0), and a vaue of 1 means these two objects were put into different groups.
+#' 0), and a value of 1 means these two objects were put into different groups.
 #' 
 #' The ouput ot the function \code{DistanceFromSort} is used as input for the
 #' function \code{\link{distatis}}.

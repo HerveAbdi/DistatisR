@@ -26,10 +26,13 @@ from \code{\link{BootFactorScores}} or \code{\link{BootFromCompromise}})}
 \item{axis2}{The dimension for the vertical axis of the plots
 (default = 2).}
 
-\item{item.colors}{When present, should be a column matrix (dimensions of
-observations and 1).  Gives the color-names to be used to color the plots.
-Can be obtained as the output of this or the other graph routine. If NULL,
-prettyGraphs chooses.}
+\item{item.colors}{When present, 
+should be a column matrix (dimensions of
+observations and 1).  
+Gives the color-names to be used to color the plots.
+Can be obtained as the output of this or the other graph routine. 
+If \code{NULL},
+\code{prettyGraphs} chooses.}
 
 \item{ZeTitle}{General title for the plots (deefault is
 'Distatis-Bootstrap').}
@@ -37,10 +40,10 @@ prettyGraphs chooses.}
 \item{constraints}{constraints for the axes}
 
 \item{nude}{When \code{TRUE} do not plot
-the names of the observations (default is \code{FALSE}.)}
+the names of the observations (default is \code{FALSE}).}
 
 \item{Ctr}{Contributions of each observation.
-If NULL (default), these are
+If \code{NULL} (default), these are
 computed from \code{FS}.}
 
 \item{lwd}{Thickness of the line plotting the ellipse or hull

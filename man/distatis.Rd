@@ -13,8 +13,9 @@ distatis(LeCube2Distance, Norm = "MFA", Distance = TRUE, RV = TRUE,
 }
 \arguments{
 \item{LeCube2Distance}{an "observations \eqn{\times}{*} observations
-\eqn{\times}{*} distance matrices" array of dimensions \eqn{I\times I \times
-K}{I*I*K}.  Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
+\eqn{\times}{*} distance matrices" array of dimensions 
+\eqn{I\times I \times  K}{I*I*K}.  
+Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
 distance (or covariance) matrix describing the \eqn{I} observations.}
 
 \item{Norm}{Type of normalization used for each cross-product matrix derived
@@ -29,7 +30,7 @@ if \code{FALSE} they are covariance matrices.}
 compute the \eqn{\alpha}{weights}, if \code{FALSE}
 we use the matrix scalar product}
 
-\item{nfact2keep}{Numner of factors to keep for the computation of the
+\item{nfact2keep}{Number of factors to keep for the computation of the
 factor scores of the observations.}
 
 \item{compact}{if \code{FALSE} (default),
@@ -60,12 +61,15 @@ cross product matrices corresponding to the
 distance matrices.
 \item \code{res.Splus$Splus} * The compromise (linear
 combination of the SCP's')
+ \item \code{res.Splus$eigValues} * The eigenvalues of the compromise)
+\item \code{res.Splus$tau} * The percentage 
+of explained intertia of the eigenValues)
 \item \code{res.Splus$ProjectionMatrix} The
 projection matrix used to compute factor
 scores and partial factor scores.
 \item \code{res.Splus$F} The factor scores for the observations.
 \item \code{res.Splus$PartialF} an
-\eqn{I\times \code{nf2keep} \timesK}{I*nf2keep*K} array.
+\eqn{I\times \code{nf2keep} \times K}{I*nf2keep*K} array.
 Contains the partial factors for the distance
 matrices.}
 }

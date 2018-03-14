@@ -19,7 +19,7 @@ GraphDistatisCompromise(FS, axis1 = 1, axis2 = 2, constraints = NULL,
 
 \item{constraints}{constraints for the axes}
 
-\item{item.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+\item{item.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 observations) of color names for the observations. If NULL (default),
 \code{prettyGraphs} chooses.}
 

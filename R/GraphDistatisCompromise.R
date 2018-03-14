@@ -16,7 +16,7 @@
 #' @param axis1 The dimension for the horizontal axis of the plots.
 #' @param axis2 The dimension for the vertical axis of the plots.
 #' @param constraints constraints for the axes
-#' @param item.colors A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+#' @param item.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 #' observations) of color names for the observations. If NULL (default),
 #' \code{prettyGraphs} chooses.
 #' @param ZeTitle General title for the plots.

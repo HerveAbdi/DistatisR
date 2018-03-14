@@ -11,7 +11,7 @@
 DISTATIS and COVSTATIS.
 }
 \details{
-Analyses sets of distance (or covariance) matrices collected on the same set
+Analyzes sets of distance (or covariance) matrices collected on the same set
 of observations
 
 \tabular{ll}{ Package: \tab DistatisR\cr Type: \tab Package\cr Version: \tab

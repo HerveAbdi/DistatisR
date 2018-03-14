@@ -12,10 +12,10 @@ Chollet et al. (2013). \url{www.utdallas.edu/~herve}
 }
 \description{
 Provide the data.frame SortSpice: Data set to illustrate the use of the
-package \code{DistatisR}. Ten assessors sorted eight beers. These data come
-from the Abdi et al.' (2007) paper in \emph{Food Quality and Preference}.
+package \code{DistatisR}. 
+Assessors are sorting spices.
 Each column represents the results of the sorting task for one assessor.
-Beers with the same number were sorted together.
+Spices  with the same number were sorted together.
 }
 \references{
 Chollet, S., Valentin, D., & Abdi, H. (in press, 2013).  The

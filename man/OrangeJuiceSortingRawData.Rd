@@ -10,7 +10,8 @@ with Sorting data and vocabulary. This excel file can be read by
 with sorting data (10 Orange Juices sorted by 44 Assessors)
 and an an associated
 vocabulary contingency table
-(10 Orange Juices by 23 descriptors). Can be read by
+(10 Orange Juices by 23 descriptors).
+Can be read by
 \code{read.df.excel}.
 }
 \details{

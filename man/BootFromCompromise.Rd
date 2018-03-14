@@ -136,8 +136,6 @@ COMPSTAT 2006.} Heidelberg: Physica Verlag.
 Lebart, L. (2007). Which bootstrap for principal axes methods?  In
 \emph{Selected contributions in data analysis and classification, COMPSTAT
 2006}.  Heidelberg: Springer Verlag.
-
-%% ~put references to the literature/web site here ~
 }
 \seealso{
 \code{\link{BootFactorScores}}

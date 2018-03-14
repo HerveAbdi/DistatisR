@@ -1,15 +1,9 @@
-
-
-
-
-
-
 #' \code{DistatisR:} DISTATIS Three Way Metric Multidimensional Scaling
 #'
 #' \code{DistatisR }package implements three way multidimensional scaling:
 #' DISTATIS and COVSTATIS.
 #'
-#' Analyses sets of distance (or covariance) matrices collected on the same set
+#' Analyzes sets of distance (or covariance) matrices collected on the same set
 #' of observations
 #'
 #' \tabular{ll}{ Package: \tab DistatisR\cr Type: \tab Package\cr Version: \tab

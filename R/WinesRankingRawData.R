@@ -1,14 +1,16 @@
-# This file
+# A data set to illustrate
+# Ranking data to be used with DistatisR.
+# WinesRankingRawData
 # Describes the Ranking 6 Wines Data
 # Created on March 12 2018 by Herve Abdi
-# part of the DistatisR package.
+# as part of the DistatisR package.
 #
 
-#' \code{Ranking6WinesRawData}: an example of an excel file
+#' \code{WinesRankingRawData}: an example of an excel file
 #' with (simulated) ranking data. Can be read with the function
 #' \code{read.df.excel()}.
 #'
-#'  \code{Ranking6WinesRawData}: an example of an excel file
+#'  \code{WinesRankingRawData}: an example of an excel file
 #' with (simulated) ranking data (6 wines ranked by 80 Assessors).
 #' Can be read by
 #' \code{read.df.excel}.
@@ -16,7 +18,7 @@
 #' @details
 #' In this example of a "ranking task" 
 #' 80 (simulated or fictitious) 
-#' assessors ranked 6 red wines ffrom Burgundy (France). 
+#' assessors ranked 6 red wines from Burgundy (France). 
 #' The assessor first chooses
 #' the most relevant dimension for these wines and then
 #' positions the wines on a scale from 1 to 9 for this dimension.
@@ -30,12 +32,12 @@
 #' @section Availability:
 #' To fetch this dataset use \code{system.file()}
 #' (see example below).
-#' @name Ranking6WinesRawData
-#' @section FileName: Ranking6WinesRawData.xlsx
+#' @name WinesRankingRawData
+#' @section FileName: WinesRankingRawData.xlsx
 #' @author Herve Abdi
 #' @examples
 #' path2file <- system.file("extdata",
-#'            "Ranking6WinesRawData.xlsx", package = 'DistatisR')
+#'            "WinesRankingRawData.xlsx", package = 'DistatisR')
 #' ranking6Wines <- read.df.excel(path = path2file, sheet = 'Ranking')
 NULL
 

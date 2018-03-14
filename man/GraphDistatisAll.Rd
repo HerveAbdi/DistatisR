@@ -13,16 +13,20 @@ GraphDistatisAll(FS, PartialFS, FBoot, RvFS, axis1 = 1, axis2 = 2,
   ellipses = TRUE, fill = TRUE, fill.alpha = 0.27, percentage = 0.95)
 }
 \arguments{
-\item{FS}{The factor scores of the observations (\code{$res4Splus$F}from
+\item{FS}{The factor scores of the observations
+ (\code{$res4Splus$F}from
 \code{distatis})}
 
 \item{PartialFS}{The partial factor scores of the observations
 (\code{$res4Splus$PartialF} from \code{distatis})}
 
-\item{FBoot}{is the bootstrapped factor scores array (\code{FBoot} obtained
-from \code{\link{BootFactorScores}} or \code{\link{BootFromCompromise}})}
+\item{FBoot}{is the bootstrapped factor scores array 
+(\code{FBoot} obtained
+from \code{\link{BootFactorScores}} or 
+\code{\link{BootFromCompromise}})}
 
-\item{RvFS}{The factor scores of the distance matrices (\code{$res4Cmat$G}
+\item{RvFS}{The factor scores
+ of the distance matrices (\code{$res4Cmat$G}
 from \code{distatis})}
 
 \item{axis1}{The dimension for the horizontal axis of the plots.}
@@ -31,11 +35,12 @@ from \code{distatis})}
 
 \item{constraints}{constraints for the axes}
 
-\item{item.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
-observations) of color names for the observations. If NULL (default),
+\item{item.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
+observations) of color names for the observations. 
+If \code{NULL} (default),
 \code{prettyGraphs} chooses.}
 
-\item{participant.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+\item{participant.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 participants) of color names for the observations. If NULL (default),
 \code{prettyGraphs} chooses.}
 
@@ -45,7 +50,7 @@ participants) of color names for the observations. If NULL (default),
 are not plotted (useful when editing the graphs for publication).}
 
 \item{Ctr}{Contributions of each observation. If NULL (default), these are
-computed from FS}
+computed from \code{FS}}
 
 \item{RvCtr}{Contributions of each participant. If NULL (default), these are
 computed from RvFS}
@@ -61,13 +66,16 @@ the observation.}
 \item{lwd}{Thickness of the line plotting the ellipse or hull.}
 
 \item{ellipses}{a boolean. When \code{TRUE} will plot ellipses (from
-\code{car} package). When \code{FALSE} will plot peeled hulls (from
+\code{car} package). When \code{FALSE} (default) 
+will plot peeled hulls (from
 \code{prettyGraphs} package).}
 
-\item{fill}{when \code{TRUE}, fill in the ellipse with color. Related to
+\item{fill}{when \code{TRUE}, fill in the ellipse with color. 
+Relevant for
 ellipses only.}
 
-\item{fill.alpha}{transparency index when filling in the ellipses.  Related
+\item{fill.alpha}{transparency index when filling in the ellipses.
+Relevant
 to ellipses only.}
 
 \item{percentage}{A value to determine the percent coverage of the bootstrap

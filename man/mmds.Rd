@@ -29,10 +29,10 @@ for a dimension.}
 \description{
 Perform a Metric Multidimensional Scaling
 (MMDS) of a (Euclidean) distance matrix measured between a set of
-objects (eithout or without masses).
+objects (with or without masses).
 }
 \details{
-MMDS Give factor scores that make it possible
+MMDS Gives factor scores that make it possible
 to draw a map of the objects
 such that the distances between objects
 on the map best approximate the
