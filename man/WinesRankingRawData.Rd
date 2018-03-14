@@ -23,7 +23,13 @@ of the general composition {w/m}{a/f}{01 : 80}.
 The assessors were 40 men and 40 women (first character w/n)
 and 40 American or 40 French (second character a/f).
 The red wines that were tasted are Irancy, Saint-Brie,
-Beaune, Nuits (Cote de Nuits), Beaujolias, and Beaujolais-Nouveau.
+Beaune, Nuits (Cote de Nuits), Beaujolais, and Beaujolais-Nouveau.
+Irancy & Saint-Brie are near the cities of Auxerre and Chablis,
+Beaune & Cote de Nuits are from central Burgundy, and
+Beaujolais and Beaujolais Nouveau are from the south of Burgundy;
+Beaujolais Nouveau is a young wine (a primeur) 
+released in November of its year, 
+after only a few weeks of fermentation.
 }
 \section{Availability}{
 
