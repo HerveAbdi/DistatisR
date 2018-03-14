@@ -12,7 +12,7 @@ Can be read by
 \code{read.df.excel}.
 }
 \details{
-In this example of a "ranking task" 
+In this example of a "ranking task," 
 80 (simulated or fictitious) 
 assessors ranked 6 red wines from Burgundy (France). 
 The assessor first chooses
