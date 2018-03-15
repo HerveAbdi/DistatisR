@@ -20,22 +20,23 @@
 #' to be used by \code{distatis}.
 #' 
 #' @details    
-#'  \code{DistanceFromRank} creates an \eqn{I \times
-#' I \times K}{I*I*K} array of distance 
+#' \code{DistanceFromRank} creates an 
+#'  \eqn{I \times I \times K}{I*I*K} 
+#' array of distance 
 #' in which each of the \eqn{K} "slices"
 #' stores the (squared Euclidean ranking) 
 #' distance matrix of the \eqn{k}th assessor.  
 #' In one of
-#' these distance matrices the distance 
+#' these distance matrices, the distance 
 #' between two objects is computed
-#' from he Pythogorean theorem. 
+#' from he Pythagorean theorem. 
 #' The ouput ot the function \code{DistanceFromRank} 
 #' is used as input for the
 #' function \code{\link{distatis}}.
 #'
 #' The input should have assessors as columns and observations 
 #' as rows (see
-#' example below)
+#' example below).
 #' 
 #' @param X gives the results of a ranking task 
 #' (see example below) as an
@@ -57,14 +58,14 @@ DistanceFromRank <- function(X){
 	# Private functions first
 	# Rank2Dist: 
   # Create a sorting distance matrix from the ranking vector
-    Rank2Dist <- function(LeRank){# Start Rank2Dist
+    Rank2Dist <- function(LeRank){# Start LeRank
 	   nObj = length(LeRank)
      truc = matrix(LeRank,nObj,nObj)
      # D = (v - v')^2
      # DistMat = abs(truc - t(truc)) # Euclidean
      DistMat =  (truc - t(truc))^2 # squared Euclidean
 	 return(DistMat)
-     }# End Rank2Dist
+     }# End LeRank
 	# X is a matrix of sort 
 	# Each column is a participant
   # Objects are rank-ordered or rated
@@ -77,5 +78,5 @@ DistanceFromRank <- function(X){
 	for(j in 1:nJ){LeCube2Distance[,,j]<-Rank2Dist(X[,j]) }
 	dimnames(LeCube2Distance) <-list(rownames(X),rownames(X),colnames(X))
 	return(LeCube2Distance)  
-} # End if function DistanceFromRank
+} # End of function DistanceFromRank
 #---------------------------------------------------------------------

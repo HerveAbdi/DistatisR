@@ -27,22 +27,23 @@ one dimension and transform it into a brick of data
 to be used by \code{distatis}.
 }
 \details{
-\code{DistanceFromRank} creates an \eqn{I \times
-I \times K}{I*I*K} array of distance 
+\code{DistanceFromRank} creates an 
+ \eqn{I \times I \times K}{I*I*K} 
+array of distance 
 in which each of the \eqn{K} "slices"
 stores the (squared Euclidean ranking) 
 distance matrix of the \eqn{k}th assessor.  
 In one of
-these distance matrices the distance 
+these distance matrices, the distance 
 between two objects is computed
-from he Pythogorean theorem. 
+from he Pythagorean theorem. 
 The ouput ot the function \code{DistanceFromRank} 
 is used as input for the
 function \code{\link{distatis}}.
 
 The input should have assessors as columns and observations 
 as rows (see
-example below)
+example below).
 }
 \examples{
 # Use the data set WinesRankingRawData stored in an excel file.
