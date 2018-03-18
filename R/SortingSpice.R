@@ -12,10 +12,10 @@
 #' @docType data
 #' @format a data frame file containing 21 columns, 16 rows plus the names of
 #' the rows and the columns.
-#' @references Chollet, S., Valentin, D., & Abdi, H. (in press, 2013).  The
+#' @references Chollet, S., Valentin, D., & Abdi, H. (2014).  The
 #' free sorting task. In. P.V. Tomasco & G. Ares (Eds), \emph{Novel Techniques
 #' in Sensory Characterization and Consumer Profiling}.  Boca Raton: Taylor and
 #' Francis.
-#' @source Chollet et al. (2013). \url{www.utdallas.edu/~herve}
+#' @source Chollet et al. (2014). \url{www.utdallas.edu/~herve}
 #' @keywords datasets DistatisR
 NULL

@@ -15,7 +15,7 @@ Analyzes sets of distance (or covariance) matrices collected on the same set
 of observations
 
 \tabular{ll}{ Package: \tab DistatisR\cr Type: \tab Package\cr Version: \tab
-1.0\cr Date: \tab 2013-07-03\cr License: \tab GPL-2\cr Depends: \tab
+1.1.0\cr Date: \tab 2018-03-15\cr License: \tab GPL-2\cr Depends: \tab
 prettyGraphs (>= 2.0.0), car } The example shown here comes from Abdi
 \emph{et al.} (2007), \code{distatis} paper on the sorting task.
 }
