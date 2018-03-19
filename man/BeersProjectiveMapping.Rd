@@ -5,23 +5,24 @@
 \alias{BeersProjectiveMapping}
 \alias{BeersProjectiveNapping}
 \title{7 (fictitious) assessors evaluate 7 Beers using
-\emph{Projective Mapping}.}
+\emph{Projective Mapping} (with verbal description).}
 \format{a list with 3 elements:
-1) \code{ProjectiveMapping}: a matrix of dimensions 7 beers by  7*2 
+1) \code{ProjectiveMapping}: 
+a matrix of dimensions 7 beers by  7*2 
 assessors-dimensions of the coordinates of the beers on the sheet
 of paper;
-2) \code{Vocabulary}: a Products (rows) by Assessors (column)
+2) \code{Vocabulary}: a Beers (rows) by Assessors (columns)
  data.frame 
- where each element of the df 
+ where each element of \code{Vocabulary}
 stores
-the words used by one assessor to describe a beer 
+the words used by one assessor to describe a beer
 (words are separated with spaces);
 and 3) \code{CT.vocabulary} a matrix storing
 the  \eqn{I} Products by \eqn{N} 
  words (from the Vocabulary) contingency table,
  in  \code{CT.vocabulary} the number at the intersection
- of a row (product) and a column (word) is the number
- of assessors who used this word to describe that product.}
+ of a row (beer) and a column (word) is the number
+ of assessors who used this word to describe that beer.}
 \source{
 Abdi, H,  & Valentin, D. (2007). 
 \url{www.utdallas.edu/~herve}
@@ -32,17 +33,17 @@ data("BeersProjectiveMapping")
 \description{
 \code{BeersProjectiveMapping}:
 7 (fictitious) assessors evaluate 7 Beers using
-Projective Mapping.
+\emph{Projective Mapping} (with verbal description).
 }
 \details{
-First, Each assessor positionned the 7 beers on a sheet
-of paper according the perceived similarity between the beers.
+First, Each assessor positions the 7 beers on a sheet
+of paper according to the perceived similarity between the beers.
 For each assessor, the position of the beers is recorded
 from the \eqn{X} and \eqn{Y} coordinates. 
-Second, the assessors are asked if they can describe the
-beers with some freely chosen descriptors. These descriptors
-are stored in a list with 7 elements (one per assessor)
-where each element of the list
+Second, the assessors are asked if they can describe each
+beer with some freely chosen descriptors. These descriptors
+are stored in a dataframe with 7 elements (one per assessor)
+where each element of the dataframe
 is a 7 component vector (one per beer) where each element stores
 the words used to describe a beer 
 (words are separated with spaces).

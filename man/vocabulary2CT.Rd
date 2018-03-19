@@ -2,7 +2,7 @@
 % Please edit documentation in R/vocabulary2CT.R
 \name{vocabulary2CT}
 \alias{vocabulary2CT}
-\title{Transforms a data.frame of product by vocabulary 
+\title{Transforms a data.frame of products by vocabulary 
 of assessors into
 a  products by words (from vocabulary) contingency table.}
 \usage{
@@ -13,24 +13,36 @@ vocabulary2CT(df.voc)
 data.frame 
 each element 
 stores
-the words used by one assessor to describe a beer 
+the words used by one assessor to describe a product 
 (words are separated with spaces);}
 }
 \value{
+a list with 1) \code{cubeOfVocabulary}:
+a 0/1 array of dimension
+products by words (from the vocabulary) by assessors
+where each "products by vocabulary" slice gives the vocabulary
+chosen by the assessor to describe the products; and
+2) 
 \code{CT.vocabulary} a matrix storing the 
-prodcuts by words contingency table.
+products by words contingency table.
 }
 \description{
 \code{vocabulary2CT}
  Transforms a data.frame of products by vocabulary 
-of assessors into
+of assessors into 1)
+a cube of 0/1 contingency tables (one per assessor); and 2)
 a  products by words (from vocabulary) contingency table.
-In  contingency table the number at the intersection
+In this contingency table, the number at the intersection
  of a row (product) and a column (word) is the number
  of assessors who used this word to describe that product.
+ 
+ @details the cube of 0/1 contingency tables
+ (i.e., \code{cubeOfVocabulary}   can also be
+ analyzed with the package \code{PTCA4CATA} as a
+ pseudo \emph{Check All That Apply}  (CATA) data set.
 }
 \examples{
-# Get BeersProjectiveMapping example
+# Get the BeersProjectiveMapping example
 data("BeersProjectiveMapping")
 aContingenyTable <- vocabulary2CT(BeersProjectiveMapping$Vocabulary)
 
@@ -38,5 +50,8 @@ aContingenyTable <- vocabulary2CT(BeersProjectiveMapping$Vocabulary)
 \seealso{
 \code{\link[tidytext]{unnest_tokens}}
  \code{\link[dplyr]{count}}
- \code{\link{vocabulary2CT}}
+ \code{\link{BeersProjectiveMapping}}
+}
+\author{
+Herve Abdi
 }
