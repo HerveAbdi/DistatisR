@@ -4,7 +4,7 @@
 \name{BeersProjectiveMapping_xlsx}
 \alias{BeersProjectiveMapping_xlsx}
 \alias{BeersProjectiveNapping_xlsx}
-\title{an example of an excel file
+\title{An example of an excel file
 with Projective Mapping data and vocabulary. 
 This excel file can be read by
 \code{read.df.excel}.}

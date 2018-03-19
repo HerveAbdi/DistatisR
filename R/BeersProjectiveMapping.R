@@ -26,14 +26,22 @@
 #' @aliases BeersProjectiveMapping BeersProjectiveNapping
 #' @usage data("BeersProjectiveMapping")
 #' @docType data
-#' @format a list with 2 elements:
+#' @format a list with 3 elements:
 #' 1) \code{ProjectiveMapping}: a matrix of dimensions 7 beers by  7*2 
 #' assessors-dimensions of the coordinates of the beers on the sheet
-#' of paper; and
-#' 2) \code{Vocabulary} a list where each element of the list 
+#' of paper;
+#' 2) \code{Vocabulary}: a Products (rows) by Assessors (column)
+#'  data.frame 
+#'  where each element of the df 
 #' stores
-#' the words used to describe a beer 
-#' (words are separated with spaces).
+#' the words used by one assessor to describe a beer 
+#' (words are separated with spaces);
+#' and 3) \code{CT.vocabulary} a matrix storing
+#' the  \eqn{I} Products by \eqn{N} 
+#'  words (from the Vocabulary) contingency table,
+#'  in  \code{CT.vocabulary} the number at the intersection
+#'  of a row (product) and a column (word) is the number
+#'  of assessors who used this word to describe that product.
 #' @references  Abdi, H., & Valentin, D., (2007). 
 #' Some new and easy ways to describe, compare, 
 #'and evaluate products and assessors. 
@@ -66,7 +74,7 @@ NULL
 print.str_BeersProjectiveMapping <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines
   cat(rep("-", ndash), sep = "")
-  cat("\n 7 Assessors Evaluate 7 Beers with Projective Mapping + Description \n")
+  cat("\n A list: 7 Assessors Evaluate 7 Beers with Projective Mapping + Description \n")
   # cat("\n List name: ",deparse(eval(substitute(substitute(x)))),"\n")
   cat(rep("-", ndash), sep = "")
   cat("\n$ProjectiveMapping ", "A matrix. Rows   : Beers")
@@ -75,6 +83,7 @@ print.str_BeersProjectiveMapping <- function (x, ...) {
   cat("\n                   ", "        Each element of the list is a") 
   cat("\n                   ", "        7 (one per beer) component vector ")
   cat("\n                   ", "        (the vocabulary of one assessor).")     
+  cat("\n$CT.vocabulary     ","The Products by Vocabulary contingency table ")
   cat("\n",rep("-", ndash), sep = "")
   cat("\n")
   invisible(x)

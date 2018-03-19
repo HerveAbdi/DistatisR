@@ -80,11 +80,11 @@ read.df.excel <- function(path, sheet, col_names = TRUE,
 print.distatis.data <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines
   cat(rep("-", ndash), sep = "")
-  cat("\n Data Frame(s) for distatis (e.g., Sorting or Ranking)\n")
+  cat("\n Data Frame(s) for distatis (e.g., Sorting, Ranking, or Projective Mapping)\n")
   # cat("\n List name: ",deparse(eval(substitute(substitute(x)))),"\n")
   cat(rep("-", ndash), sep = "")
-  cat("\n$df.data ", "A data frame for distatis (e.g. Sorting or Ranking) ")
-  cat("\n$df.voc  ", "A data frame for te vocabulary Contingency Table")
+  cat("\n$df.data ", "A data frame for distatis (e.g. Sorting, Ranking, Mapping) ")
+  cat("\n$df.voc  ", "A data frame for the vocabulary contingency table or raw data.frame")
   cat("\n",rep("-", ndash), sep = "")
   cat("\n")
   invisible(x)
