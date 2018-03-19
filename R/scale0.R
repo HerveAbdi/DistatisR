@@ -15,10 +15,14 @@
 #'  for PCA-like type of analyses.
 #'  
 #'@param x a vector to be scaled
-#'@param center (default = \code{TRUE}), when \code{TRUE}
-#'centers,
+#'@param scale (default = \code{TRUE}), when \code{TRUE}
+#'scale the vector to norm 1,
 #'  otherwise do nothing.
-#'@return a centered (if required) and norm-1 normalized
+#'@param center (default = \code{TRUE}), when \code{TRUE}
+#'center the vectors (i.e., substract the mean from all numbers),
+#'  otherwise do nothing.
+#'@return a centered (if required) and norm-1 
+#' (if required) normalized
 #'  vector.
 #'@author Herve Abdi
 #'@examples
@@ -29,13 +33,15 @@
 #'  tutuNA <- scale(toto0)  # all numbers set to NA
 #'@export
 
-scale0 <- function(x, center = TRUE){
+scale0 <- function(x, scale = TRUE, center = TRUE){
   # internal function
-  # Uses near form dplyr but copy it to avoif loading dplyr
+  # Uses near form dplyr but copy it to avoid loading dplyr
   near <- function(x, y, 
             tol = .Machine$double.eps^0.5) {abs(x - y) < tol}
   if (center) {z   <- x - mean(x)} else {z = x}
+  if (scale){
   normx <- sqrt(sum(z^2))
   if (!near(normx, 0) ){ z <- z / normx} else {z = z * 0}
+  }
   return(z)
 }

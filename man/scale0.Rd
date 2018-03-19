@@ -5,17 +5,22 @@
 \title{\code{scale0}: A variation over the base R scale function 
 that avoids the "divide by 0 = NA"  problem.}
 \usage{
-scale0(x, center = TRUE)
+scale0(x, scale = TRUE, center = TRUE)
 }
 \arguments{
 \item{x}{a vector to be scaled}
 
+\item{scale}{(default = \code{TRUE}), when \code{TRUE}
+scale the vector to norm 1,
+ otherwise do nothing.}
+
 \item{center}{(default = \code{TRUE}), when \code{TRUE}
-centers,
+center the vectors (i.e., substract the mean from all numbers),
  otherwise do nothing.}
 }
 \value{
-a centered (if required) and norm-1 normalized
+a centered (if required) and norm-1 
+(if required) normalized
  vector.
 }
 \description{
