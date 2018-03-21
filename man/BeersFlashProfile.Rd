@@ -45,8 +45,9 @@ file  \code{BeersFlashProfile.xlsx}.
 path2file <- system.file("extdata",
                   "BeersFlashProfile.xlsx", package = 'DistatisR')
 # read the data in excel file with read.df.excel
-beerDataPM  <- read.df.excel(path = path2file,
-                           sheet = 'Rankings')
+beerDataFlash  <- read.df.excel(path = path2file,
+                           sheet = 'Rankings')$df.data
+ # the Flash Profiling data are now in the data.frame beerDataFlash                        
 }
 \references{
 Abdi, H., & Valentin, D. (2007). 

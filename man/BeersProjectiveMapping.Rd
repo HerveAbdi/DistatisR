@@ -41,7 +41,8 @@ of paper according to the perceived similarity between the beers.
 For each assessor, the position of the beers is recorded
 from the \eqn{X} and \eqn{Y} coordinates. 
 Second, the assessors are asked if they can describe each
-beer with some freely chosen descriptors. These descriptors
+beer with some freely chosen descriptors. 
+These descriptors
 are stored in a dataframe with 7 elements (one per assessor)
 where each element of the dataframe
 is a 7 component vector (one per beer) where each element stores

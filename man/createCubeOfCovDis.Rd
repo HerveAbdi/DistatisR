@@ -3,7 +3,9 @@
 \name{createCubeOfCovDis}
 \alias{createCubeOfCovDis}
 \title{compute a cube of covariance and a cube of distance
-between the items (rows) of a brick of measurements.}
+between the items (rows) of a brick of measurements 
+(when all blocks
+have same number of variables).}
 \usage{
 createCubeOfCovDis(brickOfData, scale = TRUE, center = TRUE,
   ev.scale = TRUE)
@@ -40,7 +42,10 @@ between the items (rows) of a brick of measurements.
 The variables describing the items can scaled to norm 1
 and centered. The whole matrix 
 can  be scaled by its first eigenvalue
-(a la DISTATIS).
+(a la DISTATIS). All "slices" of the brick
+should have the same number of variables.
+For different number of variables per block,
+see \code{list2CubeOfCov}.
 }
 \details{
 The input of  \code{createCubeOfCovDis} is a 
@@ -49,12 +54,12 @@ by \eqn{K} assessors (as obtained, e.g., from a projective
 mapping task).
 
 By default  \code{createCubeOfCovDis}
-centers and normalizes each columns for each slice of the brick
+centers and normalizes each column for each slice of the brick
 and then normalize each covariance matrix such that
 the first eigenvalue of each covariance matrix is equal to 1.
  
 A \code{distatis} analysis of the Distance matrices with
-the option \code{Distance = TRUE} will the same results
+the option \code{Distance = TRUE} will give the same results
 as the \code{distatis} analysis of the Covariance matrices with
 the option \code{Distance = FALSE}.
 }
@@ -69,6 +74,9 @@ zeBrickOfData <- projMap2Cube(
 # Create the cubes of Covariance and Distance                     
 cubes <- createCubeOfCovDis(zeBrickOfData$cubeOfData)
 }
+}
+\seealso{
+list2CubeOfCov
 }
 \author{
 Herve Abdi
