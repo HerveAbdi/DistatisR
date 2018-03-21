@@ -52,6 +52,11 @@ By default  \code{createCubeOfCovDis}
 centers and normalizes each columns for each slice of the brick
 and then normalize each covariance matrix such that
 the first eigenvalue of each covariance matrix is equal to 1.
+ 
+A \code{distatis} analysis of the Distance matrices with
+the option \code{Distance = TRUE} will the same results
+as the \code{distatis} analysis of the Covariance matrices with
+the option \code{Distance = FALSE}.
 }
 \examples{
 \dontrun{

@@ -139,12 +139,11 @@ vocabulary2CT <- function(df.voc){
 print.voc4distatis <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines
   cat(rep("-", ndash), sep = "")
-  cat("\n Cube of Vocabulary 0/1 Contingency Tables & Grand Contingency Table \n")
+  cat("\nA Cube of K 'Vocabulary 0/1 Contingency Tables' & 1 'Grand Contingency Table' \n")
   # cat("\n List name: ",deparse(eval(substitute(substitute(x)))),"\n")
   cat(rep("-", ndash), sep = "")
-  cat("\n$cubeOfVocabulary ", "A brick of 0/1 contingency tables (one per assessor)")
-  cat("\n$CT.vocabulary    ", "A products by words contingency table")
-  cat("\n$ERv    ", "Expected value of Rv under the null")
+  cat("\n$cubeOfVocabulary ", "A brick of K '0/1 contingency tables' (one per assessor)")
+  cat("\n$CT.vocabulary    ", "A 'products by words' contingency table")
   cat("\n",rep("-", ndash), sep = "")
   cat("\n")
   invisible(x)

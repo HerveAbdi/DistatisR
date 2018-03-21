@@ -34,6 +34,10 @@
 #' and then normalize each covariance matrix such that
 #' the first eigenvalue of each covariance matrix is equal to 1.
 #'  
+#'A \code{distatis} analysis of the Distance matrices with
+#' the option \code{Distance = TRUE} will the same results
+#' as the \code{distatis} analysis of the Covariance matrices with
+#' the option \code{Distance = FALSE}.
 #'    
 #' @param brickOfData  a 
 #' \eqn{I} items by \eqn{J} quantitative variables
@@ -75,7 +79,7 @@ createCubeOfCovDis <- function(brickOfData,
     stop('brickOfData needs to be a 3-way array')
   } # end if 
   nI = dim(brickOfData)[[1]]
-  nJ = dim(brickOfData)[[2]]
+  # nJ = dim(brickOfData)[[2]]
   nK = dim(brickOfData)[[3]]
   cubeOfCov <- array(NA, dim = c(nI,nI,nK))
   cubeOfDis <- array(NA, dim = c(nI,nI,nK))
