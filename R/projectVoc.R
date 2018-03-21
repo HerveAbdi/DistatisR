@@ -11,13 +11,13 @@
 #---------------------------------------------------------------------
 
 
-#' @title Compute barycentric projection for count-like
-#' description of the item of a \code{distatis}-type of  analysis.
+#' @title Compute barycentric projections for count-like
+#' description of the items of a \code{distatis}-type of  analysis.
 #' 
 #' @description \code{projectVoc}
 #' Compute barycentric projection for count-like
 #' description of the items of a \code{distatis}-type of  analysis.
-#' The data needs to be non-negative and typically represent
+#' The data need to be non-negative and typically represent
 #' the vocabulary (i.e., words) used to describe the items
 #' in a sorting/ranking/projective-mapping task.
 #'  
@@ -25,36 +25,36 @@
 #' a plain barycentric (words are positioned at the 
 #' barycenter--aka center of mass--of the item it describe) and
 #' 2) a correspondence analysis barycentric where the variance
-#' of the projected words is equal to the the variance
+#' of the projected words is equal to the variance
 #' of the items (as for correspondence analysis when using the
 #' "symmetric" representation).
 #' 
 #' @param CT.voc a matrix or data.frame
 #' storing a
 #'  \eqn{I} items by \eqn{J} descriptors
-#'  contingency table where the \eqn{i,j} cell 
+#'  contingency table where the \eqn{i,j}-th cell 
 #'  gives the number of times
 #'  the \eqn{j}-th descriptor (in the column) 
 #'  was used to describe the \eqn{i}-th item
-#'  (in the row). \code{Ct.voc} needs to comprise non-negative 
-#'  numbers only
+#'  (in the row). \code{CT.voc} needs to containt only non-negative 
+#'  numbers.
 #' 
 #' @param Fi a matrix or data.frame
 #' storing the
 #'  \eqn{I} items by \eqn{L} factor scores obtained 
 #'  from the compromise of a distatis analysis or equivalent.
-#' @param namesOfFactors  (Default: NULL), if \code{NULL}
+#' @param namesOfFactors  (Default: NULL), if \code{NULL},
 #' \code{projectVoc} uses the names of the columns of 
 #' \code{Fi} for the names of the projected factors;
-#' if \code{namesOfFactors} is a words this word is used
-#' to names the factors of the projections; if \code{namesOfFactors}
+#' if \code{namesOfFactors} is one word then this word is used
+#' to name the factors of the projections; if \code{namesOfFactors}
 #' is a character vector, it is used to name the factors of
 #' the projection.
 #' @return a list with 
 #' 1) \code{Fvoca.normed}: the barycentric projections of
 #' the words,
 #' and 2) \code{Fvoca.normed}: the CA normalized 
-#' the barycentric projections of
+#' barycentric projections of
 #' the words
 #' @examples 
 #' # use the data from the BeersProjectiveMapping dataset
@@ -70,6 +70,25 @@
 #' # Project the vocabulary onto the factor space
 #' F4Voc <- projectVoc(BeersProjectiveMapping$CT.vocabulary, 
 #'                     testDistatis$res4Splus$F)
+#' @references  Abdi, H., & Valentin, D., (2007). 
+#' Some new and easy ways to describe, compare, 
+#'and evaluate products and assessors. 
+#'In D., Valentin, D.Z. Nguyen, L. Pelletier (Eds) 
+#'\emph{New trends in sensory evaluation 
+#'of food and non-food products}.
+#' Ho Chi Minh (Vietnam): 
+#' Vietnam National University & Ho Chi Minh City Publishing House. 
+#' pp. 5-18.
+#' 
+#'  and
+#'  
+#'  Lahne, J., Abdi, H., & Heymann, H. (2018). 
+#'  Rapid sensory profiles with DISTATIS and 
+#'  barycentric text projection: An example with amari,
+#'   bitter herbal liqueurs. 
+#'   \emph{Food Quality and Preference, 66}, 36-43. 
+#' @source Abdi, H,  & Valentin, D. (2007). 
+#' \url{www.utdallas.edu/~herve}
 #' @author Herve Abdi
 #' @rdname projectVoc
 #' @export 
