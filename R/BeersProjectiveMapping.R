@@ -1,4 +1,4 @@
-# Description for file BeersProjectiveMapping.Rda
+# Description for file BeersProjectiveMapping.rda
 # Herve Abdi: March 18, 2018.
 #
 #' @title 

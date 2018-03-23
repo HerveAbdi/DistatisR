@@ -119,7 +119,7 @@ createCubeOfCovDis <- function(brickOfData,
 } # end of function createCubeOfCovDis
 
 #---------------------------------------------------------------------
-# The print funciton
+# The print function
 
 #---------------------------------------------------------------------
 
