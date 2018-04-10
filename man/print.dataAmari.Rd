@@ -8,7 +8,7 @@
 \method{print}{dataAmari}(x, ...)
 }
 \arguments{
-\item{x}{a list: the data set: {str_BeersProjectiveMapping}}
+\item{x}{a list: the data set from  {amariSorting}}
 
 \item{...}{the rest}
 }

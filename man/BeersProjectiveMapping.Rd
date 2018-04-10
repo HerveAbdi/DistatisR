@@ -4,8 +4,8 @@
 \name{BeersProjectiveMapping}
 \alias{BeersProjectiveMapping}
 \alias{BeersProjectiveNapping}
-\title{7 (fictitious) assessors evaluate 7 Beers using
-\emph{Projective Mapping} (with verbal description).}
+\title{7 (fictitious) assessors sort and verbally describe 7 Beers using
+\emph{Projective Mapping}.}
 \format{a list with 3 elements:
 1) \code{ProjectiveMapping}: 
 a matrix of dimensions 7 beers by  7*2 

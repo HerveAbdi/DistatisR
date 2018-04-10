@@ -2,7 +2,7 @@
 # Herve Abdi: March 18, 2018.
 #
 #' @title 
-#' 25 assessors twice sort and describe  12 amaris (i.e., bitter) 
+#' 25 assessors twice sort and describe 12 amaris (i.e., bitter) 
 #' 
 #' @description 
 #' \code{sortingAmari}: 25 assessors
@@ -51,7 +51,7 @@
 #' a 12 products * 41 words  (vocabulary) * 50 assessors-repetition
 #' (i.e., 25 assessors *2 repetitions), and 3)
 #' a data frame:
-#' \code{information4Amaris} string the description of the amaris.
+#' \code{information4Amaris} storing the description of the amaris.
 #' @references  
 #' Lahne, J., Abdi, H., & Heymann, H. (2018). 
 #' Rapid sensory profiles with DISTATIS 
@@ -65,7 +65,7 @@
 #' \emph{Food Quality and Preference}, 66, 36-43. 
 #' (available from \url{www.utdallas.edu/~herve}).
 #' @keywords datasets DistatisR
-#' @author Jacob Lahne & Herve Abdi
+#' @author Jacob Lahne, Herve Abdi, & Hildegarde Heymann
 NULL
 
 
@@ -79,7 +79,7 @@ NULL
 #' Change the print function for the data set: 
 #' \code{dataAmari}
 #'
-#' @param x a list: the data set: {str_BeersProjectiveMapping}
+#' @param x a list: the data set from  {amariSorting}
 #' @param ... the rest
 #' @author Herve Abdi
 #' @export

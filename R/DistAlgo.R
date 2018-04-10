@@ -1,4 +1,4 @@
-#' Four computer algorithms evaluate the similiarity of six faces for distatis
+#' Four computer algorithms evaluate the similarity of six faces for distatis
 #' analysis
 #'
 #' Provide the data.frame DistAlgo Data set to be used to illustrated the use

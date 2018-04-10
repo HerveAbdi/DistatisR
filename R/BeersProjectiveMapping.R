@@ -2,8 +2,8 @@
 # Herve Abdi: March 18, 2018.
 #
 #' @title 
-#' 7 (fictitious) assessors evaluate 7 Beers using
-#' \emph{Projective Mapping} (with verbal description).
+#' 7 (fictitious) assessors sort and verbally describe 7 Beers using
+#' \emph{Projective Mapping}.
 #' 
 #' @description 
 #' \code{BeersProjectiveMapping}:
