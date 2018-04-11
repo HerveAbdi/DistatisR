@@ -94,7 +94,7 @@ NULL
 #' \code{sortingSpices} 
 #' (class \code{dataSortingSpices})
 #'
-#' @param x a list: the data set: {sortingWines}
+#' @param x a list: the data set: {sortingSpices}
 #' @param ... the rest
 #' @author Herve Abdi
 #' @export
