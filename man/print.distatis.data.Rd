@@ -2,8 +2,8 @@
 % Please edit documentation in R/read.df.excel.R
 \name{print.distatis.data}
 \alias{print.distatis.data}
-\title{Change the print function for
-class \code{distatis.data} outpu \code{read.df.excel}}
+\title{Change the print function for objects of 
+class \code{distatis.data} output of\code{read.df.excel}}
 \usage{
 \method{print}{distatis.data}(x, ...)
 }

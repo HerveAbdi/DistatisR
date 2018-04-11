@@ -1,5 +1,5 @@
 # Description for file sortingWine.rda
-# Hervé Abdi: March 18, 2018.
+# Hervé Abdi: April 10, 2018.
 #
 #  sortingWines Preambule ----
 #' @title Novices and wines experts sort red, rosé, and white wines
@@ -23,7 +23,7 @@
 #'   (the number at the intersection of a row and a colum
 #'   indicates the number of the pile in which the wine was sorted);
 #'  3) \code{$ternarySortNovices}:
-#'  a data frame with the 18 wines by 19 nivices ternary
+#'  a data frame with the 18 wines by 19 novices ternary
 #'  (i.e., in three piles) sorting data
 #'   (the number at the intersection of a row and a colum
 #'   indicates the number of the pile in which the wine was sorted);
@@ -41,6 +41,8 @@
 #' 
 #' In the data sets, the wines are identified with shortened
 #' names, the whole names can be found in the data frame.
+#' All the wines were from the 2005 vintage 
+#' (see Ballester \emph{et al.}, 2009 for details)
 #' 
 #' Compared to the original data, some missing data were added
 #' to the set after imputation of the missing data 
@@ -113,7 +115,7 @@ print.dataSortingWines <- function (x, ...) {
   cat("\n",rep("-", ndash), sep = "")
   cat("\n")
   invisible(x)
-} # end of function print.str_BeersProjectiveMapping
+} # end of function print.dataSortingWines
 # end print.dataSorting ----
 #_____________________________________________________________________
 

@@ -44,7 +44,7 @@ a list containing 4 objects:
   (the number at the intersection of a row and a colum
   indicates the number of the pile in which the wine was sorted);
  3) \code{$ternarySortNovices}:
- a data frame with the 18 wines by 19 nivices ternary
+ a data frame with the 18 wines by 19 novices ternary
  (i.e., in three piles) sorting data
   (the number at the intersection of a row and a colum
   indicates the number of the pile in which the wine was sorted);
@@ -62,6 +62,8 @@ Only the experts performed the free sorting task.
 
 In the data sets, the wines are identified with shortened
 names, the whole names can be found in the data frame.
+All the wines were from the 2005 vintage 
+(see Ballester \emph{et al.}, 2009 for details)
 
 Compared to the original data, some missing data were added
 to the set after imputation of the missing data 

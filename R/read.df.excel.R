@@ -67,8 +67,8 @@ read.df.excel <- function(path, sheet, col_names = TRUE,
 
 # ********************************************************************
 # ********************************************************************
-#' Change the print function for
-#' class \code{distatis.data} outpu \code{read.df.excel}
+#' Change the print function for objects of 
+#' class \code{distatis.data} output of\code{read.df.excel}
 #'
 #'  Change the print function for bootRatios
 #'
