@@ -8,7 +8,7 @@
 \method{print}{dataSortingSpices}(x, ...)
 }
 \arguments{
-\item{x}{a list: the data set: {sortingWines}}
+\item{x}{a list: the data set: {sortingSpices}}
 
 \item{...}{the rest}
 }

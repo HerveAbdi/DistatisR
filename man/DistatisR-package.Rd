@@ -5,18 +5,24 @@
 \alias{DistatisR-package}
 \alias{DistatisR}
 \alias{DiSTATISR}
-\title{\code{DistatisR:} DISTATIS Three Way Metric Multidimensional Scaling}
+\title{implements three way metric multidimensional scaling:
+DISTATIS and COVSTATIS.}
 \description{
-\code{DistatisR }package implements three way multidimensional scaling:
+\code{DistatisR}: package implements three way 
+metric multidimensional scaling:
 DISTATIS and COVSTATIS.
 }
 \details{
-Analyzes sets of distance (or covariance) matrices collected on the same set
-of observations
+Analyzes sets of distance (or covariance)
+ matrices collected on the same set
+of observations and find common and specific metric spaces.
 
-\tabular{ll}{ Package: \tab DistatisR\cr Type: \tab Package\cr Version: \tab
-1.1.0\cr Date: \tab 2018-03-15\cr License: \tab GPL-2\cr Depends: \tab
-prettyGraphs (>= 2.0.0), car } The example shown here comes from Abdi
+\tabular{ll}{ Package: \tab DistatisR\cr 
+Type: \tab Package\cr Version: \tab
+1.1.0\cr Date: \tab 2018-03-15\cr 
+License: \tab GPL-2\cr Depends: \tab
+prettyGraphs (>= 2.0.0), car} 
+The example shown here comes from Abdi
 \emph{et al.} (2007), \code{distatis} paper on the sorting task.
 }
 \examples{
@@ -145,18 +151,26 @@ estimates and display confidence and tolerance intervals for pattern
 classiffers using the Bootstrap and 3-way multidimensional scaling
 (DISTATIS).  \emph{NeuroImage}, \bold{45}, 89--95.
 
-Abdi, H., Williams, L.J., Valentin, D., & Bennani-Dosse, M. (2012).  STATIS
-and DISTATIS: Optimum multi-table principal component analysis and three way
-metric multidimensional scaling.  \emph{Wiley Interdisciplinary Reviews:
+Abdi, H., Williams, L.J., Valentin, D., & Bennani-Dosse, M. 
+(2012).  STATIS
+and DISTATIS: Optimum multi-table principal component 
+analysis and three way
+metric multidimensional scaling.  
+\emph{Wiley Interdisciplinary Reviews:
 Computational Statistics}, \bold{4}, 124--167.
 
-Chollet, S., Valentin, D., & Abdi, H.  (in press, 2013). The free sorting
-task.  In. P.V. Tomasco & G. Ares (Eds), \emph{Novel Techniques in Sensory
-Characterization and Consumer Profiling.} Boca Raton: Taylor and Francis.
+Chollet, S., Valentin, D., & Abdi, H.  (in press, 2013). 
+The free sorting
+task.  In. P.V. Tomasco & G. Ares (Eds), 
+\emph{Novel Techniques in Sensory
+Characterization and Consumer Profiling.} 
+Boca Raton: Taylor and Francis.
 
 Valentin, D., Chollet, S., Nestrud, M., & Abdi, H. (in press, 2013).
-Sorting and similarity methodologies.  In. S. Kemp, S., J. Hort, & T.
-Hollowood (Eds.), \emph{Descriptive Analysis in Sensory Evaluation}.
+Sorting and similarity methodologies.  
+In. S. Kemp, S., J. Hort, & T.
+Hollowood (Eds.), 
+\emph{Descriptive Analysis in Sensory Evaluation}.
 London: Wiley-Blackwell.
 }
 \seealso{
