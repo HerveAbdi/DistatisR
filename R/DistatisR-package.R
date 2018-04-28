@@ -35,24 +35,36 @@
 #' @references % Note: these papers are available from
 #' \url{www.utdallas.edu/~herve}
 #'
-#' Abdi, H., Valentin, D., O'Toole, A.J., & Edelman, B. (2005). DISTATIS: The
-#' analysis of multiple distance matrices.  \emph{Proceedings of the IEEE
-#' Computer Society: International Conference on Computer Vision and Pattern
+#' Abdi, H., Valentin, D., O'Toole, A.J., & Edelman, B. (2005). 
+#' DISTATIS: The
+#' analysis of multiple distance matrices. 
+#'  \emph{Proceedings of the IEEE
+#' Computer Society: International Conference 
+#' on Computer Vision and Pattern
 #' Recognition.} (San Diego, CA, USA). pp. 42-47.
 #'
-#' Abdi, H., Valentin, D., Chollet, S., & Chrea, C. (2007).  Analyzing
-#' assessors and products in sorting tasks: DISTATIS, theory and applications.
+#' Abdi, H., Valentin, D., Chollet, S., & Chrea, C. (2007).  
+#' Analyzing
+#' assessors and products in sorting tasks: 
+#' DISTATIS, theory and applications.
 #' \emph{Food Quality and Preference}, \bold{18}, 627--640.
 #'
-#' Abdi, H., & Valentin, D., (2007).  Some new and easy ways to describe,
-#' compare, and evaluate products and assessors.  In D., Valentin, D.Z. Nguyen,
-#' L. Pelletier (Eds): \emph{New trends in sensory evaluation of food and
-#' non-food products}.  Ho Chi Minh (Vietnam): Vietnam National University & Ho
+#' Abdi, H., & Valentin, D., (2007).  
+#' Some new and easy ways to describe,
+#' compare, and evaluate products and assessors.  
+#' In D., Valentin, D.Z. Nguyen,
+#' L. Pelletier (Eds): 
+#' \emph{New trends in sensory evaluation of food and
+#' non-food products}. 
+#'  Ho Chi Minh (Vietnam): Vietnam National University & Ho
 #' Chi Minh City Publishing House. pp. 5--18.
 #'
-#' Abdi, H., Dunlop, J.P., & Williams, L.J. (2009).  How to compute reliability
-#' estimates and display confidence and tolerance intervals for pattern
-#' classiffers using the Bootstrap and 3-way multidimensional scaling
+#' Abdi, H., Dunlop, J.P., & Williams, L.J. (2009).  
+#' How to compute reliability
+#' estimates and display confidence and tolerance 
+#' intervals for pattern
+#' classiffers using the Bootstrap 
+#' and 3-way multidimensional scaling
 #' (DISTATIS).  \emph{NeuroImage}, \bold{45}, 89--95.
 #'
 #' Abdi, H., Williams, L.J., Valentin, D., & Bennani-Dosse, M. 
@@ -63,14 +75,14 @@
 #' \emph{Wiley Interdisciplinary Reviews:
 #' Computational Statistics}, \bold{4}, 124--167.
 #'
-#' Chollet, S., Valentin, D., & Abdi, H.  (in press, 2013). 
+#' Chollet, S., Valentin, D., & Abdi, H. (2014). 
 #' The free sorting
 #' task.  In. P.V. Tomasco & G. Ares (Eds), 
 #' \emph{Novel Techniques in Sensory
 #' Characterization and Consumer Profiling.} 
 #' Boca Raton: Taylor and Francis.
 #'
-#' Valentin, D., Chollet, S., Nestrud, M., & Abdi, H. (in press, 2013).
+#' Valentin, D., Chollet, S., Nestrud, M., & Abdi, H. (2018).
 #' Sorting and similarity methodologies.  
 #' In. S. Kemp, S., J. Hort, & T.
 #' Hollowood (Eds.), 
@@ -79,8 +91,8 @@
 #' @keywords package
 #' @examples
 #'
-#' # Here we use the sorting task from Abdi et al, 2007 paper.
-#' # where 10 Assessors sorted 8 beers
+#' # Here we use the sorting task from Abdi et al.' (2007) paper.
+#' # where 10 Assessors sorted 8 beers.
 #'
 #' #-----------------------------------------------------------------------------
 #' #  1. Get the data from the 2007 sorting example
@@ -125,11 +137,12 @@
 #' # Sort <- read.table("BeeerSortingTask.csv", header=TRUE,
 #' #   sep=",", na.strings="NA", dec=".", row.names=1, strip.white=TRUE)
 #'
-#' #-----------------------------------------------------------------------------
-#' # 2. Create the set of distance matrices (one distance matrix per assessor)
+#' #------------------------------------------------------------------
+#' # 2. Create the set of distance matrices 
+#' #  (one distance matrix per assessor)
 #' #    (uses the function DistanceFromSort)
 #' DistanceCube <- DistanceFromSort(Sort)
-#' #-----------------------------------------------------------------------------
+#' #------------------------------------------------------------------
 #' # 3. Call the DISTATIS routine with the cube of distance as parameter
 #' testDistatis <- distatis(DistanceCube)
 #' # The factor scores for the beers are in
@@ -137,7 +150,7 @@
 #' # the factor scores for the assessors are in (RV matrice)
 #' #  testDistatis$res4Cmat$G
 #'
-#' #-----------------------------------------------------------------------------
+#' #------------------------------------------------------------------
 #' # 4. Inferences on the beers obtained via bootstrap
 #' #    here we use two different bootstraps:
 #' #    1. Bootstrap on factors (very fast but could be too liberal
@@ -153,7 +166,7 @@
 #'  F_fullBoot <- BootFromCompromise(DistanceCube,niter=1000)
 #'
 #'
-#' #-----------------------------------------------------------------------------
+#' #------------------------------------------------------------------
 #' # 5. Create the Graphics
 #' # 5.1 an Rv map
 #'  rv.graph.out <- GraphDistatisRv(testDistatis$res4Cmat$G)
