@@ -51,11 +51,12 @@
 #' is a character vector, it is used to name the factors of
 #' the projection.
 #' @return a list with 
-#' 1) \code{Fvoca.normed}: the barycentric projections of
+#' 1) \code{Fvoca.bary}: the barycentric projections of
 #' the words,
 #' and 2) \code{Fvoca.normed}: the CA normalized 
+#' (i.e., variance of projections equals eigenvalue)
 #' barycentric projections of
-#' the words
+#' the words.
 #' @examples 
 #' # use the data from the BeersProjectiveMapping dataset
 #' data("BeersProjectiveMapping")

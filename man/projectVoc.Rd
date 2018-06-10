@@ -37,11 +37,12 @@ the projection.}
 }
 \value{
 a list with 
-1) \code{Fvoca.normed}: the barycentric projections of
+1) \code{Fvoca.bary}: the barycentric projections of
 the words,
 and 2) \code{Fvoca.normed}: the CA normalized 
+(i.e., variance of projections equals eigenvalue)
 barycentric projections of
-the words
+the words.
 }
 \description{
 \code{projectVoc}

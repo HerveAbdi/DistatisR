@@ -1,0 +1,5 @@
+setwd('~/Dropbox/DistatisR.1.1.0/DistatisR/data/beersBlindSorting.rda')
+setwd('~/Dropbox/DistatisR.1.1.0/DistatisR/data/')
+load('beersBlindSorting.rda')
+ls()
+beersBlindSorting
