@@ -1,11 +1,12 @@
-# Description for file sortingSpices.rda
+# Description for file multiculturalSortingSpices.rda
 # Hervé Abdi: April 10, 2018.
 #
-#  sortingSpices Preambule ----
+#  multiculturalSortingSpices Preambule ----
 #' @title 62 assessors from 5 countries sort 16 spice samples
 #' 
 #' @description 
-#' \code{sortingSpices}: 62 participants from 5 different countries
+#' \code{multiculturalSortingSpices}: 
+#' 62 participants from 5 different countries
 #' (USA, France, India, Spain, and Vietnam) for 16 different spices
 #' (including 6 mixtures of spices).
 #' 
@@ -40,8 +41,8 @@
 #' In the data frames, the spice blends are identifed
 #' wiht acronyms that are expended in the data frame
 #' \code{spicesDescription}.
-#' @name sortingSpices
-#' @usage data("sortingSpices")
+#' @name multiculturalSortingSpices
+#' @usage data("multiculturalSortingSpices")
 #' @docType data
 #' @format
 #' A list containing 7 objects
@@ -81,17 +82,17 @@
 #'@keywords datasets DistatisR
 #'@author  Chollet, S., Valentin, D., & Abdi, H. 
 NULL
-# End of sortingSpices ----
+# End of multiculturalSortingSpices ----
 
 #_____________________________________________________________________
-# Print function sortingWines ----
+# Print function for class dataSortingSpices ----
 #_____________________________________________________________________
 #_____________________________________________________________________
 #' Change the print function for the data set: 
-#' \code{sortingSpices}
+#' \code{multiculturalSortingSpices}
 #'
 #' Change the print function for the data set: 
-#' \code{sortingSpices} 
+#' \code{multiculturalSortingSpices} 
 #' (class \code{dataSortingSpices})
 #'
 #' @param x a list: the data set: {sortingSpices}
@@ -110,7 +111,7 @@ print.dataSortingSpices <- function(x, ...) {
   cat("\n$sortIndian         ","16 Spices * 15 Assessors: Indian data.")
   cat("\n$sortSpanish        ","16 Spices * 11 Assessors: Spanish data.")
   cat("\n$sortVietnamese     ","16 Spices *  6 Assessors: Vietnamese data.")
-  cat("\n$spicesDescription ","data frame describing the spices.")
+  cat("\n$spicesDescription  ","data frame describing the spices.")
   cat("\n",rep("-", ndash), sep = "")
   cat("\n")
   invisible(x)

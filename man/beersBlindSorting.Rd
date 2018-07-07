@@ -44,10 +44,10 @@ The 9 beers were
 3 different brewers (Pelforth, Chti, Leffe).
 }
 \details{
-#Nine different commercial beers were evaluated (denoted
+Nine different commercial beers (denoted
  \code{PelfBL, PelfA, PelfBR, ChtiBL, ChtiA, ChtiBR, LeffBL,
- LeffA, and LeffBR}). 
-These beers came from three different breweries,
+ LeffA, and LeffBR}) were evaluated. 
+These beers came from three different breweries:
 Pelforth (noted \code{Pelf}), Chti, (\code{Chti}), 
 and Leffe (\code{Leff}), 
 and each brewery provided three types of beer:
