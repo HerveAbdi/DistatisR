@@ -26,14 +26,21 @@ a name for each column."}
 (default) gives the name of the sheet where an optional
 contingency table  (products by names) could be stored.
 Needs to have the same row names as the sorting/ranking
-data frame (df.data) to be useful (but he program does not check).}
+data frame (df.data) to be useful (but he program does not check).
+
+@return 
+a list with one data frame  `$df.data` (contains the data) 
+when `voc.sheet = NULL`
+or if not: two data frames 
+ `$df.data` (contains the data) and 
+ `$df.voc` (contains the vocabulary).}
 }
 \description{
 \code{read.df.excel} reads \code{distatis} formated
  ranking or sorting data from an excel file.
 }
 \details{
-@details
+@details 
  The data are read from an excel file in which the rows
  are the Products to evaluate and the columns are the Assessors
  (e.g., Judges, Participants, Subjects, Evaluators).

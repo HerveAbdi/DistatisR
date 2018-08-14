@@ -8,10 +8,11 @@ confidence intervals (as confidence ellipsoids or peeled hulls)
 for a
 \acronym{DISTATIS} analysis.}
 \usage{
-GraphDistatisBoot(FS, FBoot, axis1 = 1, axis2 = 2, item.colors = NULL,
-  ZeTitle = "Distatis-Bootstrap", constraints = NULL, nude = FALSE,
-  Ctr = NULL, lwd = 3.5, ellipses = TRUE, fill = TRUE,
-  fill.alpha = 0.27, percentage = 0.95)
+GraphDistatisBoot(FS, FBoot, axis1 = 1, axis2 = 2,
+  item.colors = NULL, ZeTitle = "Distatis-Bootstrap",
+  constraints = NULL, nude = FALSE, Ctr = NULL, lwd = 3.5,
+  ellipses = TRUE, fill = TRUE, fill.alpha = 0.27,
+  percentage = 0.95)
 }
 \arguments{
 \item{FS}{The factor scores of the observations (\code{$res4Splus$F} from

@@ -10,7 +10,8 @@ GraphDistatisAll(FS, PartialFS, FBoot, RvFS, axis1 = 1, axis2 = 2,
   constraints = NULL, item.colors = NULL, participant.colors = NULL,
   ZeTitleBase = NULL, nude = FALSE, Ctr = NULL, RvCtr = NULL,
   color.by.observations = TRUE, lines = TRUE, lwd = 3.5,
-  ellipses = TRUE, fill = TRUE, fill.alpha = 0.27, percentage = 0.95)
+  ellipses = TRUE, fill = TRUE, fill.alpha = 0.27,
+  percentage = 0.95)
 }
 \arguments{
 \item{FS}{The factor scores of the observations

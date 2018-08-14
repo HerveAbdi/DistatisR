@@ -7,8 +7,8 @@ for a \acronym{DISTATIS} analysis.}
 \usage{
 GraphDistatisPartial(FS, PartialFS, axis1 = 1, axis2 = 2,
   constraints = NULL, item.colors = NULL, participant.colors = NULL,
-  ZeTitle = "Distatis-Partial", Ctr = NULL, color.by.observations = TRUE,
-  nude = FALSE, lines = TRUE)
+  ZeTitle = "Distatis-Partial", Ctr = NULL,
+  color.by.observations = TRUE, nude = FALSE, lines = TRUE)
 }
 \arguments{
 \item{FS}{The factor scores of the observations
