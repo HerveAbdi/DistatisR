@@ -1,13 +1,16 @@
-#' mmds Metric (classical) Multidimensional Scaling
+# functions in this file
+# mmds
+
+#'  Metric (classical) Multidimensional Scaling
 #' (a.k.a Principal Coordinate
 #' Analysis) of a (Euclidean) Distance Matrix.
 #'
-#' Perform a Metric Multidimensional Scaling
-#' (MMDS) of a (Euclidean) distance matrix measured between a set of
+#' \code{mmds}: Perform a Metric Multidimensional Scaling
+#' (MMDS) of an (Euclidean) distance matrix measured between a set of
 #' objects (with or without masses).
 #'
 #'@details
-#' MMDS Gives factor scores that make it possible
+#' \code{mmds} gives factor scores that make it possible
 #' to draw a map of the objects
 #' such that the distances between objects
 #' on the map best approximate the
@@ -32,7 +35,7 @@
 #' will have negative eigenvalues that will be ignored
 #' by \code{mmds} which, therefore, gives the best Euclidean
 #' approximation to this non-Euclidean distance matrix
-#' (nonmetric MDS maybe a better technique in these cases).
+#' (note that, nonmetric MDS maybe a better technique in these cases).
 #'
 #' @param DistanceMatrix A squared (assumed to be Euclidean)
 #' distance matrix
@@ -89,15 +92,13 @@
 #'            contributionCircles = TRUE,
 #'            contributions = BrainRes$Contributions)
 #' # 4. et Voila!
-#'
-#' @importFrom prettyGraphs prettyPlot
-#' @export
-mmds <-
-function(DistanceMatrix, masses=NULL){
+#' @rdname mmds
+#' @export 
+mmds <- function(DistanceMatrix, masses = NULL){
 	# mmds (metric or classical mds)
 	# Quick and dirty mds with or without masses
-	# here to accomagny distatis and allow chi2 distance analyses
-	# WARNING mds assumes that the distance matrix
+	# here to accompagny distatis and allow chi2 distance analyses
+	# WARNING mmds assumes that the distance matrix
 	# is (generalized) Euclidean
 	# and so it keeps only the positive eigenvalues
 	D <- DistanceMatrix   # Being lazy!
@@ -107,7 +108,8 @@ function(DistanceMatrix, masses=NULL){
 	LeM = t(kronecker(m,t(rep(1,nI))))  # PM repmat
 	Xhi <- diag(1,nI) -  LeM # centering matrix
 	#print(Xhi)
-	S <- -.5*sqrt(LeM)*Xhi%*%D%*%t(Xhi)*sqrt(t(LeM)) # Double Centered SCP matrix
+	S <- -.5*sqrt(LeM)*Xhi %*% D %*% t(Xhi) * sqrt(t(LeM)) 
+	# Double Centered SCP matrix
 	eig <- eigen(S, symmetric = TRUE) # Eigen-decomposition of S
 
 	# clean to keep positive eigenvalues only
@@ -131,7 +133,7 @@ function(DistanceMatrix, masses=NULL){
 	colnames(Ctr) <- Nom2Dim
 	#	return(list(S=S,fi=LeF,pdq=eig,M=LeM))
 	return(list(FactorScores = LeF, eigenvalues = L,
-	            Contributions=Ctr,
+	            Contributions = Ctr,
 	            percentage = tau,
 	            M = LeM))
 }

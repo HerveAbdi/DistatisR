@@ -2,7 +2,7 @@
 % Please edit documentation in R/BootFactorScores.R
 \name{BootFactorScores}
 \alias{BootFactorScores}
-\title{\code{BootFactorScores} Computes observation
+\title{Computes observation
 factor scores
 Bootstrap replicates from partial factor scores.}
 \usage{
@@ -20,10 +20,10 @@ the output is a 3-way array of dimensions
 number of factors by number of replicates."
 }
 \description{
-\code{BootFactorScores} Computes Bootstrap replicates
+\code{BootFactorScores}: Computes Bootstrap replicates
 of the factor scores of
 the observations from the partial factor scores.
-Typically
+\code{BootFactorScores} is typically
 used to create confidence intervals and to compute
 Bootstrap ratios.
 }

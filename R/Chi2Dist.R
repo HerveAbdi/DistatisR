@@ -1,4 +1,8 @@
-#' \code{Chi2Dist}
+# functions in this file
+# Chi2Dist
+
+
+#' 
 #' Computes the \eqn{\chi^2}{chi2} distance between 
 #' the rows of a rectangular matrix (with positive elements).
 #' 
@@ -98,8 +102,8 @@ function(X){#compute the chi2 distance
     # Preprocess R
     Rc = t(t(R) - c)           # deviations to barycenter
     Rtilde = t(t(Rc)*sqrt(w))  # weighted R
-    S = Rtilde%*%t(Rtilde)     # covariance
-    s =diag(S) # diag of
-    D = (s - S) + t(s-S)       # Chi2 distance matrix
+    S = Rtilde %*% t(Rtilde)     # covariance
+    s = diag(S) # diag of
+    D = (s - S) + t(s - S)       # Chi2 distance matrix
     return(list(Distance =  D, masses = m))
 }

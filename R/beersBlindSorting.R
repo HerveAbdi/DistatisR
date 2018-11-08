@@ -2,16 +2,17 @@
 # Document the data from Lelièvre et al.
 # to be included in DistatisR 1.2.0
 #
-#' Novices and Experts sorted 3 types of beers from 
+#' @title  Novices and Experts sorted 3 types of beers from 
 #' 3 different brewers without and without seeing the beers.
 #' 
+#' @description 
 #' \code{beersBlindSorting}:  several different groups of
 #' Novices and Beer-Experts sorted 9 beers with (Vision)
 #' or without (Blind) visual information.
 #' The 9 beers were
 #' 3 types of beers 
 #' (blond, amber, and  dark) obtained from 
-#' 3 different brewers (Pelforth, Chti, Leffe).
+#' 3 different brewers (Pelforth, Chti, & Leffe).
 #' 
 #' 
 #' @details 

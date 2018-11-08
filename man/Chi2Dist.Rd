@@ -2,8 +2,7 @@
 % Please edit documentation in R/Chi2Dist.R
 \name{Chi2Dist}
 \alias{Chi2Dist}
-\title{\code{Chi2Dist}
-Computes the \eqn{\chi^2}{chi2} distance between 
+\title{Computes the \eqn{\chi^2}{chi2} distance between 
 the rows of a rectangular matrix (with positive elements).}
 \usage{
 Chi2Dist(X)

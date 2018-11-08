@@ -3,8 +3,8 @@
 \name{print.F4voc}
 \alias{print.F4voc}
 \title{Change the print function for objects of the class 
-\code{'F4voc'} (e.g. from function 
-\code{projectVoc})}
+\code{'F4voc'} (e.g., output from function 
+\code{projectVoc}).}
 \usage{
 \method{print}{F4voc}(x, ...)
 }
@@ -15,8 +15,8 @@
 }
 \description{
 Change the print function for objects of the class 
-\code{'F4voc'} (e.g. from function 
-\code{projectVoc})
+\code{'F4voc'} (e.g., ooutput from function 
+\code{projectVoc}).
 }
 \author{
 Herve Abdi

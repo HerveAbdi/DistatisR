@@ -1,4 +1,16 @@
-#' \code{distatis} 3-Way MDS based on the \acronym{STATIS} optimization
+# functions in this file
+# distatis
+# + private functions
+#    DblCenterDist
+#    Dist2CP
+#    MFAnormCP
+#    CP2MFAnormedCP
+#    GetCmat
+#    ComputeSplus
+#_____________________________________________________________________
+
+# distatis Preamble ----
+#'  3-Way MDS based on the \acronym{STATIS} optimization
 #' procedure.
 #'
 #'  \code{distatis}: Implements the \acronym{DISTATIS}

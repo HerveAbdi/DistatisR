@@ -1,14 +1,16 @@
 # function projectVoc
 # plain barycentric and CA like barycentric projection
-#
+#  functions in this file
+# projectVoc
+# printF4voc
 
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Helper for roxygen2
 #  install.packages('sinew')
 #  sinew::makeOxygen(projectVoc)
 #
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 
 
 #' @title Compute barycentric projections for count-like
@@ -23,7 +25,7 @@
 #'  
 #' @details two types of projection are computed: 1)
 #' a plain barycentric (words are positioned at the 
-#' barycenter--aka center of mass--of the item it describe) and
+#' barycenter--a.k.a. center of mass--of the items it describe) and
 #' 2) a correspondence analysis barycentric where the variance
 #' of the projected words is equal to the variance
 #' of the items (as for correspondence analysis when using the
@@ -132,17 +134,17 @@ projectVoc <- function(CT.voc , # I * N  The CT for vocabulary
    } # End of function projectVoc
 
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Print function for 'F4voc'
 #*********************************************************************
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 #' Change the print function for objects of the class 
-#' \code{'F4voc'} (e.g. from function 
-#' \code{projectVoc})
+#' \code{'F4voc'} (e.g., output from function 
+#' \code{projectVoc}).
 #'
 #' Change the print function for objects of the class 
-#' \code{'F4voc'} (e.g. from function 
-#' \code{projectVoc})
+#' \code{'F4voc'} (e.g., ooutput from function 
+#' \code{projectVoc}).
 #'
 #' @param x a list: the data set: {str_BeersProjectiveMapping}
 #' @param ... the rest
@@ -163,4 +165,4 @@ print.F4voc <- function (x, ...) {
   cat("\n")
   invisible(x)
 } # end of function print.F4voc
-#---------------------------------------------------------------------
+#_____________________________________________________________________

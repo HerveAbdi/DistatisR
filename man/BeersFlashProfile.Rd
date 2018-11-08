@@ -22,15 +22,15 @@ This excel file can be read by
 }
 \details{
 In this example of Flash Profiling
-6 (fictitious) assessors evaluate 7 (imaginery) beers. 
+6 (fictitious) assessors evaluated 7 (imaginery) beers. 
 First, Each assessor chose a set of descriptors
 suited to describe these beers and then ranked 
-(or rate in variations of the technique) 
+(or rated in variations of the technique) 
 the beers for each dimension. Note that the descriptors 
 as well as the number of descriptors vary with the judges.
 
 Note: 
-The names of the variables starts the the Judges ID (J1- to J6-).
+The names of the variables starts with the Judges ID (J1- to J6-).
 
 Note: the data are stored in the 
 Excel Sheet called \code{Rankings} of the excel 
@@ -64,7 +64,7 @@ pp. 5-18.
 BeersProjectiveMapping BeersProjectiveMapping_xlsx
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{DistatisR}
 \keyword{datasets}

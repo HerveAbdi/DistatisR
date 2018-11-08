@@ -2,8 +2,7 @@
 % Please edit documentation in R/DistanceFromSort.R
 \name{DistanceFromSort}
 \alias{DistanceFromSort}
-\title{\code{DistanceFromSort}  
-Creates a 3-dimensional distance array from the results of a sorting task.}
+\title{Creates a 3-dimensional distance array from the results of a sorting task.}
 \usage{
 DistanceFromSort(X)
 }
@@ -12,24 +11,32 @@ DistanceFromSort(X)
 objects (row) by assessors (columns) matrix.}
 }
 \value{
-\code{DistanceFromSort} returns a \eqn{I\times I \times K}{I*I*K}
+\code{DistanceFromSort}
+ returns an \eqn{I\times I \times K}{I * I * K}
 array of distance.
 }
 \description{
 \code{DistanceFromSort}:  
 Takes the results from a (plain) sorting task 
 where \eqn{K} assessors sort
-\eqn{I} observations into (mutually exclusive) groups (i.e., one object is
-in one an only one group).  \code{DistanceFromSort} creates an \eqn{I \times
-I \times K}{I*I*K} array of distance in which each of the \eqn{k} "slices"
-stores the (sorting) distance matrix of the \eqn{k}th assessor.  In one of
-these distance matrices, a value of 0 at the intersection of a row and a
+\eqn{I} observations into (mutually exclusive) groups 
+(i.e., one object is
+in one and only one group).  \code{DistanceFromSort} 
+creates an \eqn{I \times
+I \times K}{I*I*K} array of distance 
+in which each of the \eqn{k} "slices"
+stores the (sorting) distance matrix of the \eqn{k}th assessor.  
+In one of
+these distance matrices, a value of 0 
+at the intersection of a row and a
 column means that the object represented by the row and the object
-represented by the column were sorted together (i.e., they are a distance of
-0), and a value of 1 means these two objects were put into different groups.
-}
-\details{
-The ouput ot the function \code{DistanceFromSort} is used as input for the
+represented by the column were sorted together 
+(i.e., they are a distance of 0), 
+and a value of 1 means these two objects 
+were put into different groups.
+
+The ouput ot the function \code{DistanceFromSort} 
+is used as input for the
 function \code{\link{distatis}}.
 
 The input should have assessors as columns and observations 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mmds.R
 \name{mmds}
 \alias{mmds}
-\title{mmds Metric (classical) Multidimensional Scaling
+\title{Metric (classical) Multidimensional Scaling
 (a.k.a Principal Coordinate
 Analysis) of a (Euclidean) Distance Matrix.}
 \usage{
@@ -27,12 +27,12 @@ variance by an object
 for a dimension.}
 }
 \description{
-Perform a Metric Multidimensional Scaling
-(MMDS) of a (Euclidean) distance matrix measured between a set of
+\code{mmds}: Perform a Metric Multidimensional Scaling
+(MMDS) of an (Euclidean) distance matrix measured between a set of
 objects (with or without masses).
 }
 \details{
-MMDS Gives factor scores that make it possible
+\code{mmds} gives factor scores that make it possible
 to draw a map of the objects
 such that the distances between objects
 on the map best approximate the
@@ -61,7 +61,7 @@ Note also that a non Euclidean distance matrix
 will have negative eigenvalues that will be ignored
 by \code{mmds} which, therefore, gives the best Euclidean
 approximation to this non-Euclidean distance matrix
-(nonmetric MDS maybe a better technique in these cases).
+(note that, nonmetric MDS maybe a better technique in these cases).
 }
 
 \examples{
@@ -95,7 +95,6 @@ prettyGraphs::prettyPlot(BrainRes$FactorScore,
            contributionCircles = TRUE,
            contributions = BrainRes$Contributions)
 # 4. et Voila!
-
 }
 \references{
 The procedure and references are detailled in:

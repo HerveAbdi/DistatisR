@@ -67,7 +67,7 @@ An example with amari, bitter herbal liqueurs.
 \emph{Food Quality and Preference}, 66, 36-43.
 }
 \author{
-Jacob Lahne, Herve Abdi, & Hildegarde Heymann
+Jacob Lahne, Hervé Abdi, & Hildegarde Heymann
 }
 \keyword{DistatisR}
 \keyword{datasets}

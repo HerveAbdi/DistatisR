@@ -65,7 +65,7 @@
 #' \emph{Food Quality and Preference}, 66, 36-43. 
 #' (available from \url{www.utdallas.edu/~herve}).
 #' @keywords datasets DistatisR
-#' @author Jacob Lahne, Herve Abdi, & Hildegarde Heymann
+#' @author Jacob Lahne, Hervé Abdi, & Hildegarde Heymann
 NULL
 
 

@@ -5,7 +5,7 @@
 \alias{DiSTATIS}
 \alias{CovSTATIS}
 \alias{covstatis}
-\title{\code{distatis} 3-Way MDS based on the \acronym{STATIS} optimization
+\title{3-Way MDS based on the \acronym{STATIS} optimization
 procedure.}
 \usage{
 distatis(LeCube2Distance, Norm = "MFA", Distance = TRUE, RV = TRUE,

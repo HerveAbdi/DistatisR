@@ -1,12 +1,18 @@
-#' \code{BootFactorScores} Computes observation
+# functions in this file:
+# BootFactorScores
+# HA.
+
+
+
+#' Computes observation
 #' factor scores
 #' Bootstrap replicates from partial factor scores.
 #'
 #'@description
-#' \code{BootFactorScores} Computes Bootstrap replicates
+#' \code{BootFactorScores}: Computes Bootstrap replicates
 #' of the factor scores of
 #' the observations from the partial factor scores.
-#' Typically
+#' \code{BootFactorScores} is typically
 #' used to create confidence intervals and to compute
 #' Bootstrap ratios.
 #'

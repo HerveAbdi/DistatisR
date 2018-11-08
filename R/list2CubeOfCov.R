@@ -1,20 +1,20 @@
 # File for list2cubeOfCovDis
-# creating a cube of Covariance/Disstance from a list of
-# rectangular data table such as e.g., the ones in a f;ash profile
+# creating a cube of Covariance/Distance from a list of
+# rectangular data table such as e.g., the ones in a flash profile
 #
 # Created March 21, 2018.
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Function starts here
 #
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Helper for roxygen2
 #  install.packages('sinew')
 #  sinew::makeOxygen(list2CubeOfCovDis)
 #
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # function list2CubeOfCovDis 
 #
 #' @title compute a cube of covariance and a cube of distance
@@ -121,7 +121,7 @@ cubeOfDis <- array(NA, dim = c(nI,nI,nK))
 # First compute the covariance matrices
 for (k in 1:nK){
   # step one normalize per column
-  norm_Xk <- apply( kBlocks[[k]],2,scale0,scale,center)
+  norm_Xk <- apply( kBlocks[[k]],2,scale1,scale,center)
   cov_k   <- norm_Xk %*% t(norm_Xk)
   if (ev.scale) {
     cov_k <- cov_k / eigen(cov_k, 
@@ -146,6 +146,6 @@ return.list <- structure(list(cubeOfCovariance = cubeOfCov,
                          class = 'cubeOfCovDis')
 return(return.list)
 } # End of funciton list2CubeOfCov
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Note that the print function is the same as createCubeOfCovDis
-#---------------------------------------------------------------------
+#_____________________________________________________________________

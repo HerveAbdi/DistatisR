@@ -2,23 +2,25 @@
 # With or without vocabulary
 # data will typically be read by read.df.excel
 # HA March 18, 2018.
+# functions in this file
+#  projMap2Cube
 
-#---------------------------------------------------------------------
-#---------------------------------------------------------------------
+#_____________________________________________________________________
+#_____________________________________________________________________
 # Helper for roxygen2
 # sinew::makeOxygen(projMap2Cube)
 
-#' @title \code{projMap2Cube} 
-#' reshape a data matrix from Projective mapping
+#' @title \
+#' reshape a data matrix from projective mapping
 #' into a brick of data for a \code{distatis} analysis.
 #' 
 #' @description 
 #' \code{projMap2Cube} 
-#' reshape a data matrix from Projective mapping
+#' reshapes a data matrix from projective mapping
 #' into a brick of data for a \code{distatis} analysis.
 #' With \eqn{I} products, \eqn{J} variables, and
 #' \eqn{K} blocks (assessors),
-#' the original data can be 1)  "flat" 
+#' the original data can be 1) "flat" 
 #' (e.g., \eqn{I} rows as products,
 #' columns as \eqn{K} blocks of \eqn{J} Variables) 
 #' or 2) "long"

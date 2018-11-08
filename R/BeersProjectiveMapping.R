@@ -7,15 +7,15 @@
 #' 
 #' @description 
 #' \code{BeersProjectiveMapping}:
-#' 7 (fictitious) assessors evaluate 7 Beers using
+#' 7 (fictitious) assessors evaluated 7 Beers using
 #' \emph{Projective Mapping} (with verbal description).
 #' 
 #' @details 
-#' First, Each assessor positions the 7 beers on a sheet
+#' First, Each assessor positioned the 7 beers on a sheet
 #' of paper according to the perceived similarity between the beers.
-#' For each assessor, the position of the beers is recorded
+#' For each assessor, the position of the beers was recorded
 #' from the \eqn{X} and \eqn{Y} coordinates. 
-#' Second, the assessors are asked if they can describe each
+#' Second, the assessors were asked if they could describe each
 #' beer with some freely chosen descriptors. 
 #' These descriptors
 #' are stored in a dataframe with 7 elements (one per assessor)
@@ -57,7 +57,7 @@
 #' @source Abdi, H,  & Valentin, D. (2007). 
 #' \url{www.utdallas.edu/~herve}
 #' @keywords datasets DistatisR
-#' @author Herve Abdi
+#' @author Hervé Abdi
 NULL
 
 #---------------------------------------------------------------------

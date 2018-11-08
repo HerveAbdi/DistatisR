@@ -32,15 +32,15 @@ data("BeersProjectiveMapping")
 }
 \description{
 \code{BeersProjectiveMapping}:
-7 (fictitious) assessors evaluate 7 Beers using
+7 (fictitious) assessors evaluated 7 Beers using
 \emph{Projective Mapping} (with verbal description).
 }
 \details{
-First, Each assessor positions the 7 beers on a sheet
+First, Each assessor positioned the 7 beers on a sheet
 of paper according to the perceived similarity between the beers.
-For each assessor, the position of the beers is recorded
+For each assessor, the position of the beers was recorded
 from the \eqn{X} and \eqn{Y} coordinates. 
-Second, the assessors are asked if they can describe each
+Second, the assessors were asked if they could describe each
 beer with some freely chosen descriptors. 
 These descriptors
 are stored in a dataframe with 7 elements (one per assessor)
@@ -61,7 +61,7 @@ Vietnam National University & Ho Chi Minh City Publishing House.
 pp. 5-18.
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{DistatisR}
 \keyword{datasets}

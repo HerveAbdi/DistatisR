@@ -2,8 +2,8 @@
 % Please edit documentation in R/projMap2Cube.R
 \name{projMap2Cube}
 \alias{projMap2Cube}
-\title{\code{projMap2Cube} 
-reshape a data matrix from Projective mapping
+\title{\
+reshape a data matrix from projective mapping
 into a brick of data for a \code{distatis} analysis.}
 \usage{
 projMap2Cube(Data, shape = "flat", nVars = 2, nBlocks = NULL)
@@ -31,11 +31,11 @@ to be used to create a cube of distance or covariance.
 }
 \description{
 \code{projMap2Cube} 
-reshape a data matrix from Projective mapping
+reshapes a data matrix from projective mapping
 into a brick of data for a \code{distatis} analysis.
 With \eqn{I} products, \eqn{J} variables, and
 \eqn{K} blocks (assessors),
-the original data can be 1)  "flat" 
+the original data can be 1) "flat" 
 (e.g., \eqn{I} rows as products,
 columns as \eqn{K} blocks of \eqn{J} Variables) 
 or 2) "long"

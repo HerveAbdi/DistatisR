@@ -1,20 +1,22 @@
-#---------------------------------------------------------------------
-
-#---------------------------------------------------------------------
+# functions in this file: 
+# createCubeOfCovDis
+# print.cubeOfCovDis
+#_____________________________________________________________________
+#_____________________________________________________________________
 # Helper for roxygen2
 #  install.packages('sinew')
 #  sinew::makeOxygen(createCubeOfCovDis)
 #
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # function createCubeOfCovDis 
 #
 
 #' @title compute a cube of covariance and a cube of distance
 #' between the items (rows) of a brick of measurements 
 #' (when all blocks
-#' have same number of variables).
+#' have the same number of variables).
 #' 
 #' @description \code{createCubeOfCovDis}
 #' compute a cube of covariance and a cube of 
@@ -92,7 +94,7 @@ createCubeOfCovDis <- function(brickOfData,
   # First compute the covariance matrices
   for (k in 1:nK){
     # step one normalize per column
-    norm_Xk <- apply( brickOfData[,,k],2,scale0,scale,center)
+    norm_Xk <- apply( brickOfData[,,k],2,scale1,scale,center)
     cov_k   <- norm_Xk %*% t(norm_Xk)
     if (ev.scale) {
       cov_k <- cov_k / eigen(cov_k, 
@@ -118,15 +120,15 @@ createCubeOfCovDis <- function(brickOfData,
   return(return.list)
 } # end of function createCubeOfCovDis
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # The print function
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 # Print function for cubeOfCovDis
 #*********************************************************************
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 #' Change the print function for the class \code{cubeOfCovDis}
 #'
 #' Change the print function for the class \code{cubeOfCovDis}: 
@@ -148,4 +150,4 @@ print.cubeOfCovDis <- function(x, ...){
   cat("\n")
   invisible(x)
 } # end of function print.cubeOfCovDis
-#---------------------------------------------------------------------
+#_____________________________________________________________________

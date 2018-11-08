@@ -5,7 +5,7 @@
 \title{compute a cube of covariance and a cube of distance
 between the items (rows) of a brick of measurements 
 (when all blocks
-have same number of variables).}
+have the same number of variables).}
 \usage{
 createCubeOfCovDis(brickOfData, scale = TRUE, center = TRUE,
   ev.scale = TRUE)

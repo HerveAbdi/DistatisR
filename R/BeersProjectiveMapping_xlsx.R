@@ -13,13 +13,13 @@
 #' with Projective Mapping and vocabulary. 
 #' This excel file can be read by
 #' \code{read.df.excel}. In this example
-#' 7 (fictitious) assessors evaluate 7 Beers.
+#' 7 (fictitious) assessors evaluated 7 Beers.
 #' 
 #' @details 
 #' In this example of projective mapping with vocabulary,
-#' 7 (fictitious) assessors evaluate 7 Beers 
-#' First, Each assessor positionned the 7 beers on a sheet
-#' of paper according the perceived similarity between the beers.
+#' 7 (fictitious) assessors evaluated 7 Beers 
+#' First, each assessor positionned the 7 beers on a sheet
+#' of paper according  to the perceived similarity between the beers.
 #' For each assessor, the position of the beers is recorded
 #' from the \eqn{X} and \eqn{Y} coordinates. 
 #' Second, the assessors are asked if they can describe the
@@ -50,7 +50,7 @@
 #' @source Abdi, H,  & Valentin, D. (2007). 
 #' \url{www.utdallas.edu/~herve}
 #' @keywords datasets DistatisR
-#' @author Herve Abdi
+#' @author Hervé Abdi
 #' @examples
 #' # get the path and file name
 #' path2file <- system.file("extdata",

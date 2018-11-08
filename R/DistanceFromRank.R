@@ -1,4 +1,7 @@
-#---------------------------------------------------------------------
+# functions in this file:
+# DistanceFromRank
+# Rank2Dist
+#_____________________________________________________________________
 # A function to create a distance matrix between elements
 # that have been ranked.
 # The distance is the plain Euclidean/Spearman rank
@@ -7,7 +10,7 @@
 # gives back a I*I*J "cube of distance: to be used by
 # DistatisR
 # Current Version is March 14, 2018.
-#---------------------------------------------------------------------
+#_____________________________________________________________________
 #' \code{DistanceFromRank}:
 #' Creates a 3-dimensional distance array from the results 
 #' of a ranking task.
@@ -79,4 +82,4 @@ DistanceFromRank <- function(X){
 	dimnames(LeCube2Distance) <-list(rownames(X),rownames(X),colnames(X))
 	return(LeCube2Distance)  
 } # End of function DistanceFromRank
-#---------------------------------------------------------------------
+#_____________________________________________________________________

@@ -1,3 +1,7 @@
+# functions in this file:
+# Chi2DistanceFromSort
+# Chi2Dist (as a private function)
+
 #' \code{Chi2DistanceFromSort}:
 #' Creates a 3-dimensional \eqn{\chi^2}{chi2}
 #' distance array from the results
@@ -111,7 +115,7 @@ function(X){
 	# distance array
 
 	# First Chi2Dist as a private function
-	Chi2Dist    <-function(X){#compute the chi2 distance
+	Chi2Dist    <- function(X){#compute the chi2 distance
 	# between the rows of a matrix
     # send back the distance and the vector of mass
 
@@ -126,10 +130,10 @@ function(X){
     # Preprocess R
     Rc = t(t(R) - c)           # deviations to barycenter
     Rtilde = t(t(Rc)*sqrt(w))  # weighted R
-    S = Rtilde%*%t(Rtilde)     # covariance
-    s =diag(S) # diag of
+    S =  Rtilde %*% t(Rtilde)     # covariance
+    s = diag(S) # diag of
     D = (s - S) + t(s-S)       # Chi2 distance matrix
-    return(list(Distance=D, masses=m))
+    return(list(Distance = D, masses = m))
 } # end of private Chi2Dist
 
 	nI = nrow(X);nJ = ncol(X)
@@ -137,7 +141,7 @@ function(X){
 	LeCube2Distance = array(0, c(nI,nI,nJ))
 	# Horrible  Loop!
 	for(j in 1:nJ){
-		# get CHi2Distance of jth assessor expressed as disjunctive coding
+		# get Chi2Distance of jth assessor expressed as disjunctive coding
 		dist =  Chi2Dist(stats::model.matrix(~ as.factor(as.matrix(X[,j])) - 1))
 		LeCube2Distance[,,j] <- dist$Distance
 		 } # done ugly loop
