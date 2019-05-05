@@ -1,5 +1,5 @@
 # Description for file amariSorting.rda
-# Herve Abdi: March 18, 2018.
+# Hervé Abdi: March 18, 2018.
 #
 #' @title 
 #' 25 assessors twice sort and describe 12 amaris (i.e., bitter) 
