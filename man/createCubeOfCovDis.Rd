@@ -7,8 +7,7 @@ between the items (rows) of a brick of measurements
 (when all blocks
 have the same number of variables).}
 \usage{
-createCubeOfCovDis(brickOfData, scale = TRUE, center = TRUE,
-  ev.scale = TRUE)
+createCubeOfCovDis(brickOfData, scale = TRUE, center = TRUE, ev.scale = TRUE)
 }
 \arguments{
 \item{brickOfData}{a 

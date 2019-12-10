@@ -7,8 +7,7 @@ between the items (rows) of a matrix of measurements
 comprising \eqn{K} different blocks of possibly different
 number of variables.}
 \usage{
-list2CubeOfCovDis(Data, Judges, scale = TRUE, center = TRUE,
-  ev.scale = TRUE)
+list2CubeOfCovDis(Data, Judges, scale = TRUE, center = TRUE, ev.scale = TRUE)
 }
 \arguments{
 \item{Data}{a matrix of dimensions

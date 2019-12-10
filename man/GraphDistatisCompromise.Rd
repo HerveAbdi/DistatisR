@@ -5,9 +5,16 @@
 \title{Plot maps of the factor scores of the observations for a \acronym{DISTATIS}
 analysis}
 \usage{
-GraphDistatisCompromise(FS, axis1 = 1, axis2 = 2, constraints = NULL,
-  item.colors = NULL, ZeTitle = "Distatis-Compromise", nude = FALSE,
-  Ctr = NULL)
+GraphDistatisCompromise(
+  FS,
+  axis1 = 1,
+  axis2 = 2,
+  constraints = NULL,
+  item.colors = NULL,
+  ZeTitle = "Distatis-Compromise",
+  nude = FALSE,
+  Ctr = NULL
+)
 }
 \arguments{
 \item{FS}{The factor scores of the observations (\code{$res4Splus$F}from

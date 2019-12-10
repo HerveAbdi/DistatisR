@@ -5,9 +5,15 @@
 \title{Plot maps of the factor scores (from the Rv matrix) of the distance matrices
 for a \acronym{DISTATIS} analysis}
 \usage{
-GraphDistatisRv(RvFS, axis1 = 1, axis2 = 2,
-  ZeTitle = "Distatis-Rv Map", participant.colors = NULL,
-  nude = FALSE, RvCtr = NULL)
+GraphDistatisRv(
+  RvFS,
+  axis1 = 1,
+  axis2 = 2,
+  ZeTitle = "Distatis-Rv Map",
+  participant.colors = NULL,
+  nude = FALSE,
+  RvCtr = NULL
+)
 }
 \arguments{
 \item{RvFS}{The factor scores of the distance matrices (\code{$res4Cmat$G}

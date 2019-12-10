@@ -6,8 +6,14 @@
 of the (observation) factor scores by
 creating bootstrapped compromises.}
 \usage{
-BootFromCompromise(LeCube2Distance, niter = 1000, Norm = "MFA",
-  Distance = TRUE, RV = TRUE, nfact2keep = 3)
+BootFromCompromise(
+  LeCube2Distance,
+  niter = 1000,
+  Norm = "MFA",
+  Distance = TRUE,
+  RV = TRUE,
+  nfact2keep = 3
+)
 }
 \arguments{
 \item{LeCube2Distance}{The array of distance used to call \code{distatis}}

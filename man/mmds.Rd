@@ -86,7 +86,7 @@ colnames(D) <- rownames(D)
 BrainRes <- mmds(D)
 # Note that compared to Abdi (2007)
 # the factor scores of mmds are equal to F / sqrt(nrow(D))
-# the eigenvalues of mmds are equal to \\Lambda *{1/nrow(D)}
+# the eigenvalues of mmds are equal to \Lambda *{1/nrow(D)}
 # (ie., the normalization differs but the results are proportional)
 # 3. Now a pretty plot with the prettyPlot function from prettyGraphs
 prettyGraphs::prettyPlot(BrainRes$FactorScore,

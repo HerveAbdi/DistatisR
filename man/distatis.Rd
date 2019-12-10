@@ -8,8 +8,14 @@
 \title{3-Way MDS based on the \acronym{STATIS} optimization
 procedure.}
 \usage{
-distatis(LeCube2Distance, Norm = "MFA", Distance = TRUE, RV = TRUE,
-  nfact2keep = 3, compact = FALSE)
+distatis(
+  LeCube2Distance,
+  Norm = "MFA",
+  Distance = TRUE,
+  RV = TRUE,
+  nfact2keep = 3,
+  compact = FALSE
+)
 }
 \arguments{
 \item{LeCube2Distance}{an "observations \eqn{\times}{*} observations
