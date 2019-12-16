@@ -1,13 +1,13 @@
 # functions in this file
 # distatis
 # + private functions
-#    DblCenterDist
-#    Dist2CP
+#    DblCenterDist -> this one has been isolated
+#    Dist2CP -> and also this one
 #    MFAnormCP
 #    CP2MFAnormedCP
 #    GetCmat
 #    ComputeSplus
-#_____________________________________________________________________
+#________________________
 
 # distatis Preamble ----
 #'  3-Way MDS based on the \acronym{STATIS} optimization
@@ -28,12 +28,11 @@
 #' partial factor scores that show how each individual distance matrix "sees"
 #' the compromise space.  \code{distatis} computes the compromise as an optimum
 #' linear combination of the cross-product matrices associated to each distance
-#' matrix.  \code{distatis} can also be applied to a set of covariance
+#' matrix. \code{distatis} can also be applied to a set of covariance
 #' matrices.
 #'
 #' \acronym{DISTATIS} is part of the \acronym{STATIS} family.
-#'  It is often used
-#' to analyze the results of sorting tasks.
+#' It is often used to analyze the results of sorting tasks.
 #'
 #' @aliases distatis DiSTATIS CovSTATIS covstatis
 #' @param LeCube2Distance an "observations \eqn{\times}{*} observations
@@ -82,13 +81,13 @@
 #' combination of the SCP's')
 #'  \item \code{res.Splus$eigValues} * The eigenvalues of the compromise)
 #' \item \code{res.Splus$tau} * The percentage
-#' of explained intertia of the eigenValues)
+#' of explained inertia of the eigenValues)
 #' \item \code{res.Splus$ProjectionMatrix} The
 #' projection matrix used to compute factor
 #' scores and partial factor scores.
 #' \item \code{res.Splus$F} The factor scores for the observations.
 #' \item \code{res.Splus$PartialF} an
-#' \eqn{I\times \code{nf2keep} \times K}{I*nf2keep*K} array.
+#' \eqn{I \times \code{nf2keep} \times K}{I*nf2keep*K} array.
 #' Contains the partial factors for the distance
 #' matrices.}
 #' @author Herve Abdi
@@ -151,109 +150,20 @@ distatis <- function(LeCube2Distance,
   # (References to be completed)
   # The compact option is used for the bootstrap
   
-  # Private functions
-  # DblCenterDist Create the Centering Matrix
   if (Distance & !double_centering){
     stop("You must double center distance matrices !")
   }
-  DblCenterDist <- function(Y) {
-    # Double Center a distance matrix
-    nI <- nrow(Y)
-    CentMat <- diag(nI) - (1 / nI) * matrix(1, nI, nI)
-    S <- -(1 / 2) * (CentMat %*% Y %*% CentMat)
-    return(S)
-  } # end of DblCenterDist
-  #
-  # *************************************************************************************************
-  Dist2CP <-
-    function(D3) {
-      # Transform a Cube of Distance into a cube of CP
-      CP3 <-
-        (array(apply(D3, 3, DblCenterDist), dim = c(dim(D3)[1], dim(D3)[2], dim(D3)[3])))
-      dimnames(CP3) <- dimnames(D3)
-      return(CP3)
-    } # end of Dist2CP
-  #
-  # *************************************************************************************************
-  # MFAnormCP Normalize a CP matrix product to first eigenvalue of one
-  MFAnormCP <-
-    function(Y) {
-      # MFA Normalize a psd matrix (i.e., first eigenvalue=1)
-      ev = eigen(Y, symmetric = T, only.values = T)[1]
-      e1 = ev$values[1]
-      Ynormed = Y / e1
-      return(Ynormed)
-    } # End of MFAnormCP
-  # *************************************************************************************************
-  # SUMPCAnormCP Normalize a CP matrix product to first eigenvalue of one
-  SUMPCAnormCP <-
-    function(Y) {
-      # SUMPCA Normalize a psd matrix (i.e., total intertia=1)
-      Ynormed <- Y / sum(diag(Y))
-      return(Ynormed)
-    } # End of SUMPCAnormCP
-  #
-  # *************************************************************************************************
-  # CP2MFAnormedCP: MFA normalize a cube of CP
-  CP2MFAnormedCP <-
-    function(CP3) {
-      # Transform a cube of CP into an MFA normed cube of CP
-      CP3normed <- array(apply(CP3, 3, MFAnormCP), dim = dim(CP3))
-      dimnames(CP3normed) <- dimnames(CP3)
-      return(CP3normed)
-    }
-  # *************************************************************************************************
-  # CP2SUMPCAnormedCP: SUMPCA normalize a cube of CP
-  CP2SUMPCAnormedCP <-
-    function(CP3) {
-      # Transform a cube of CP into a SUMPCA normed cube of CP
-      CP3normed <- array(apply(CP3, 3, SUMPCAnormCP), dim = dim(CP3))
-      dimnames(CP3normed) <- dimnames(CP3)
-      return(CP3normed)
-    }
-  # *************************************************************************************************
-  # Compute the RV coefficient matrix
-  #
-  GetCmat <- function(CubeCP, RV = TRUE) {
-    # Compute a C matrix (or RV) from a cube of CP
-    # get the dimensions
-    nI <- dim(CubeCP)[1]
-    nJ <- dim(CubeCP)[3]
-    # reshape the 3D array as an (nI^2)*(nJ) matrix
-    CP2 <-  array(CubeCP, dim = c(nI * nI, nJ))
-    C <- t(CP2) %*% CP2 # Scalar Product
-    if (RV) {
-      # RV is TRUE we want the RV coefficient instead of the Scalar Product
-      laNorm <- sqrt(apply(CP2 ^ 2, 2, sum))
-      C <- C / (t(t(laNorm)) %*% laNorm)
-    } # end if
-    rownames(C) <- dimnames(CubeCP)[[3]] -> colnames(C)
-    return(C)
-  }
-  #
-  # *************************************************************************************************
-  # Compute the compromise
-  ComputeSplus <- function(CubeCP, alpha) {
-    # Compute the comprise matrix for STATIS/DISTATIS
-    nI <- dim(CubeCP)[1]
-    nJ <- dim(CubeCP)[3]
-    Splus <- matrix(0, nI, nI)
-    # Formerly a Horrible Loop. Changed in final version
-    # for (i in 1:nJ){ Splus = Splus + alpha[i]*CubeCP[,,i] }
-    # A better way
-    Splus <- apply(apply(CubeCP, c(1, 2), '*', t(alpha)), c(2, 3), sum)
-    return(Splus)
-  } # end ComputeSplus
-  # End of Private Routines
-  # *************************************************************************************************
   # Transform the cube of distances into a cube of Cross-Products
   # if Distance is already a covariance or correlation, reverse the sign
-  if (Distance != TRUE) {
-    LeCube2Distance <- - LeCube2Distance
-  }
+  CP3 <- LeCube2Distance
+  ### ADD test of SDPness?
+  # if (Distance != TRUE) { removed because of the default normalization
+  #   CP3 <- - CP3
+  # }
   # double center
   if (double_centering) {
-    CP3 <- Dist2CP(LeCube2Distance)
+    if (Distance) CP3 <- Dist2CP(CP3)
+    else CP3 <- Dist2CP(-CP3)
   }
   # perform MFA normalization
   if (Norm == 'MFA') {
@@ -348,11 +258,15 @@ distatis <- function(LeCube2Distance,
     class(res.Splus) <- c("Splus", "list")
     res.distatis <- list(res4Cmat = res.Cmat,
                          res4Splus = res.Splus,
-                         compact = compact)
+                         compact = compact,
+                         params = list(double_centering = double_centering,
+                                       Norm = Norm,
+                                       Distance = Distance,
+                                       RV = RV))
     class(res.distatis) <- c("DistatisR", "list")
-  } # End of if compact == FALSE
-  else {
-    # When "comptact" is TRUE, send back only the compact information
+    # End of if compact == FALSE
+  } else {
+    # When "compact" is TRUE, send back only the compact information
     res.Cmat <- list(alpha = alpha, compact = compact)
     class(res.Cmat) <- c("Cmat", "list")
     res.Splus <- list(Splus = Splus, compact = compact)

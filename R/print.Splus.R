@@ -23,11 +23,11 @@ function (x,...) {
 		res[1,] <- c("$Splus","S+ Matrix")
 	}else{
 		res <- array("", c(7, 2), list(1:7, c("name", "description")))
-		res[1,] <- c("$SCP","Sum of Cross Products matrix")
+		res[1,] <- c("$SCP","3D array of the cross product matrices")
 		res[2,] <- c("$eigValues","Eigenvalues of Compromise")
 		res[3,] <- c("$tau","Percentage of Explained Variance per Eigenvalue")
-		res[4,] <- c("$F","Factor scores")
-		res[5,] <- c("$PartialF","Partial Factor Scores")
+		res[4,] <- c("$F","Factor scores for the compromise")
+		res[5,] <- c("$PartialF","Partial Factor Scores for the compromise")
 		res[6,] <- c("$ProjectionMatrix", "The Projection Matrix")
 		res[7,] <- c("$Splus","S+ Matrix")
 	}

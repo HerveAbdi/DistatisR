@@ -24,7 +24,7 @@ print.Cmat <- function (x,...) {
 		res[2,] <- c("$eigVector","Eigenvectors")
 		res[3,] <- c("$eigValues","Eigenvalues")
 		res[4,] <- c("$tau", "Explained variance for components")
-		res[5,] <- c("$G","the Rv matrix")
+		res[5,] <- c("$G","The factor score matrix for the Rv")
 		res[6,] <- c("$alpha","alpha weights")
 	}
 

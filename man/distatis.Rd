@@ -12,6 +12,7 @@ distatis(
   LeCube2Distance,
   Norm = "MFA",
   Distance = TRUE,
+  double_centering = TRUE,
   RV = TRUE,
   nfact2keep = 3,
   compact = FALSE
@@ -19,17 +20,19 @@ distatis(
 }
 \arguments{
 \item{LeCube2Distance}{an "observations \eqn{\times}{*} observations
-\eqn{\times}{*} distance matrices" array of dimensions 
-\eqn{I\times I \times  K}{I*I*K}.  
+\eqn{\times}{*} distance matrices" array of dimensions
+\eqn{I\times I \times  K}{I*I*K}.
 Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
 distance (or covariance) matrix describing the \eqn{I} observations.}
 
 \item{Norm}{Type of normalization used for each cross-product matrix derived
 from the distance (or covariance) matrices.  Current options are \code{NONE}
-(do nothing) or \code{MFA} (\code{default} ) that normalizes each matrix so
+(do nothing), \code{SUMPCA} (normalize by the total inertia) or \code{MFA} (\code{default} ) that normalizes each matrix so
 that its first eigenvalue is equal to one.}
 
-\item{Distance}{if \code{TRUE} (\code{default}) the matrices are distance matrices,
+\item{Distance}{if \code{TRUE} (\code{default}) the matrices are distance matrices,}
+
+\item{double_centering}{if \code{TRUE} (\code{default}) the matrices are double-centered,
 if \code{FALSE} they are covariance matrices.}
 
 \item{RV}{if \code{TRUE} (\code{default}) we use the \eqn{R_V}{Rv} coefficient to
@@ -40,7 +43,7 @@ we use the matrix scalar product}
 factor scores of the observations.}
 
 \item{compact}{if \code{FALSE} (default),
- \code{distatis} provides detailled output, if
+ \code{distatis} provides detailed output, if
  \code{TRUE},  \code{distatis} sends back
 only the \eqn{\alpha}{alpha} weights (this option is used to make the
 bootstrap routine \code{\link{BootFromCompromise}} more efficient).}
@@ -68,14 +71,14 @@ distance matrices.
 \item \code{res.Splus$Splus} * The compromise (linear
 combination of the SCP's')
  \item \code{res.Splus$eigValues} * The eigenvalues of the compromise)
-\item \code{res.Splus$tau} * The percentage 
-of explained intertia of the eigenValues)
+\item \code{res.Splus$tau} * The percentage
+of explained inertia of the eigenValues)
 \item \code{res.Splus$ProjectionMatrix} The
 projection matrix used to compute factor
 scores and partial factor scores.
 \item \code{res.Splus$F} The factor scores for the observations.
 \item \code{res.Splus$PartialF} an
-\eqn{I\times \code{nf2keep} \times K}{I*nf2keep*K} array.
+\eqn{I \times \code{nf2keep} \times K}{I*nf2keep*K} array.
 Contains the partial factors for the distance
 matrices.}
 }
@@ -83,8 +86,7 @@ matrices.}
 \code{distatis}: Implements the \acronym{DISTATIS}
  method which is a 3-way generalization of
 metric multidimensional scaling
-(\emph{a.k.a.} classical MDS or principal
-coordinate analysis).
+(\emph{a.k.a.} classical MDS or principal coordinate analysis).
 \code{distatis} takes a set of \eqn{K} distance
 (or covariance)
 matrices describing a set of \eqn{I} observations and computes (1) a set of
@@ -96,13 +98,12 @@ that best describes the similarity structure of the observations and (3)
 partial factor scores that show how each individual distance matrix "sees"
 the compromise space.  \code{distatis} computes the compromise as an optimum
 linear combination of the cross-product matrices associated to each distance
-matrix.  \code{distatis} can also be applied to a set of covariance
+matrix. \code{distatis} can also be applied to a set of covariance
 matrices.
 }
 \details{
 \acronym{DISTATIS} is part of the \acronym{STATIS} family.
- It is often used
-to analyze the results of sorting tasks.
+It is often used to analyze the results of sorting tasks.
 }
 \examples{
 
