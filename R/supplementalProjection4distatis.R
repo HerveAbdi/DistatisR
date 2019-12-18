@@ -5,18 +5,20 @@
 # Needs to be tested ----
 # last fix HA: replace p (undefined) by P.
 
-#_______________________________________________________________________________
+#_____________________________________________________________________
 # Preamble -----
-#' @title Supplementary element projection in DISTATIS
+#' @title Supplementary element(s) projection in DISTATIS
 #'
 #' @description  \code{supplementalProjection4distatis}:
-#' Computes for \code{distatis} the projection as supplementary element s
+#' Computes for \code{distatis} 
+#' the projection as supplementary element(s)
 #' (a.k.a. "out of sample")
-#' of a set of squared matrices. The matrices to be projected need to be
-#' of the same type (i.e., distance, correlation) as the matrices 
-#' used in with \code{distatis}.
+#' of a set of squared matrices.
+#'  The matrices to be projected need to be
+#' of the same type (e.g., distance, correlation) as the matrices 
+#' used inn the original call to \code{distatis}.
 #' 
-#' @param res.distatis the result of the function \code{distatis}
+#' @param res.distatis the results of the function \code{distatis}
 #' @param elsupp the supplementary elements (i.e., a 3D array).
 #'
 #' @return the coordinates of the supplementary 

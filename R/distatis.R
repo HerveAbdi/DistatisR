@@ -192,11 +192,14 @@ distatis <- function(LeCube2Distance,
     names(eigC$tau)    <- Nom2Dim
     names(eigC$values) <- Nom2Dim
     # factors scores for RV mat
-    eigC$G <- t(apply(eigC$vectors, 1, '*', t(t(sqrt(
-      abs(eigC$values)
-    )))))
+    eigC$G   <- t(apply(eigC$vectors, 1, '*', t(t(sqrt(abs(eigC$values) )))))
     rownames(eigC$G) <- rownames(C)
     colnames(eigC$G) <- Nom2Dim
+    G2        <- eigC$G^2
+   # 
+    eigC$ctr  <- rdiag(G2, 1/eigC$values)  
+    eigC$d2G  <- rowSums(G2)
+    eigC$cos2 <- ldiag(1/eigC$d2G, G2) 
   }
   # alpha weights
   alpha <- eigC$vectors[, 1] / sum(eigC$vectors[, 1])
@@ -219,6 +222,8 @@ distatis <- function(LeCube2Distance,
     Nom2Factors <- paste('Factor', 1:nfact2keep)
     F <- F[, 1:nfact2keep]
     colnames(F) <- Nom2Factors
+    F2 <- F^2
+    
     # Projection matrix
     ProjMat <- t(apply(eigenSplus$vectors, 1, '*', 
                        1 / t(t(eigenSplus$SingularValues))))
