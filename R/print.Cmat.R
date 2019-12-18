@@ -19,13 +19,16 @@ print.Cmat <- function (x,...) {
 		res[1,] <- c("$alpha","alpha weights")
 	}else{
 		#list(C = C, eigVector = eigC$vector, eigValues = eigC$values, tau = eigC$tau, G = eigC$G, alpha=alpha)
-		res <- array("", c(6, 2), list(1:6, c("name", "description")))
+		res <- array("", c(9, 2), list(1:9, c("name", "description")))
 		res[1,] <- c("$C","The C matrix")
-		res[2,] <- c("$eigVector","Eigenvectors")
-		res[3,] <- c("$eigValues","Eigenvalues")
+		res[2,] <- c("$eigVector","Eigenvectors of C")
+		res[3,] <- c("$eigValues","Eigenvalues of C")
 		res[4,] <- c("$tau", "Explained variance for components")
-		res[5,] <- c("$G","The factor score matrix for the Rv")
-		res[6,] <- c("$alpha","alpha weights")
+		res[5,] <- c("$G","The factor score matrix for C")
+		res[6,] <- c("$ctr","The contribution matrix for C")
+		res[7,] <- c("$cos2","The squared cosines matrix for the C")
+		res[8,] <- c("$d2","The squared Euclidean distances for the C")
+		res[9,] <- c("$alpha","The alpha weights")
 	}
 
 	print(res)
