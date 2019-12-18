@@ -1,14 +1,18 @@
-# functions in this file
-# distatis
-# + private functions
-#    DblCenterDist -> this one has been isolated
-#    Dist2CP -> and also this one
-#    MFAnormCP
-#    CP2MFAnormedCP
-#    GetCmat
-#    ComputeSplus
+#_____________________________________________________________________
+# distatis: function distatis
+# Private functions used in this file
+# See file names matching the function names
+# -- private functions
+#   o DblCenterDist 
+#   o Dist2CP       
+#   o MFAnormCP
+#   o CP2MFAnormedCP
+#   o GetCmat
+#   o ComputeSplus
+#   o rdiag & ldiag
 #________________________
-
+# Last update 12 / 18 / 2020 by Hervé
+#_____________________________________________________________________
 # distatis Preamble ----
 #'  3-Way MDS based on the \acronym{STATIS} optimization
 #' procedure.
@@ -56,8 +60,11 @@
 #' @param Distance if \code{TRUE} (\code{default}) 
 #' the matrices are distance matrices,
 #' @param double_centering if \code{TRUE} 
-#' (\code{default}) the matrices are double-centered,
-#' if \code{FALSE} they are covariance matrices.
+#' (\code{default}) the matrices are double-centered
+#' (should always be used for distances)
+#' if \code{FALSE} the matrices
+#' will be double centered 
+#' (note that these should be covariance matrices).
 #' @param RV if \code{TRUE} (\code{default}) 
 #' we use the \eqn{R_V}{Rv} coefficient to
 #' compute the \eqn{\alpha}{weights}, 
@@ -85,7 +92,7 @@
 #' \itemize{ 
 #'   \item \code{res.Cmat$C}
 #'   The \eqn{I\times I}{I*I} \bold{C} matrix
-#'   of scalar products (or \eqn{R_V}{Rv} between distance matrices). 
+#'   of scalar products (or \eqn{R_V}{Rv} between distance matrices).  
 #'   \item
 #'   \code{res.Cmat$vectors} The eigenvectors of the \bold{C} matrix 
 #'   \item
@@ -97,7 +104,10 @@
 #'  \item 
 #'   \code{res.Cmat$ctr} The contributions for \code{res.Cmat$G},
 #'  \item
-#'    \code{res.Cmat$cos2} The squared cosines for \code{res.Cmat$G}.
+#'    \code{res.Cmat$cos2} The squared cosines for \code{res.Cmat$G}
+#'  \item
+#'  \code{res.Cmat$d2} The squared 
+#'  Euclidean distance  for \code{res.Cmat$G}.
 #'    }
 #'    
 #' \item{res.Splus}{Results for the between observation analysis.}
@@ -107,16 +117,26 @@
 #' the (normalized if needed)
 #' cross product matrices corresponding to the
 #' distance matrices.
-#' \item \code{res.Splus$Splus} * The compromise (linear
-#' combination of the SCP's')
+#' \item \code{res.Splus$Splus} * The compromise 
+#' (optimal linear
+#' combination of the SCP's').
 #'  \item \code{res.Splus$eigValues} *
-#'   The eigenvalues of the compromise)
+#'   The eigenvalues of the compromise).
+#'  \item \code{res.Splus$eigVectors} *
+#'   The eigenvectors of the compromise).
 #' \item \code{res.Splus$tau} * The percentage
-#' of explained inertia of the eigenValues)
+#' of explained inertia of the eigenValues).
 #' \item \code{res.Splus$ProjectionMatrix} The
 #' projection matrix used to compute factor
 #' scores and partial factor scores.
 #' \item \code{res.Splus$F} The factor scores for the observations.
+#'  \item 
+#'   \code{res.Splus$ctr} The contributions for \code{res.Cmat$F}.
+#'  \item
+#'    \code{res.Splus$cos2} The squared cosines for \code{res.Cmat$F}.
+#'  \item
+#'  \code{res.Splust$d2} The squared 
+#'  Euclidean distance  for \code{res.Cmat$F}.
 #' \item \code{res.Splus$PartialF} an
 #' \eqn{I \times \code{nf2keep} \times K}{I*nf2keep*K} array.
 #' Contains the partial factors for the distance
