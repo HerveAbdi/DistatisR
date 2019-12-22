@@ -69,7 +69,9 @@
 #' (should always be used for distances)
 #' if \code{FALSE} the matrices
 #' will be double centered 
-#' (note that these should be covariance matrices).
+#' (note that these matrices 
+#' should be semi positive definite matrices such that
+#' covariance matrices).
 #' @param RV if \code{TRUE} (\code{default}) 
 #' we use the \eqn{R_V}{Rv} coefficient to
 #' compute the \eqn{\alpha}{weights}, 
@@ -85,8 +87,7 @@
 #'  (this option is used to make the
 #' bootstrap routine 
 #' \code{\link{BootFromCompromise}} more efficient).
-#' @return
-#' \code{distatis} sends back the results \emph{via} two lists:
+#' @return \code{distatis} sends back the results \emph{via} two lists:
 #' \code{res.Cmat}
 #' and \code{res.Splus}.
 #' Note that items with a * are the only ones sent back
@@ -105,7 +106,7 @@
 #'  \item
 #'  \code{res.Cmat$value} The eigenvalues of the \bold{C} matrix 
 #'  \item
-#'  \code{res.Cmat$G} The factor scores for the \bold{C} matrix }
+#'  \code{res.Cmat$G} The factor scores for the \bold{C} matrix 
 #'  \item 
 #'   \code{res.Cmat$ctr} The contributions for \code{res.Cmat$G},
 #'  \item
@@ -205,7 +206,7 @@
 #' @examples
 #'
 #' # 1. Load the DistAlgo data set 
-#' (available from the DistatisR package)
+#' # (available from the DistatisR package).
 #' data(DistAlgo)
 #' # DistAlgo is a 6*6*4 Array (face*face*Algorithm)
 #' #------------------------------------------------------------------
@@ -221,7 +222,7 @@ distatis <- function(LeCube2Distance,
                      nfact2keep = 3,
                      compact = FALSE) {
   # DISTATIS
-  # Implements the standard DISTATIS program
+  # Implements the standard DISTATIS program as
   # described in Abdi H. et al, 2005, 2007, 2009, & 2012.
   # (References to be completed)
   # The compact option is used for the bootstrap

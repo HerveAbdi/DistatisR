@@ -22,7 +22,7 @@
 #
 
 #-----------------------------------------------------------------------------
-# THis command is assume to have been issued prior to running the demo
+# This command is assumed to have been issued prior to running the demo
 # library(DistatisR)
 #-----------------------------------------------------------------------------
 #  1. Get the data from the 2007 sorting example

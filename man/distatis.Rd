@@ -41,7 +41,9 @@ the matrices are distance matrices,}
 (should always be used for distances)
 if \code{FALSE} the matrices
 will be double centered 
-(note that these should be covariance matrices).}
+(note that these matrices 
+should be semi positive definite matrices such that
+covariance matrices).}
 
 \item{RV}{if \code{TRUE} (\code{default}) 
 we use the \eqn{R_V}{Rv} coefficient to
@@ -81,7 +83,7 @@ when using the \code{compact = TRUE} option.
  \item
  \code{res.Cmat$value} The eigenvalues of the \bold{C} matrix 
  \item
- \code{res.Cmat$G} The factor scores for the \bold{C} matrix
+ \code{res.Cmat$G} The factor scores for the \bold{C} matrix 
  \item 
   \code{res.Cmat$ctr} The contributions for \code{res.Cmat$G},
  \item
@@ -142,11 +144,16 @@ scores (called the \emph{compromise} factor scores)
 for the observations
 that best describes the similarity structure of the observations 
 and (3)
-partial factor scores that show how each individual distance matrix "sees"
-the compromise space.  \code{distatis} computes the compromise as an optimum
-linear combination of the cross-product matrices associated to each distance
-matrix. \code{distatis} can also be applied to a set of covariance
-matrices.
+partial factor scores that show how 
+each individual distance matrix "sees"
+the compromise space.  
+\code{distatis} computes the compromise as an optimum
+linear combination of the cross-product matrices 
+associated to each distance
+matrix. 
+\code{distatis} can also be applied to a set of 
+scalar products, covariance, or correlation
+ matrices.
 }
 \details{
 \acronym{DISTATIS} is part of the \acronym{STATIS} family.
@@ -155,7 +162,7 @@ It is often used to analyze the results of sorting tasks.
 \examples{
 
 # 1. Load the DistAlgo data set 
-# (available from the DistatisR package)
+# (available from the DistatisR package).
 data(DistAlgo)
 # DistAlgo is a 6*6*4 Array (face*face*Algorithm)
 #------------------------------------------------------------------
