@@ -5,8 +5,10 @@
 \alias{SortingSpice}
 \alias{SortSpice}
 \title{21 French assessors sorted 16 blends of Spice for \code{distatis} analysis}
-\format{a data frame file containing 21 columns, 16 rows plus the names of
-the rows and the columns.}
+\format{
+a data frame file containing 21 columns, 16 rows plus the names of
+the rows and the columns.
+}
 \source{
 Chollet et al. (2014). \url{www.utdallas.edu/~herve}
 }

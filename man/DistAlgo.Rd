@@ -5,8 +5,10 @@
 \alias{DistAlgo}
 \title{Four computer algorithms evaluate the similarity of six faces for distatis
 analysis}
-\format{an \eqn{6\times6\time4}{6*6*4} array. Each \eqn{6\times 6}{6*6}
-matrix is a distance matrix}
+\format{
+an \eqn{6\times6\time4}{6*6*4} array. Each \eqn{6\times 6}{6*6}
+matrix is a distance matrix
+}
 \source{
 Abdi et al. (2005). \url{www.utdallas.edu/~herve}
 }

@@ -4,13 +4,15 @@
 \name{amariSorting}
 \alias{amariSorting}
 \title{25 assessors twice sort and describe 12 amaris (i.e., bitter)}
-\format{a list containing 3 objects:
+\format{
+a list containing 3 objects:
  1) \code{Sorting} a data frame with the 12 by 25*2 sorting data,
 2) \code{cubeOfVocabulary}: and array of dimensions
 a 12 products * 41 words  (vocabulary) * 50 assessors-repetition
 (i.e., 25 assessors *2 repetitions), and 3)
 a data frame:
-\code{information4Amaris} storing the description of the amaris.}
+\code{information4Amaris} storing the description of the amaris.
+}
 \source{
 Lahne, J., Abdi, H., & Heymann, H. (2018). 
 #' Rapid sensory profiles with DISTATIS 

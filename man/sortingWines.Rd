@@ -4,7 +4,8 @@
 \name{sortingWines}
 \alias{sortingWines}
 \title{Novices and wines experts sort red, rosé, and white wines}
-\format{a list containing 4 objects:
+\format{
+a list containing 4 objects:
  1) \code{freeSortExperts}:
  a data frame with the 18 wines by 19 experts free sorting data
   (the number at the intersection of a row and a colum
@@ -21,7 +22,8 @@
   indicates the number of the pile in which the wine was sorted);
   and 4)
 \code{vinesDescription} a data frame
-storing the description of the 18 wines.}
+storing the description of the 18 wines.
+}
 \usage{
 data("sortingWines")
 }

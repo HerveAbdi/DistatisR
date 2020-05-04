@@ -5,7 +5,8 @@
 \alias{beersBlindSorting}
 \title{Novices and Experts sorted 3 types of beers from 
 3 different brewers without and without seeing the beers.}
-\format{A list with 11 lists
+\format{
+A list with 11 lists
 each storing a 9*9*\eqn{N_k}  \code{cubeOfDistance} and
 one 9*9 distance table. Specifically:
 \describe{
@@ -20,7 +21,8 @@ one 9*9 distance table. Specifically:
 \item{$NBr3}{9*9* 18 Novices, Blind, rep 3}
 \item{$NBr4}{9*9* 18 Novices, Blind, rep 4}
 \item{$N2B}{9*9* 37 Novices, Blind. (Group 2)}
-}}
+}
+}
 \source{
 A longer description of the data, 
 story, first analysis, etc. can be found in:

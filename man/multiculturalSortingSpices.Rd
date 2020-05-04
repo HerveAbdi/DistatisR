@@ -4,7 +4,8 @@
 \name{multiculturalSortingSpices}
 \alias{multiculturalSortingSpices}
 \title{62 assessors from 5 countries sort 16 spice samples}
-\format{A list containing 7 objects
+\format{
+A list containing 7 objects
 (for all sorting data, the number 
 at the intersection of a row and a colum
 indicates the number of the pile in which the spice was sorted):
@@ -28,7 +29,8 @@ the 11 Spanish participants,
  results of the sorting task for
 the 6 Vietnamese participants, and
 7) \code{spicesDescription} A data frame containing the
-description of the Spices.}
+description of the Spices.
+}
 \usage{
 data("multiculturalSortingSpices")
 }

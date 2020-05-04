@@ -5,8 +5,10 @@
 \alias{SortingBeer}
 \alias{Sort}
 \title{Ten Assessors sorted eight beers for \code{distatis} analysis}
-\format{a data frame file containing 10 columns, 8 rows plus the names of
-the rows and the columns.}
+\format{
+a data frame file containing 10 columns, 8 rows plus the names of
+the rows and the columns.
+}
 \source{
 Abdi et al. (2007). \url{www.utdallas.edu/~herve}
 }

@@ -6,7 +6,8 @@
 \alias{BeersProjectiveNapping}
 \title{7 (fictitious) assessors sort and verbally describe 7 Beers using
 \emph{Projective Mapping}.}
-\format{a list with 3 elements:
+\format{
+a list with 3 elements:
 1) \code{ProjectiveMapping}: 
 a matrix of dimensions 7 beers by  7*2 
 assessors-dimensions of the coordinates of the beers on the sheet
@@ -22,7 +23,8 @@ the  \eqn{I} Products by \eqn{N}
  words (from the Vocabulary) contingency table,
  in  \code{CT.vocabulary} the number at the intersection
  of a row (beer) and a column (word) is the number
- of assessors who used this word to describe that beer.}
+ of assessors who used this word to describe that beer.
+}
 \source{
 Abdi, H,  & Valentin, D. (2007). 
 \url{www.utdallas.edu/~herve}
