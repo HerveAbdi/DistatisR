@@ -50,11 +50,13 @@
 #' It is often used to analyze the results of sorting tasks.
 #'
 #' @aliases distatis DiSTATIS CovSTATIS covstatis
-#' @param LeCube2Distance an "observations \eqn{\times}{*} observations
+#' @param LeCube2Distance an "observations 
+#' \eqn{\times}{*} observations
 #' \eqn{\times}{*} distance matrices" array of dimensions
 #' \eqn{I\times I \times  K}{I*I*K}.
 #' Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
-#' distance (or covariance) matrix describing the \eqn{I} observations.
+#' distance (or covariance) matrix describing the 
+#' \eqn{I} observations.
 #' @param Norm Type of normalization 
 #' used for each cross-product matrix derived
 #' from the distance (or covariance) matrices.  
@@ -87,7 +89,8 @@
 #'  (this option is used to make the
 #' bootstrap routine 
 #' \code{\link{BootFromCompromise}} more efficient).
-#' @return \code{distatis} sends back the results \emph{via} two lists:
+#' @return \code{distatis} sends back the results 
+#' \emph{via} two lists:
 #' \code{res.Cmat}
 #' and \code{res.Splus}.
 #' Note that items with a * are the only ones sent back

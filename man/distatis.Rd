@@ -19,11 +19,13 @@ distatis(
 )
 }
 \arguments{
-\item{LeCube2Distance}{an "observations \eqn{\times}{*} observations
+\item{LeCube2Distance}{an "observations 
+\eqn{\times}{*} observations
 \eqn{\times}{*} distance matrices" array of dimensions
 \eqn{I\times I \times  K}{I*I*K}.
 Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
-distance (or covariance) matrix describing the \eqn{I} observations.}
+distance (or covariance) matrix describing the 
+\eqn{I} observations.}
 
 \item{Norm}{Type of normalization 
 used for each cross-product matrix derived
