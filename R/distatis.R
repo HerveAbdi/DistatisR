@@ -328,10 +328,10 @@ distatis <- function(LeCube2Distance,
     colnames(PartialF) <- Nom2Factors
     dimnames(PartialF)[[3]] <- rownames(C)
     
-    # pack up the information to send back
-    # Will try to Keep a structure similar 
-    # to  Cherise Chin Fatt MExPosition
-    # in the meantime go for fast and match matlab
+    # pack up the information to send back.
+    # May try as some point to keep a structure similar 
+    # to MExPosition
+    # in the meantime go for fast and match original matlab program.
     # pack return list ----
     res.Cmat <- list(
       C = C,
