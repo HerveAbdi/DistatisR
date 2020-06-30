@@ -66,7 +66,8 @@ bootstrap routine
 \code{\link{BootFromCompromise}} more efficient).}
 }
 \value{
-\code{distatis} sends back the results \emph{via} two lists:
+\code{distatis} sends back the results 
+\emph{via} two lists:
 \code{res.Cmat}
 and \code{res.Splus}.
 Note that items with a * are the only ones sent back
