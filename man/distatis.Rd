@@ -32,17 +32,20 @@ used for each cross-product matrix derived
 from the distance (or covariance) matrices.  
 Current options are \code{NONE}
 (do nothing), \code{SUMPCA} (normalize by the total inertia) 
-or \code{MFA} (\code{default} ) that normalizes each matrix so
+or \code{MFA} (\code{default}) that normalizes each matrix so
 that its first eigenvalue is equal to one.}
 
 \item{Distance}{if \code{TRUE} (\code{default}) 
-the matrices are distance matrices,}
+the matrices are distance matrices, \code{FALSE}
+the matrices are treated as positive semi-definite matrices
+(e.g., scalar products,
+covariance, or correlation matrices).}
 
 \item{double_centering}{if \code{TRUE} 
 (\code{default}) the matrices are double-centered
-(should always be used for distances)
+(should always be used for distances).
 if \code{FALSE} the matrices
-will be double centered 
+will \emph{not} be double centered 
 (note that these matrices 
 should be semi positive definite matrices such that
 covariance matrices).}
@@ -53,7 +56,7 @@ compute the \eqn{\alpha}{weights},
 if \code{FALSE}
 we use the matrix scalar product}
 
-\item{nfact2keep}{Number of factors 
+\item{nfact2keep}{(default: \code{3}) Number of factors 
 to keep for the computation of the
 factor scores of the observations.}
 
@@ -133,26 +136,31 @@ matrices.}
  method which is a 3-way generalization of
 metric multidimensional scaling
 (\emph{a.k.a.} classical MDS or principal coordinate analysis).
-\code{distatis} takes a set of \eqn{K} distance
-(or covariance)
-matrices describing a set of \eqn{I} observations 
-and computes (1) a set of
+\code{distatis} takes
+as input a set of \eqn{K} distance matrices
+(or  positive semi-definite matrices such as scalar products,
+covariance, or correlation matrices)
+ describing a set of \eqn{I} observations.
+From this set of matrices \code{distatis}    
+computes: (1) a set of
 factor scores that describes the similarity structure 
-of the distance
+of the \eqn{K} distance
 matrices (e.g., what distance matrices describe the 
 observations in the same
 way, what distance matrices differ from each other) 
 (2) a set of factor
 scores (called the \emph{compromise} factor scores) 
-for the observations
-that best describes the similarity structure of the observations 
-and (3)
+that best describes  
+ the similarity structure of the \eqn{I} observations 
+and (3) \eqn{I}
+sets of
 partial factor scores that show how 
 each individual distance matrix "sees"
 the compromise space.  
 \code{distatis} computes the compromise as an optimum
 linear combination of the cross-product matrices 
-associated to each distance
+associated to each distance 
+(or positive positive semi-definite)
 matrix. 
 \code{distatis} can also be applied to a set of 
 scalar products, covariance, or correlation
@@ -232,5 +240,7 @@ Hervé Abdi
 #\code{\link{BootFactorScores}} \code{\link{BootFromCompromise}}
 #as \code{\link{help}},
 }
+\keyword{DISTATIS}
+\keyword{MDS}
 \keyword{distatis}
 \keyword{mds}
