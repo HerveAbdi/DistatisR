@@ -5,7 +5,7 @@
 \alias{DiSTATIS}
 \alias{CovSTATIS}
 \alias{covstatis}
-\title{3-Way MDS based on the \acronym{STATIS} optimization
+\title{3-Way MDS based on the  "STATIS" optimization
 procedure.}
 \usage{
 distatis(
@@ -136,6 +136,8 @@ matrices.}
  method which is a 3-way generalization of
 metric multidimensional scaling
 (\emph{a.k.a.} classical MDS or principal coordinate analysis).
+}
+\details{
 \code{distatis} takes
 as input a set of \eqn{K} distance matrices
 (or  positive semi-definite matrices such as scalar products,
@@ -152,21 +154,23 @@ way, what distance matrices differ from each other)
 scores (called the \emph{compromise} factor scores) 
 that best describes  
  the similarity structure of the \eqn{I} observations 
-and (3) \eqn{I}
+and (3)
+\eqn{I}
 sets of
 partial factor scores that show how 
 each individual distance matrix "sees"
 the compromise space.  
+
 \code{distatis} computes the compromise as an optimum
 linear combination of the cross-product matrices 
 associated to each distance 
 (or positive positive semi-definite)
 matrix. 
+
 \code{distatis} can also be applied to a set of 
 scalar products, covariance, or correlation
  matrices.
-}
-\details{
+
 \acronym{DISTATIS} is part of the \acronym{STATIS} family.
 It is often used to analyze the results of sorting tasks.
 }
