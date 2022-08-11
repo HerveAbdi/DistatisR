@@ -34,12 +34,12 @@ GraphDistatisPartial(
 
 \item{constraints}{constraints for the axes}
 
-\item{item.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+\item{item.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 observations) of color names for the observations.
 If \code{NULL} (default),
 \code{prettyGraphs} chooses.}
 
-\item{participant.colors}{A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+\item{participant.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 participants) of color names for the observations.
 If \code{NULL} (default),
 \code{prettyGraphs} chooses (with function \code{prettyGraphs::}).}
@@ -70,7 +70,8 @@ returned.}
 \code{GraphDistatisPartial} plots maps of the factor scores of the
 observations from a \code{\link{distatis}} analysis.
 \code{GraphDistatisPartial} gives a map of the factors scores of the
-observations plus partial factor scores, as "seen" by each of the matrices.
+observations plus partial factor scores, 
+as "seen" by each of the matrices.
 }
 \details{
 Note that, in the current version, the graphs are plotted as R-plots and are

@@ -13,7 +13,8 @@ Dist2CP(D3)
 the cube of cross-product matrices.
 }
 \description{
-Transforms a cube of distance matrices into a cube of cross-product matrices.
+Transforms a cube of distance matrices 
+into a cube of cross-product matrices.
 }
 \examples{
 \dontrun{

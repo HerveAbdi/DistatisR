@@ -18,3 +18,4 @@ Change the print function for the class \code{cubeOfCovDis}:
 \author{
 Herve Abdi
 }
+\keyword{internal}

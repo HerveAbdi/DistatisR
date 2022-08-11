@@ -17,4 +17,5 @@ Print S+ matrix results.
 \author{
 Derek Beaton
 }
+\keyword{internal}
 \keyword{print}

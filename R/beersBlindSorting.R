@@ -85,6 +85,7 @@
 #' @param x an object of the class cubeSort
 #' @param ... the rest
 #' @author Herve Abdi
+#' @keywords internal
 #' @export
 print.cubeSort <- function (x, ...){
   ndash = 78 # How many dashes for separation lines
@@ -108,6 +109,7 @@ print.cubeSort <- function (x, ...){
 #' @param x an object of the class 'beersBlind'
 #' @param ... the rest
 #' @author Herve Abdi
+#' @keywords internal
 #' @export
 print.beersBlind <- function (x, ...){
   ndash = 78 # How many dashes for separation lines

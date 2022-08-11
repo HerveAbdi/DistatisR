@@ -4,7 +4,8 @@
 #' \code{GraphDistatisPartial} plots maps of the factor scores of the
 #' observations from a \code{\link{distatis}} analysis.
 #' \code{GraphDistatisPartial} gives a map of the factors scores of the
-#' observations plus partial factor scores, as "seen" by each of the matrices.
+#' observations plus partial factor scores, 
+#' as "seen" by each of the matrices.
 #'
 #' Note that, in the current version, the graphs are plotted as R-plots and are
 #' \emph{not} passed back by the routine.  So the graphs need to be saved "by
@@ -19,11 +20,11 @@
 #' @param axis1 The dimension for the horizontal axis of the plots.
 #' @param axis2 The dimension for the vertical axis of the plots.
 #' @param constraints constraints for the axes
-#' @param item.colors A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+#' @param item.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 #' observations) of color names for the observations.
 #' If \code{NULL} (default),
 #' \code{prettyGraphs} chooses.
-#' @param participant.colors A \eqn{I\time 1}{I*1} matrix (with \eqn{I} = #
+#' @param participant.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
 #' participants) of color names for the observations.
 #' If \code{NULL} (default),
 #' \code{prettyGraphs} chooses (with function \code{prettyGraphs::}).

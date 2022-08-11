@@ -19,3 +19,4 @@ Change the print function for voc4distatis class
 \author{
 Herve Abdi
 }
+\keyword{internal}

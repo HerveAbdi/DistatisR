@@ -88,6 +88,7 @@ read.df.excel <- function(path, sheet, col_names = TRUE,
 #' class \code{distatis.data}.
 #' @param ... everything else for the functions
 #' @author Herve Abdi
+#' @keywords internal
 #' @export
 print.distatis.data <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines

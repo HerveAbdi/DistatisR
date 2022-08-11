@@ -21,4 +21,5 @@ Print F_alpha_k results
 \author{
 Hervé Abdi
 }
+\keyword{internal}
 \keyword{print}

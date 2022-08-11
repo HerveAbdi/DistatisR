@@ -135,6 +135,7 @@ vocabulary2CT <- function(df.voc){
 #' @param x a list: output of \code{vocabulary2CT}
 #' @param ... everything else for the function
 #' @author Herve Abdi
+#' @keywords internal
 #' @export
 print.voc4distatis <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines

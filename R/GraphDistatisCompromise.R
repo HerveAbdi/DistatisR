@@ -17,10 +17,11 @@
 #' @param axis2 The dimension for the vertical axis of the plots.
 #' @param constraints constraints for the axes
 #' @param item.colors A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
-#' observations) of color names for the observations. If NULL (default),
+#' observations) of color names for the observations. If \code{NULL} (default),
 #' \code{prettyGraphs} chooses.
 #' @param ZeTitle General title for the plots.
-#' @param nude When \code{nude} is \code{TRUE} the labels for the observations
+#' @param nude (default \code{FALSE}) 
+#' When \code{nude} is \code{TRUE} the labels for the observations
 #' are not plotted (useful when editing the graphs for publication).
 #' @param Ctr Contributions of each observation. If NULL (default), these are
 #' computed from FS
@@ -57,7 +58,8 @@
 #' @importFrom prettyGraphs prettyPlot
 #' @export
 GraphDistatisCompromise <-
-function(FS,axis1=1,axis2=2,constraints=NULL,item.colors=NULL,ZeTitle= 'Distatis-Compromise',nude=FALSE,Ctr=NULL){
+function(FS,axis1=1,axis2=2,constraints=NULL,
+         item.colors=NULL,ZeTitle= 'Distatis-Compromise',nude=FALSE,Ctr=NULL){
 
     if(is.null(item.colors)){
 		item.design <- diag(dim(FS)[1])
