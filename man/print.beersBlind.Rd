@@ -17,3 +17,4 @@ Change the print function for class 'beersBlind'
 \author{
 Herve Abdi
 }
+\keyword{internal}

@@ -17,3 +17,4 @@ Change the print function for cubeSort
 \author{
 Herve Abdi
 }
+\keyword{internal}

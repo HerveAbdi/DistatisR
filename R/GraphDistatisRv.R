@@ -23,8 +23,9 @@
 #' \code{prettyGraphs} chooses.
 #' @param nude When \code{nude} is \code{TRUE} the labels for the observations
 #' are not plotted (useful when editing the graphs for publication).
-#' @param RvCtr Contributions of each participant. If NULL (default), these are
-#' computed from RvFS
+#' @param RvCtr Contributions of each participant. 
+#' If code{NULL} (default), these are
+#' computed from \code{RvFS}.
 #' @return \item{constraints}{A set of plot constraints that are returned.}
 #' \item{participant.colors}{A set of colors for the participants are
 #' returned.}

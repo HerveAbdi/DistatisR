@@ -32,8 +32,9 @@ participants) of color names for the observations. If NULL (default),
 \item{nude}{When \code{nude} is \code{TRUE} the labels for the observations
 are not plotted (useful when editing the graphs for publication).}
 
-\item{RvCtr}{Contributions of each participant. If NULL (default), these are
-computed from RvFS}
+\item{RvCtr}{Contributions of each participant. 
+If code{NULL} (default), these are
+computed from \code{RvFS}.}
 }
 \value{
 \item{constraints}{A set of plot constraints that are returned.}

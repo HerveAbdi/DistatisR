@@ -1,8 +1,11 @@
 #' @title ComputeSplus
-#' @description Compute the comprise matrix for STATIS/DISTATIS
+#' @description Compute the compromise matrix for STATIS/DISTATIS
 #' @param CubeCP A 3D array of cross-product matrices.
-#' @param alpha Vector of weights
-#' @return The compromise matrix, i.e. the sum of the slices weighted by alpha
+#' @param alpha The vector of weights
+#' @return The compromise matrix
+#' computed as the alpha-weighted sum of the 
+#' cross-product matrices.
+#'  
 #' @examples 
 #' \dontrun{
 #' D3 <- array(c(0, 1, 2, 1, 0, 1, 2, 1, 0, 

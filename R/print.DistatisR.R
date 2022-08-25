@@ -7,6 +7,7 @@
 #' @param ... inherited/passed arguments for S3 print method(s).
 #' @author Derek Beaton
 #' @keywords print
+#' @keywords internal
 #' @export
 print.DistatisR <-
 function (x,...) {

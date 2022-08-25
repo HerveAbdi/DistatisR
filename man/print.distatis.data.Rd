@@ -19,3 +19,4 @@ Change the print function for bootRatios
 \author{
 Herve Abdi
 }
+\keyword{internal}

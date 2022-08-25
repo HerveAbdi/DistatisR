@@ -21,3 +21,4 @@ Change the print function for objects of the class
 \author{
 Herve Abdi
 }
+\keyword{internal}

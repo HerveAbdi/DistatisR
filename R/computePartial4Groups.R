@@ -100,6 +100,7 @@ return(return.list)
 #' for S3 print method(s).
 #' @author Hervé Abdi
 #' @keywords print
+#' @keywords internal
 #' @export
 print.F_alpha_k <-
   function (x,...) {

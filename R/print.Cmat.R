@@ -6,6 +6,7 @@
 #' @param ... inherited/passed arguments for S3 print method(s).
 #' @author Derek Beaton
 #' @keywords print
+#' @keywords internal
 #' @export
 print.Cmat <- function (x,...) {
 	res.Cmat <- x

@@ -27,12 +27,13 @@ GraphDistatisCompromise(
 \item{constraints}{constraints for the axes}
 
 \item{item.colors}{A \eqn{I\times 1}{I*1} matrix (with \eqn{I} = #
-observations) of color names for the observations. If NULL (default),
+observations) of color names for the observations. If \code{NULL} (default),
 \code{prettyGraphs} chooses.}
 
 \item{ZeTitle}{General title for the plots.}
 
-\item{nude}{When \code{nude} is \code{TRUE} the labels for the observations
+\item{nude}{(default \code{FALSE}) 
+When \code{nude} is \code{TRUE} the labels for the observations
 are not plotted (useful when editing the graphs for publication).}
 
 \item{Ctr}{Contributions of each observation. If NULL (default), these are

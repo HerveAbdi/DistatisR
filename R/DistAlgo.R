@@ -10,7 +10,7 @@
 #'
 #' @name DistAlgo
 #' @docType data
-#' @format an \eqn{6\times6\time4}{6*6*4} array. Each \eqn{6\times 6}{6*6}
+#' @format an \eqn{6\times6\times4}{6*6*4} array. Each \eqn{6\times 6}{6*6}
 #' matrix is a distance matrix
 #' @references Abdi, H., Valentin, D., O'Toole, A.J., & Edelman, B. (2005).
 #' DISTATIS: The analysis of multiple distance matrices.  \emph{Proceedings of

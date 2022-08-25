@@ -106,7 +106,7 @@ returned.}
 }
 \description{
 This function produces 4 plots: (1) a compromise plot, (2) a partial factor
-scores plot, (3) a bootstrap confidence intervals plot, and (4) a Rv map.
+scores plot, (3) a bootstrap confidence intervals plot, and (4) an \eqn{Rv} map.
 }
 \examples{
 

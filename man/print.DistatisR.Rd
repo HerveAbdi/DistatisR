@@ -17,4 +17,5 @@ Print DistatisR results.
 \author{
 Derek Beaton
 }
+\keyword{internal}
 \keyword{print}

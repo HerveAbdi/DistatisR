@@ -9,13 +9,15 @@ ComputeSplus(CubeCP, alpha)
 \arguments{
 \item{CubeCP}{A 3D array of cross-product matrices.}
 
-\item{alpha}{Vector of weights}
+\item{alpha}{The vector of weights}
 }
 \value{
-The compromise matrix, i.e. the sum of the slices weighted by alpha
+The compromise matrix
+computed as the alpha-weighted sum of the 
+cross-product matrices.
 }
 \description{
-Compute the comprise matrix for STATIS/DISTATIS
+Compute the compromise matrix for STATIS/DISTATIS
 }
 \examples{
 \dontrun{

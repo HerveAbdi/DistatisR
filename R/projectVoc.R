@@ -149,6 +149,7 @@ projectVoc <- function(CT.voc , # I * N  The CT for vocabulary
 #' @param x a list: the data set: {str_BeersProjectiveMapping}
 #' @param ... the rest
 #' @author Herve Abdi
+#' @keywords internal
 #' @export
 print.F4voc <- function (x, ...) {
   ndash = 78 # How many dashes for separation lines

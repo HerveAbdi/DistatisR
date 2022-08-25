@@ -137,7 +137,7 @@ createCubeOfCovDis <- function(brickOfData,
 #' @param x a list objects of the class {cubeOfCovDis}
 #' @param ... the rest
 #' @author Herve Abdi
-#' @export
+#' @keywords internal
 print.cubeOfCovDis <- function(x, ...){
   ndash = 78 # How many dashes for separation lines
   cat(rep("-", ndash), sep = "")
