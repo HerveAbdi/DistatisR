@@ -2,11 +2,10 @@
 % Please edit documentation in R/statis.R
 \name{statis}
 \alias{statis}
-\title{multitable method with  "STATIS" optimization
-procedure for asymmetric, rectangular matrices}
+\title{statis}
 \usage{
 statis(
-  LeGrandTable,
+  LaGrandeTable,
   DESIGN,
   Norm = "MFA",
   center = TRUE,

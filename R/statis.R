@@ -17,7 +17,7 @@
 # statis Preamble ----
 #' multitable method with  "STATIS" optimization
 #' procedure for asymmetric, rectangular matrices
-#' 
+#' @title statis
 #' @param LeListOfTables an "observations 
 #' \eqn{\times}{*} observations
 #' \eqn{\times}{*} distance matrices" array of dimensions
@@ -132,7 +132,7 @@
 #' @examples
 #' add(1, 1)
 #' add(10, 1)
-statis <- function(LeGrandTable,
+statis <- function(LaGrandeTable,
                    DESIGN,
                 Norm = 'MFA',
                 center = TRUE, 
@@ -145,37 +145,36 @@ statis <- function(LeGrandTable,
     # design=c('NZ','NZ','NZ','NZ','FR','FR','FR','FR','CA','CA','CA','CA')
     
     ## center and scale the data tables
-    LeGrandTable.preproc <- lapply(LeGrandTable, function(x) expo.scale(x, center = center, scale = scale))
+    LaGrandeTable.preproc <- lapply(LaGrandeTable, function(x) expo.scale(x, center = center, scale = scale))
     
     # perform MFA normalization ----
     if (Norm == 'MFA') {
-        LeGrandTable.preproc <- lapply(LeGrandTable.preproc, MFAnormMat)
+        LaGrandeTable.preproc <- lapply(LaGrandeTable.preproc, MFAnormMat)
+    }
+    if (Norm == 'SUMPCA') {
+        LaGrandeTable.preproc <- lapply(LaGrandeTable.preproc, SUMPCAnormMat)
     }
     
     ## Put data into an array
-    if (is.list(LeGrandTable.preproc)){
-        diff.row <- lapply(LeGrandTable.preproc, nrow) %>% unique %>% length()
-        diff.col <- lapply(LeGrandTable.preproc, ncol) %>% unique %>% length()
+    if (is.list(LaGrandeTable.preproc)){
+        diff.row <- lapply(LaGrandeTable.preproc, nrow) %>% unique %>% length()
+        diff.col <- lapply(LaGrandeTable.preproc, ncol) %>% unique %>% length()
         
         if (diff.row == 1 & diff.col > 1 | diff.row == 1 & diff.col == 1 & diff.row < diff.col){
             ## create crossproduct with rows
-            data.list <- lapply(LeGrandTable.preproc, function(x) crossprod(t(x)))
+            data.list <- lapply(LaGrandeTable.preproc, function(x) crossprod(t(x)))
         }else if (diff.row > 1 & diff.col == 1 | diff.row == 1 & diff.col == 1 & diff.row > diff.col){
-            data.list <- lapply(LeGrandTable.preproc, crossprod)
+            data.list <- lapply(LaGrandeTable.preproc, crossprod)
         }else{
             stop("Either the rows or the columns of the data tables have to match.")
         }
         leCube <- array(as.numeric(unlist(data.list)), 
                         dim=c(dim(data.list[[1]])[1], dim(data.list[[1]])[2], length(data.list)),
                         dimnames = list(rownames(data.list[[1]]), colnames(data.list[[1]]), names(data.list)))
-    }else if(is.array(LeGrandTable.preproc)){
-        leCube <- LeGrandTable.preproc
+    }else if(is.array(LaGrandeTable.preproc)){
+        leCube <- LaGrandeTable.preproc
     }else{
         stop("The tables should be in a list or an array.")
-    }
-    
-    if (Norm == 'SUMPCA') {
-        leCube <- CP2SUMPCAnormedCP(leCube)
     }
     
     # Compute C matrix ----
@@ -251,22 +250,30 @@ statis <- function(LeGrandTable,
         colnames(PartialFi) <- Nom2Factors
         dimnames(PartialFi)[[3]] <- rownames(C)
         # Column factor scores ----
-        Fj <- lapply(LeGrandTable.preproc, function(x){
+  
+        Q <- lapply(LaGrandeTable.preproc, function(x){
+            qj <- t(x) %*% eigenSplus$vectors[,1:nfact2keep] %*% diag(1/eigenSplus$SingularValues[1:nfact2keep])
+            rownames(qj) <- rownames(x)
+            colnames(qj) <- Nom2Factors
+            return(qj)
+        })
+        
+        Fj_noalpha <- lapply(LaGrandeTable.preproc, function(x){ ## missing alpha 
             fj <- t(x) %*% eigenSplus$vectors[,1:nfact2keep]
             rownames(fj) <- colnames(x)
             colnames(fj) <- Nom2Factors
             return(fj)
-            })
-        Q <- lapply(Fj, function(x){
-            qj <- x %*% diag(1/eigenSplus$SingularValues[1:nfact2keep])
-            rownames(qj) <- rownames(x)
-            colnames(qj) <- Nom2Factors
-            return(qj)
-            })
+        })
+        Fj <- mapply('*', Fj_noalpha, sqrt(alpha), SIMPLIFY = FALSE)
+
         Fj2     <-  lapply(Fj, '^', 2)
         d2Fj    <-  lapply(Fj, rowSums)
-        ctrFj   <- lapply(Fj2, function(x) DistatisR:::rdiag(x, 1/ abs(eigenSplus$values[1:nfact2keep])))
-        
+        ctrFj   <- lapply(Fj2, function(x) rdiag(x, 1/ abs(eigenSplus$values[1:nfact2keep])))
+        cos2Fj  <- list()
+        for (ln in 1:length(d2Fj)){
+            cos2Fj[[ln]] <- ldiag(1/d2Fj[[ln]], Fj2[[ln]])
+        }
+        names(cos2Fj) <- names(Fj2)
         # pack up the information to send back.
         # May try as some point to keep a structure similar 
         # to MExPosition
@@ -296,6 +303,7 @@ statis <- function(LeGrandTable,
             ctr.i = ctrFi,
             ctr.j = ctrFj,
             cos2.i = cos2Fi,
+            cos2.j = cos2Fj,
             d2.i = d2Fi,
             d2.j = d2Fj,
             PartialFi = PartialFi,
@@ -308,7 +316,6 @@ statis <- function(LeGrandTable,
                              res4Splus = res.Splus,
                              compact = compact,
                              params = list(
-                                 double_centering = double_centering,
                                  Norm = Norm,
                                  RV = RV))
         class(res.statis) <- c("StatisR", "list")
