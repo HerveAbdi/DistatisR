@@ -54,8 +54,8 @@
 #' to keep for the computation of the
 #' factor scores of the observations.
 #' @param compact if \code{FALSE} (default),
-#'  \code{distatis} provides detailed output, if
-#'  \code{TRUE},  \code{distatis} sends back
+#'  \code{statis} provides detailed output, if
+#'  \code{TRUE},  \code{statis} sends back
 #' only the \eqn{\alpha}{alpha} weights
 #'  (this option is used to make the
 #' bootstrap routine 
@@ -328,10 +328,10 @@ statis <- function(LaGrandeTable,
         class(res.Cmat) <- c("Cmat", "list")
         res.Splus <- list(Splus = Splus, compact = compact)
         class(res.Splus) <- c("Splus", "list")
-        res.distatis <- list(res4Cmat = res.Cmat,
+        res.statis <- list(res4Cmat = res.Cmat,
                              res4Splus = res.Splus,
                              compact = compact)
-        class(res.distatis) <- c("StatisR", "list")
+        class(res.statis) <- c("StatisR", "list")
     }
     # return ----
     return(res.statis) # et voila ----

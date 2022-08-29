@@ -35,8 +35,8 @@ to keep for the computation of the
 factor scores of the observations.}
 
 \item{compact}{if \code{FALSE} (default),
- \code{distatis} provides detailed output, if
- \code{TRUE},  \code{distatis} sends back
+ \code{statis} provides detailed output, if
+ \code{TRUE},  \code{statis} sends back
 only the \eqn{\alpha}{alpha} weights
  (this option is used to make the
 bootstrap routine 
