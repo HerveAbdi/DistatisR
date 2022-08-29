@@ -119,6 +119,8 @@
 #'  \item
 #'    \code{res.Splus$cos2.i} The squared cosines for \code{res.Cmat$Fi}.
 #'  \item
+#'    \code{res.Splus$cos2.j} The squared cosines for \code{res.Cmat$Fj}.
+#'  \item
 #'  \code{res.Splust$d2.i} The squared 
 #'  Euclidean distance  for \code{res.Cmat$Fi}.
 #'  \item
