@@ -5,7 +5,9 @@
 #' @export
 #'
 #' @examples
-#' MFAnormMat(Y)
+#' ## a random 5 x 6 matrix
+#' X <- matrix(rnorm(30), nrow = 5)
+#' MFAnormMat(X)
 MFAnormMat <- function (Y) {
     sv = svd(Y)
     sv1 = sv$d[1]

@@ -6,7 +6,6 @@
 \usage{
 statis(
   LaGrandeTable,
-  DESIGN,
   Norm = "MFA",
   center = TRUE,
   scale = "SS1",
@@ -16,13 +15,29 @@ statis(
 )
 }
 \arguments{
+\item{LaGrandeTable}{A list of observations 
+\eqn{\times}{*} variables matrices. These matrices describe the same
+observations with sets of variables (which do not necessarily have 
+to match across matrices).}
+
 \item{Norm}{Type of normalization 
-used for each cross-product matrix derived
-from the distance (or covariance) matrices.  
-Current options are \code{NONE}
-(do nothing), \code{SUMPCA} (normalize by the total inertia) 
+used for each matrix.  
+Current options are \code{NONE} (do nothing), 
+\code{SUMPCA} (normalize by the square root of the total sum of squares) 
 or \code{MFA} (\code{default}) that normalizes each matrix so
 that its first eigenvalue is equal to one.}
+
+\item{center}{If \code{TRUE}, 
+(\code{default}) the columns of each matrix are centered
+(i.e., to have a mean of 0).
+If \code{FALSE}, the columns will \emph{not} be centered.}
+
+\item{scale}{If \code{TRUE}, the columns of each matrix are normalized
+to have a standard deviation equal 1.
+If \code{"SS1"}, (\code{default}) the columns of each matrix are 
+normalized to have a sum of squares of 1, 
+so that they contribute equally.
+If \code{FALSE}, the columns will \emph{not} be normalized.}
 
 \item{RV}{if \code{TRUE} (\code{default}) 
 we use the \eqn{R_V}{Rv} coefficient to
@@ -41,29 +56,6 @@ only the \eqn{\alpha}{alpha} weights
  (this option is used to make the
 bootstrap routine 
 \code{\link{BootFromCompromise}} more efficient).}
-
-\item{LeListOfTables}{an "observations 
-\eqn{\times}{*} observations
-\eqn{\times}{*} distance matrices" array of dimensions
-\eqn{I\times I \times  K}{I*I*K}.
-Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
-distance (or covariance) matrix describing the 
-\eqn{I} observations.}
-
-\item{Distance}{if \code{TRUE} (\code{default}) 
-the matrices are distance matrices, \code{FALSE}
-the matrices are treated as positive semi-definite matrices
-(e.g., scalar products,
-covariance, or correlation matrices).}
-
-\item{double_centering}{if \code{TRUE} 
-(\code{default}) the matrices are double-centered
-(should always be used for distances).
-if \code{FALSE} the matrices
-will \emph{not} be double centered 
-(note that these matrices 
-should be semi positive definite matrices such that
-covariance matrices).}
 }
 \value{
 \code{statis} sends back the results 
@@ -141,6 +133,10 @@ multitable method with  "STATIS" optimization
 procedure for asymmetric, rectangular matrices
 }
 \examples{
-add(1, 1)
-add(10, 1)
+## Wine data from Abdi et al. (2012)
+## A list of tables with matching rows and different variables
+data(wines2012List)
+
+## This replicate results from the paper             
+statis.res <- statis(wines2012List, Norm = "SUMPCA", scale = TRUE, RV = FALSE)
 }

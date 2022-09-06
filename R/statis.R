@@ -4,47 +4,38 @@
 # Private functions used in this file
 #  >>> See file names matching the function names
 # -- private functions
-#   o DblCenterDist 
-#   o Dist2CP       
-#   o MFAnormCP
-#   o CP2MFAnormedCP
+#   o MFAnormMat
+#   o CP2MFAnormedMat
 #   o GetCmat
 #   o ComputeSplus
 #   o rdiag & ldiag
 #________________________
-# Last update  07 / 28 / 2022 by Ju-Chi
+# Last update  09 / 06 / 2022 by Ju-Chi
 #_____________________________________________________________________
 # statis Preamble ----
 #' multitable method with  "STATIS" optimization
 #' procedure for asymmetric, rectangular matrices
 #' @title statis
-#' @param LeListOfTables an "observations 
-#' \eqn{\times}{*} observations
-#' \eqn{\times}{*} distance matrices" array of dimensions
-#' \eqn{I\times I \times  K}{I*I*K}.
-#' Each of the \eqn{K} "slices" is a \eqn{I\times I}{I*I} square
-#' distance (or covariance) matrix describing the 
-#' \eqn{I} observations.
+#' @param LaGrandeTable A list of observations 
+#' \eqn{\times}{*} variables matrices. These matrices describe the same
+#' observations with sets of variables (which do not necessarily have 
+#' to match across matrices).
 #' @param Norm Type of normalization 
-#' used for each cross-product matrix derived
-#' from the distance (or covariance) matrices.  
-#' Current options are \code{NONE}
-#' (do nothing), \code{SUMPCA} (normalize by the total inertia) 
+#' used for each matrix.  
+#' Current options are \code{NONE} (do nothing), 
+#' \code{SUMPCA} (normalize by the square root of the total sum of squares) 
 #' or \code{MFA} (\code{default}) that normalizes each matrix so
 #' that its first eigenvalue is equal to one.
-#' @param Distance if \code{TRUE} (\code{default}) 
-#' the matrices are distance matrices, \code{FALSE}
-#' the matrices are treated as positive semi-definite matrices
-#' (e.g., scalar products,
-#' covariance, or correlation matrices).
-#' @param double_centering if \code{TRUE} 
-#' (\code{default}) the matrices are double-centered
-#' (should always be used for distances).
-#' if \code{FALSE} the matrices
-#' will \emph{not} be double centered 
-#' (note that these matrices 
-#' should be semi positive definite matrices such that
-#' covariance matrices).
+#' @param center If \code{TRUE}, 
+#' (\code{default}) the columns of each matrix are centered
+#' (i.e., to have a mean of 0).
+#' If \code{FALSE}, the columns will \emph{not} be centered. 
+#' @param scale If \code{TRUE}, the columns of each matrix are normalized
+#' to have a standard deviation equal 1.
+#' If \code{"SS1"}, (\code{default}) the columns of each matrix are 
+#' normalized to have a sum of squares of 1, 
+#' so that they contribute equally.
+#' If \code{FALSE}, the columns will \emph{not} be normalized.
 #' @param RV if \code{TRUE} (\code{default}) 
 #' we use the \eqn{R_V}{Rv} coefficient to
 #' compute the \eqn{\alpha}{weights}, 
@@ -131,21 +122,23 @@
 #' Contains the partial factors for the distance
 #' matrices.}
 #' 
+#' @importFrom ExPosition expo.scale
+#' 
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' ## Wine data from Abdi et al. (2012)
+#' ## A list of tables with matching rows and different variables
+#' data(wines2012List)
+#' 
+#' ## This replicate results from the paper             
+#' statis.res <- statis(wines2012List, Norm = "SUMPCA", scale = TRUE, RV = FALSE)
 statis <- function(LaGrandeTable,
-                   DESIGN,
-                Norm = 'MFA',
-                center = TRUE, 
-                scale = "SS1",
-                RV = TRUE,
-                nfact2keep = 3,
-                compact = FALSE) {
-    
-    # data('wines2012')
-    # design=c('NZ','NZ','NZ','NZ','FR','FR','FR','FR','CA','CA','CA','CA')
-    
+                   Norm = 'MFA',
+                   center = TRUE, 
+                   scale = "SS1",
+                   RV = TRUE,
+                   nfact2keep = 3,
+                   compact = FALSE) {
+
     ## center and scale the data tables
     LaGrandeTable.preproc <- lapply(LaGrandeTable, function(x) expo.scale(x, center = center, scale = scale))
     
@@ -255,14 +248,12 @@ statis <- function(LaGrandeTable,
   
         Q <- lapply(LaGrandeTable.preproc, function(x){
             qj <- t(x) %*% eigenSplus$vectors[,1:nfact2keep] %*% diag(1/eigenSplus$SingularValues[1:nfact2keep])
-            rownames(qj) <- rownames(x)
             colnames(qj) <- Nom2Factors
             return(qj)
         })
         
         Fj_noalpha <- lapply(LaGrandeTable.preproc, function(x){ ## missing alpha 
             fj <- t(x) %*% eigenSplus$vectors[,1:nfact2keep]
-            rownames(fj) <- colnames(x)
             colnames(fj) <- Nom2Factors
             return(fj)
         })
