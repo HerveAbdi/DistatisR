@@ -33,7 +33,9 @@ from the distance (or covariance) matrices.
 Current options are \code{NONE}
 (do nothing), \code{SUMPCA} (normalize by the total inertia) 
 or \code{MFA} (\code{default}) that normalizes each matrix so
-that its first eigenvalue is equal to one.}
+that its first eigenvalue is equal to one
+or \code{NUCLEAR} (i.e., the of the squarae root of the
+eigenvalues).}
 
 \item{Distance}{if \code{TRUE} (\code{default}) 
 the matrices are distance matrices, \code{FALSE}
@@ -47,14 +49,15 @@ covariance, or correlation matrices).}
 if \code{FALSE} the matrices
 will \emph{not} be double centered 
 (note that these matrices 
-should be semi positive definite matrices such that
+should be semi positive definite matrices such as,
+for example,
 covariance matrices).}
 
 \item{RV}{if \code{TRUE} (\code{default}) 
 we use the \eqn{R_V}{Rv} coefficient to
 compute the \eqn{\alpha}{weights}, 
 if \code{FALSE}
-we use the matrix scalar product}
+we use the matrix scalar product.}
 
 \item{nfact2keep}{(default: \code{3}) Number of factors 
 to keep for the computation of the
@@ -66,7 +69,8 @@ factor scores of the observations.}
 only the \eqn{\alpha}{alpha} weights
  (this option is used to make the
 bootstrap routine 
-\code{\link{BootFromCompromise}} more efficient).}
+\code{\link{BootFromCompromise}} more 
+computationally efficient).}
 }
 \value{
 \code{distatis} sends back the results 
@@ -208,7 +212,8 @@ classifiers using the Bootstrap and 3-way multidimensional scaling
 (DISTATIS).  
 \emph{NeuroImage}, \bold{45}, 89--95.
 
-Abdi, H., Williams, L.J., Valentin, D., & Bennani-Dosse, M. (2012).
+Abdi, H., Williams, L.J., Valentin, D., & 
+Bennani-Dosse, M. (2012).
   STATIS
 and DISTATIS: Optimum multi-table principal component 
 analysis and three way

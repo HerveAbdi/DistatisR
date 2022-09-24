@@ -25,7 +25,7 @@
 #'  
 #' @details two types of projection are computed: 1)
 #' a plain barycentric (words are positioned at the 
-#' barycenter--a.k.a. center of mass--of the items it describe) and
+#' barycenter--a.k.a. center of mass--of the items it describes) and
 #' 2) a correspondence analysis barycentric where the variance
 #' of the projected words is equal to the variance
 #' of the items (as for correspondence analysis when using the
