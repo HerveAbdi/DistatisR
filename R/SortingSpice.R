@@ -16,6 +16,8 @@
 #' free sorting task. In. P.V. Tomasco & G. Ares (Eds), \emph{Novel Techniques
 #' in Sensory Characterization and Consumer Profiling}.  Boca Raton: Taylor and
 #' Francis.
-#' @source Chollet et al. (2014). \url{www.utdallas.edu/~herve}
+#' @source Chollet et al. (2014). 
+#' Paper available from  
+#' \url{https://personal.utdallas.edu/~herve/}
 #' @keywords datasets DistatisR
 NULL

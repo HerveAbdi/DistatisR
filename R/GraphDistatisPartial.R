@@ -55,7 +55,7 @@
 #' Computer Society: International Conference on Computer Vision and Pattern
 #' Recognition}.  (San Diego, CA, USA). pp. 42-47.
 #'
-#' see \url{www.utdallas.edu/~herve}
+#' Papaer vailable from  \url{https://personal.utdallas.edu/~herve/}
 #' @keywords DistatisR mds
 #' @examples
 #'

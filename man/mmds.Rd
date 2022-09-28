@@ -4,7 +4,7 @@
 \alias{mmds}
 \title{Metric (classical) Multidimensional Scaling
 (a.k.a Principal Coordinate
-Analysis) of a (Euclidean) Distance Matrix.}
+Analysis) of a (squared Euclidean) Distance Matrix.}
 \usage{
 mmds(DistanceMatrix, masses = NULL)
 }
@@ -18,17 +18,20 @@ distance matrix}
 of rows of \code{DistanceMatrix}.}
 }
 \value{
-Sends back a list \item{LeF}{factor scores for the objects.}
+Sends back a list 
+\item{LeF}{factor scores for the objects.}
 \item{eigenvalues}{the eigenvalues for the factor scores
  (i.e., a variance).}
-\item{tau}{the percentage of explained variance by each dimension.}
-\item{Contributions}{give the proporion of explained
+\item{tau}{the percentage of 
+explained variance by each dimension.}
+\item{Contributions}{give the proportion of explained
 variance by an object
 for a dimension.}
 }
 \description{
 \code{mmds}: Perform a Metric Multidimensional Scaling
-(MMDS) of an (Euclidean) distance matrix measured between a set of
+(MMDS) of an (squared Euclidean) distance matrix 
+measured between a set of
 objects (with or without masses).
 }
 \details{
@@ -39,13 +42,15 @@ on the map best approximate the
 original distances between objects.
 }
 \section{Method}{
- MMDS transform the distance matrix
+ MMDS transform the 
+squared Euclidean distance matrix
 into a (double centered)
 covariance-like matrix which is then analyzed
-via its eigen-decomposition.  The
+via its eigen-decomposition.  
+The
 factor scores of each dimension are scaled
 such that their variance (i.e.,
-the sum ot their weighted squared factor scores)
+the sum of their weighted squared factor scores)
 is equal to the eigen-value
 of the corresponding dimension.
  Note that if the \code{masses} vector is
@@ -56,12 +61,13 @@ absent, equal masses
 \section{Technicalities}{
 
 the distance matrix to be analyzed is supposed to be a
-\eqn{squared} euclidean distance matrix.
+\eqn{squared} Euclidean distance matrix.
 Note also that a non Euclidean distance matrix
 will have negative eigenvalues that will be ignored
 by \code{mmds} which, therefore, gives the best Euclidean
 approximation to this non-Euclidean distance matrix
-(note that, nonmetric MDS maybe a better technique in these cases).
+(note that, nonmetric MDS maybe a better 
+method in these cases).
 }
 
 \examples{
@@ -97,7 +103,7 @@ prettyGraphs::prettyPlot(BrainRes$FactorScore,
 # 4. et Voila!
 }
 \references{
-The procedure and references are detailled in:
+The procedure and references are detailed in:
 Abdi, H. (2007).
 Metric multidimensional scaling.
 In N.J. Salkind (Ed.): \emph{Encyclopedia
@@ -107,7 +113,8 @@ Thousand Oaks (CA): Sage. pp. 598--605.
 (Paper available from \url{www.utdallas.edu/~herve}).
 }
 \seealso{
-\code{\link{GraphDistatisCompromise}} \code{\link{distatis}}
+\code{\link{GraphDistatisCompromise}} 
+\code{\link{distatis}}
 }
 \author{
 Herve Abdi

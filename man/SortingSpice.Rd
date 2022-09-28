@@ -10,7 +10,9 @@ a data frame file containing 21 columns, 16 rows plus the names of
 the rows and the columns.
 }
 \source{
-Chollet et al. (2014). \url{www.utdallas.edu/~herve}
+Chollet et al. (2014). 
+Paper available from  
+\url{https://personal.utdallas.edu/~herve/}
 }
 \description{
 Provide the data.frame SortSpice: Data set to illustrate the use of the

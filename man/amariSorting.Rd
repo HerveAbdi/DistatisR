@@ -19,7 +19,8 @@ Lahne, J., Abdi, H., & Heymann, H. (2018).
 and barycentric text projection: 
 An example with amari, bitter herbal liqueurs. 
 \emph{Food Quality and Preference}, 66, 36-43. 
-(available from \url{www.utdallas.edu/~herve}).
+(available from 
+ \url{https://personal.utdallas.edu/~herve/}).
 }
 \usage{
 data("amariSorting")

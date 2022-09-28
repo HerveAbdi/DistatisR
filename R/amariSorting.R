@@ -63,7 +63,8 @@
 #' and barycentric text projection: 
 #' An example with amari, bitter herbal liqueurs. 
 #' \emph{Food Quality and Preference}, 66, 36-43. 
-#' (available from \url{www.utdallas.edu/~herve}).
+#' (available from 
+#'  \url{https://personal.utdallas.edu/~herve/}).
 #' @keywords datasets DistatisR
 #' @author Jacob Lahne, Hervé Abdi, & Hildegarde Heymann
 NULL

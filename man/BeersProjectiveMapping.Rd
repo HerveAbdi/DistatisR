@@ -27,7 +27,7 @@ the  \eqn{I} Products by \eqn{N}
 }
 \source{
 Abdi, H,  & Valentin, D. (2007). 
-\url{www.utdallas.edu/~herve}
+\url{https://personal.utdallas.edu/~herve/}
 }
 \usage{
 data("BeersProjectiveMapping")

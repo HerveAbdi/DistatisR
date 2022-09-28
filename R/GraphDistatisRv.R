@@ -68,7 +68,8 @@
 #' \emph{Encyclopedia of Research Design.} Thousand Oaks (CA): Sage. pp.
 #' 222--229.
 #'
-#' These papers are available from \url{www.utdallas.edu/~herve}
+#' These papers are available from 
+#'  \url{https://personal.utdallas.edu/~herve/}
 #' @importFrom prettyGraphs prettyPlot
 #' @keywords DistatisR
 #' @examples

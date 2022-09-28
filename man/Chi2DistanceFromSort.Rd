@@ -22,19 +22,30 @@ array of \eqn{K} distances matrices
 }
 \description{
 \code{Chi2DistanceFromSort}:
- Takes the results from a (plain) sorting task where \eqn{K} assessors sort
-\eqn{I} observations into (mutually exclusive) groups (i.e., one object is
+ Takes the results from a (plain) sorting task where
+  \eqn{K} assessors sort
+\eqn{I} observations into (mutually exclusive) groups
+ (i.e., one object is
 in one an only one group).
- \code{Chi2DistanceFromSort} creates an \eqn{I \times
-I \times K}{I*I*K} array of distance in which each of the \eqn{k} "slices"
-stores the (sorting) distance matrix of the \eqn{k}th assessor.  In one of
-these distance matrices, the distance between rows is the \eqn{\chi^2}{Chi2}
-distance between rows when the results of the task are coded as 0/1 group
-coding (i.e., the "complete disjunctive coding" as used in multiple
-correspondence analysis, see Abdi & Valentin, 2007, for more)
+ \code{Chi2DistanceFromSort} creates an 
+ \eqn{I \times
+I \times K}{I*I*K} array of distance in which
+ each of the \eqn{k} "slices"
+stores the (sorting) distance matrix of the 
+\eqn{k}th assessor.  
+In one of
+these distance matrices,
+ the distance between rows is the \eqn{\chi^2}{Chi2}
+distance between rows when the results 
+of the task are coded as 0/1 group
+coding (i.e., the "complete disjunctive coding" 
+as used in multiple
+correspondence analysis, 
+see Abdi & Valentin, 2007, for more)
 }
 \details{
-The ouput ot the function \code{Chi2DistanceFromSort} is used as input for the
+The ouput ot the function \code{Chi2DistanceFromSort} 
+is used as input for the
 function \code{\link{distatis}}.
 
 The input should have assessors
@@ -108,7 +119,8 @@ Abdi, H., & Valentin, D. (2007). Multiple correspondence analysis.  In N.J.
 Salkind (Ed.): \emph{Encyclopedia of Measurement and Statistics.} Thousand
 Oaks (CA): Sage. pp. 651-657.
 
-These papers are available from \url{www.utdallas.edu/~herve}
+These papers are available from 
+ \url{https://personal.utdallas.edu/~herve/}
 }
 \seealso{
 \code{\link{distatis}}

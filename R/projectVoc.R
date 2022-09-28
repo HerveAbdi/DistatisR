@@ -14,7 +14,8 @@
 
 
 #' @title Compute barycentric projections for count-like
-#' description of the items of a \code{distatis}-type of  analysis.
+#' description of the items of a \code{distatis}-type 
+#' of  analysis.
 #' 
 #' @description \code{projectVoc}
 #' Compute barycentric projection for count-like
@@ -25,10 +26,13 @@
 #'  
 #' @details two types of projection are computed: 1)
 #' a plain barycentric (words are positioned at the 
-#' barycenter--a.k.a. center of mass--of the items it describes) and
-#' 2) a correspondence analysis barycentric where the variance
+#' barycenter--a.k.a. center of mass--of 
+#' the items it describes) and
+#' 2) a correspondence analysis barycentric 
+#' where the variance
 #' of the projected words is equal to the variance
-#' of the items (as for correspondence analysis when using the
+#' of the items (as for correspondence 
+#' analysis when using the
 #' "symmetric" representation).
 #' 
 #' @param CT.voc a matrix or data.frame
@@ -38,19 +42,23 @@
 #'  gives the number of times
 #'  the \eqn{j}-th descriptor (in the column) 
 #'  was used to describe the \eqn{i}-th item
-#'  (in the row). \code{CT.voc} needs to containt only non-negative 
+#'  (in the row). \code{CT.voc} 
+#'  needs to contain only non-negative 
 #'  numbers.
 #' 
 #' @param Fi a matrix or data.frame
 #' storing the
 #'  \eqn{I} items by \eqn{L} factor scores obtained 
-#'  from the compromise of a distatis analysis or equivalent.
+#'  from the compromise of a \code{distatis} 
+#'  analysis or equivalent.
 #' @param namesOfFactors  (Default: NULL), if \code{NULL},
 #' \code{projectVoc} uses the names of the columns of 
 #' \code{Fi} for the names of the projected factors;
 #' if \code{namesOfFactors} is one word then this word is used
-#' to name the factors of the projections; if \code{namesOfFactors}
-#' is a character vector, it is used to name the factors of
+#' to name the factors of the projections; 
+#' if \code{namesOfFactors}
+#' is a character vector, it is used to name the 
+#' factors of
 #' the projection.
 #' @return a list with 
 #' 1) \code{Fvoca.bary}: the barycentric projections of
@@ -64,8 +72,8 @@
 #' data("BeersProjectiveMapping")
 #' # Create the I*J*K brick of data
 #' zeBrickOfData <- projMap2Cube(
-#'                           BeersProjectiveMapping$ProjectiveMapping, 
-#'                           shape = 'flat',  nVars = 2)
+#'                   BeersProjectiveMapping$ProjectiveMapping, 
+#'                   shape = 'flat',  nVars = 2)
 #' # create the cube of covariance matrices between beers
 #' cubeOfCov <- createCubeOfCovDis(zeBrickOfData$cubeOfData)
 #' # Call distatis
@@ -91,7 +99,8 @@
 #'   bitter herbal liqueurs. 
 #'   \emph{Food Quality and Preference, 66}, 36-43. 
 #' @source Abdi, H,  & Valentin, D. (2007). 
-#' \url{www.utdallas.edu/~herve}
+#' Papers available from
+#'  \url{https://personal.utdallas.edu/~herve/}
 #' @author Herve Abdi
 #' @rdname projectVoc
 #' @export 

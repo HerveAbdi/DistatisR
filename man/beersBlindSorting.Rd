@@ -31,7 +31,7 @@ Beer trained and untrained assessors rely more on vision
 than on taste when they categorize beers. 
 \emph{Chemosensory Perception, 2}, 143-153.
 available from
-\url{http://www.utdallas.edu/~herve/abdi-lcav09-inpress.pdf}
+\url{https://personal.utdallas.edu/~herve/abdi-lcav09-inpress.pdf}
 }
 \usage{
 beersBlindSorting

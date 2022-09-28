@@ -72,7 +72,8 @@ print('It matches CA on X (see Abdi & Williams, 2010. Table 16, p. 449)')
 \references{
 The procedure and references 
 are detailled in (Paper available
-from \url{www.utdallas.edu/~herve}): 
+from  
+\url{https://personal.utdallas.edu/~herve/}): 
 Abdi, H. (2007). Distance.  In N.J.
 Salkind (Ed.): \emph{Encyclopedia 
 of Measurement and Statistics}. Thousand

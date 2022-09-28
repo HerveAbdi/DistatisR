@@ -11,11 +11,12 @@
 #'
 #' \tabular{ll}{ Package: \tab DistatisR\cr 
 #' Type: \tab Package\cr Version: \tab
-#' 1.1.0\cr Date: \tab 2018-03-15\cr 
+#' 1.1.0\cr Date: \tab 2022-09-28\cr 
 #' License: \tab GPL-2\cr Depends: \tab
 #' prettyGraphs (>= 2.0.0), car} 
 #' The example shown here comes from Abdi
-#' \emph{et al.} (2007), \code{distatis} paper on the sorting task.
+#' \emph{et al.} (2007), \code{distatis} 
+#' paper on the sorting task.
 #'
 #' @name DistatisR-package
 #' @aliases DistatisR-package DistatisR DiSTATISR
@@ -33,7 +34,7 @@
 #' \code{\link{mmds}}
 #' \code{\link[prettyGraphs:prettyGraphs-package]{prettyGraphs}}
 #' @references % Note: these papers are available from
-#' \url{www.utdallas.edu/~herve}
+#'  \url{https://personal.utdallas.edu/~herve/}
 #'
 #' Abdi, H., Valentin, D., O'Toole, A.J., & Edelman, B. (2005). 
 #' DISTATIS: The

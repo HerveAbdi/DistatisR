@@ -58,8 +58,10 @@
 #' scalar products, covariance, or correlation
 #'  matrices.
 #'
-#' \acronym{DISTATIS} is part of the \acronym{STATIS} family.
-#' It is often used to analyze the results of sorting tasks.
+#' \acronym{DISTATIS} is part of the 
+#' \acronym{STATIS} family.
+#' It is often used to analyze
+#'  the results of sorting tasks.
 #'
 #' @aliases distatis DiSTATIS CovSTATIS covstatis
 #' @param LeCube2Distance an "observations 
@@ -224,7 +226,8 @@
 #'  Thousand Oaks (CA): Sage. pp.
 #' 222--229.
 #'
-#' (These papers are available from \url{www.utdallas.edu/~herve})
+#' (These papers are available from 
+#'  \url{https://personal.utdallas.edu/~herve/})
 #' @keywords distatis mds DISTATIS MDS
 #' @examples
 #'

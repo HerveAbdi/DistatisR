@@ -55,7 +55,7 @@
 #' Vietnam National University & Ho Chi Minh City Publishing House. 
 #' pp. 5-18.
 #' @source Abdi, H,  & Valentin, D. (2007). 
-#' \url{www.utdallas.edu/~herve}
+#' \url{https://personal.utdallas.edu/~herve/}
 #' @keywords datasets DistatisR
 #' @author Hervé Abdi
 NULL

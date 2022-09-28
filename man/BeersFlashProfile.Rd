@@ -10,7 +10,7 @@ This excel file can be read by
 \code{read.df.excel}.}
 \source{
 Abdi, H,  & Valentin, D. (2007). 
-\url{www.utdallas.edu/~herve}
+\url{https://personal.utdallas.edu/~herve/}
 }
 \description{
 \code{BeersFlashProfile}:

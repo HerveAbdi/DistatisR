@@ -105,7 +105,8 @@ Mantel Coefficient.  In N.J. Salkind, D.M., Dougherty, & B. Frey (Eds.):
 \emph{Encyclopedia of Research Design.} Thousand Oaks (CA): Sage. pp.
 222--229.
 
-These papers are available from \url{www.utdallas.edu/~herve}
+These papers are available from 
+ \url{https://personal.utdallas.edu/~herve/}
 }
 \seealso{
 \code{\link{GraphDistatisAll}}

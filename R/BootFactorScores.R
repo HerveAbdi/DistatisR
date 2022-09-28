@@ -86,7 +86,8 @@
 #' \emph{Wiley Interdisciplinary Reviews:
 #' Computational Statistics}, \bold{4}, 124--167.
 #'
-#' These papers are available from \url{www.utdallas.edu/~herve}
+#' These papers are available from 
+#' \url{https://personal.utdallas.edu/~herve/}
 #'
 #' Additional references:
 #'

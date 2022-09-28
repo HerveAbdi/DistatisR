@@ -107,7 +107,8 @@ L. Pelletier (Eds) \emph{New trends in sensory evaluation of food and
 non-food products.} Ho Chi Minh (Vietnam): Vietnam National University-Ho
 chi Minh City Publishing House. pp. 5--18.
 
-These papers are available from \url{www.utdallas.edu/~herve}
+These papers are available from 
+ \url{https://personal.utdallas.edu/~herve/}
 }
 \seealso{
 \code{\link{distatis}}
