@@ -101,7 +101,7 @@ analysis of multiple distance matrices.  \emph{Proceedings of the IEEE
 Computer Society: International Conference on Computer Vision and Pattern
 Recognition}.  (San Diego, CA, USA). pp. 42-47.
 
-Papaer vailable from  \url{https://personal.utdallas.edu/~herve/}
+Paper available from  \url{https://personal.utdallas.edu/~herve/}
 }
 \seealso{
 \code{\link{GraphDistatisAll}}
