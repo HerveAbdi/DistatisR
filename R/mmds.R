@@ -38,7 +38,7 @@
 #' will have negative eigenvalues that will be ignored
 #' by \code{mmds} which, therefore, gives the best Euclidean
 #' approximation to this non-Euclidean distance matrix
-#' (note that, nonmetric MDS maybe a better 
+#' (note that, non-metric MDS maybe a better 
 #' method in these cases).
 #'
 #' @param DistanceMatrix A squared (assumed to be Euclidean)
@@ -66,7 +66,7 @@
 #' of Measurement and Statistics}.
 #' Thousand Oaks (CA): Sage. pp. 598--605.
 #'
-#' (Paper available from \url{www.utdallas.edu/~herve}).
+#' (Paper available from \url{https://personal.utdallas.edu/~herve/}).
 #' @keywords DistatisR MMDS mmds distatis
 #' @examples
 #'

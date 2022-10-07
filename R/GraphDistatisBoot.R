@@ -36,7 +36,7 @@
 #' Can be obtained as the output of this or the other graph routine. 
 #' If \code{NULL},
 #' \code{prettyGraphs} chooses.
-#' @param ZeTitle General title for the plots (deefault is
+#' @param ZeTitle General title for the plots (default is
 #' 'Distatis-Bootstrap').
 #' @param constraints constraints for the axes
 #' @param nude When \code{TRUE} do not plot
@@ -87,7 +87,7 @@
 #' non-food products}.  Ho Chi Minh (Vietnam): Vietnam National University-Ho
 #' chi Minh City Publishing House. pp. 5--18.
 #'
-#' These papers are available from \url{www.utdallas.edu/~herve}
+#' These papers are available from \url{https://personal.utdallas.edu/~herve/}
 #' @keywords DistatisR
 #' @examples
 #'
