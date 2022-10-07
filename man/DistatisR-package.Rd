@@ -195,7 +195,7 @@ London: Wiley-Blackwell.
 \code{\link{GraphDistatisBoot}} \code{\link{GraphDistatisCompromise}}
 \code{\link{GraphDistatisPartial}} \code{\link{GraphDistatisRv}}
 \code{\link{mmds}}
-\code{\link[prettyGraphs:prettyGraphs-package]{prettyGraphs}}
+\code{\link{prettyGraphs}}
 }
 \author{
 Derek Beaton [aut, com, ctb], & Herve Abdi

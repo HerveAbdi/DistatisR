@@ -32,7 +32,7 @@
 #' \code{\link{GraphDistatisBoot}} \code{\link{GraphDistatisCompromise}}
 #' \code{\link{GraphDistatisPartial}} \code{\link{GraphDistatisRv}}
 #' \code{\link{mmds}}
-#' \code{\link[prettyGraphs:prettyGraphs-package]{prettyGraphs}}
+#' \code{\link{prettyGraphs}}
 #' @references % Note: these papers are available from
 #'  \url{https://personal.utdallas.edu/~herve/}
 #'
