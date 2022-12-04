@@ -20,6 +20,7 @@
 #'  Z <- ldiag(y, X)
 #'  }
 #' @keywords internal
+#' @export
 ldiag <- function(y,X){
   nR <- length(y)
   nC <- ncol(X)
@@ -45,6 +46,7 @@ ldiag <- function(y,X){
 #'  Z = rdiag(X,y)
 #'  }
 #' @keywords internal
+#' @export
 rdiag <- function(X,y){
   nC <- length(y)
   nR <- nrow(X)
