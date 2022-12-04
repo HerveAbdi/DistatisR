@@ -238,7 +238,7 @@
 #' #------------------------------------------------------------------
 #' # 2. Call the DISTATIS routine with the array 
 #' #  of distance (DistAlgo) as parameter
-#' # DistatisAlgo <- distatis(DistAlgo)
+#' DistatisAlgo <- distatis(DistAlgo)
 #' @export
 distatis <- function(LeCube2Distance,
                      Norm = 'MFA',
