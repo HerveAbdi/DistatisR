@@ -99,6 +99,7 @@ return(return.list)
 #' @param \dots inherited/passed arguments 
 #' for S3 print method(s).
 #' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords print
 #' @keywords internal
 #' @export

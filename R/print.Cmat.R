@@ -5,6 +5,7 @@
 #' @param x a list that contains items to make into the Cmat class.
 #' @param ... inherited/passed arguments for S3 print method(s).
 #' @author Derek Beaton
+#' @return an array with results from the analysis. prints to screen
 #' @keywords print
 #' @keywords internal
 #' @export

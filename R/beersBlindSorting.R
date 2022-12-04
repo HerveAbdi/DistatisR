@@ -83,8 +83,9 @@
 #' Change the print function for cubeSort
 #'
 #' @param x an object of the class cubeSort
-#' @param ... the rest
+#' @param ... dots to pass to the generic print function
 #' @author Herve Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.cubeSort <- function (x, ...){
@@ -107,8 +108,9 @@ print.cubeSort <- function (x, ...){
 #' Change the print function for class 'beersBlind'
 #'
 #' @param x an object of the class 'beersBlind'
-#' @param ... the rest
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.beersBlind <- function (x, ...){

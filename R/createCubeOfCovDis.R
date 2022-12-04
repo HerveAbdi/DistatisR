@@ -135,8 +135,9 @@ createCubeOfCovDis <- function(brickOfData,
 #' (output of \code{createCubeOfCovDis}.
 #'
 #' @param x a list objects of the class {cubeOfCovDis}
-#' @param ... the rest
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 print.cubeOfCovDis <- function(x, ...){
   ndash = 78 # How many dashes for separation lines

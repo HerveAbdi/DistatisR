@@ -156,8 +156,9 @@ projectVoc <- function(CT.voc , # I * N  The CT for vocabulary
 #' \code{projectVoc}).
 #'
 #' @param x a list: the data set: {str_BeersProjectiveMapping}
-#' @param ... the rest
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.F4voc <- function (x, ...) {

@@ -81,8 +81,9 @@ NULL
 #' \code{dataAmari}
 #'
 #' @param x a list: the data set from  {amariSorting}
-#' @param ... the rest
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.dataAmari <- function (x, ...) {

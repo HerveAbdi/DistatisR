@@ -86,8 +86,9 @@ read.df.excel <- function(path, sheet, col_names = TRUE,
 #'
 #' @param x a list: output of \code{distatis.data};
 #' class \code{distatis.data}.
-#' @param ... everything else for the functions
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.distatis.data <- function (x, ...) {

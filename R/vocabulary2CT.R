@@ -133,8 +133,9 @@ vocabulary2CT <- function(df.voc){
 #'  (e.g.,output of Rv).
 #'
 #' @param x a list: output of \code{vocabulary2CT}
-#' @param ... everything else for the function
-#' @author Herve Abdi
+#' @param \dots inherited/passed arguments for S3 print method(s).
+#' @author Hervé Abdi
+#' @return invisible; contents are printed to screen
 #' @keywords internal
 #' @export
 print.voc4distatis <- function (x, ...) {
