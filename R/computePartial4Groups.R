@@ -47,12 +47,6 @@
 #' to compute each group partial factor scores.
 #' @author Hervé Abdi
 #' @seealso \code{\link{distatis}}
-#' @examples 
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
 #' @rdname computePartial4Groups
 #' @export 
 
