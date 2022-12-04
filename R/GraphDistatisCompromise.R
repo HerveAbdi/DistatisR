@@ -67,7 +67,7 @@ function(FS,axis1=1,axis2=2,constraints=NULL,
 	}
 
 	if(is.null(constraints) || sum(names(constraints) %in% c('minx','maxx','miny','maxy')) != 4){
-		print('Making constraints')
+		# print('Making constraints')
     	#First, compute the constraints
 	    real.minimum <- min(FS)
     	real.maximum <- max(FS)
