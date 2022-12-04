@@ -4,7 +4,7 @@
 #' @param Y The matrix to normalize
 #' @return The normalized matrix 
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' A <- toeplitz(c(1, 0.6))
 #' MFAnormCP(A)
 #' }

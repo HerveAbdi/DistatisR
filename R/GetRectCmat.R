@@ -5,7 +5,7 @@
 #' @param RV Boolean, if TRUE, GetCmat computes the matrix of the RV coefficients between all the slices of the 3D array, otherwise, GetCmat computes a scalar product. 
 #' @return A rectangular matrix of either RV coefficients or scalar products.
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' D3.1 <- array(c(0, 1, 2, 1, 0, 1, 2, 1, 0, 
 #'               0, 3, 3, 3, 0, 3, 3, 3, 0), 
 #'             dim = c(3, 3, 2))

@@ -26,10 +26,6 @@
 #' *** HA comment: Maybe we also want to send the square cosines 
 #' to give the quality of representation.
 #' @author  Vincent Guillemot
-#' @examples
-#' \dontrun{
-#' # an Example here
-#' }
 #' @export
 supplementalProjection4distatis <- function(res.distatis, elsupp) {
   if (is.na(dim(elsupp)[3])) {

@@ -3,7 +3,7 @@
 #' @param Y Matrix to normalize
 #' @return Normalized matrix
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' A <- toeplitz(c(1, 0.6))
 #' SUMPCAnormCP(A)
 #' }

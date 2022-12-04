@@ -16,7 +16,7 @@
 #' @rdname ldiag
 #' @seealso \code{\link{rdiag}}
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'  Z <- ldiag(y, X)
 #'  }
 #' @keywords internal
@@ -42,7 +42,7 @@ ldiag <- function(y,X){
 #' @seealso \code{\link{ldiag}}
 #' @rdname rdiag
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'  Z = rdiag(X,y)
 #'  }
 #' @keywords internal

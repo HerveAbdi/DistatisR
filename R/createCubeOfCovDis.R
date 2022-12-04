@@ -64,7 +64,7 @@
 #' (squared) Euclidean distance
 #'   matrices. 
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' # use the data from the BeersProjectiveMapping dataset
 #' data("BeersProjectiveMapping") 
 #' # Create the I*J_k*K brick of data
