@@ -15,10 +15,6 @@
 #' @author Hervé Abdi
 #' @rdname ldiag
 #' @seealso \code{\link{rdiag}}
-#' @examples
-#' \donttest{
-#'  Z <- ldiag(y, X)
-#'  }
 #' @keywords internal
 #' @export
 ldiag <- function(y,X){
@@ -41,10 +37,6 @@ ldiag <- function(y,X){
 #' @author Hervé Abdi
 #' @seealso \code{\link{ldiag}}
 #' @rdname rdiag
-#' @examples
-#' \donttest{
-#'  Z = rdiag(X,y)
-#'  }
 #' @keywords internal
 #' @export
 rdiag <- function(X,y){
