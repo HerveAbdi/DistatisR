@@ -44,10 +44,11 @@
 #' \code{CT.vocabulary} a matrix storing the 
 #' products by words contingency table.
 #' @examples 
+#' \donttest{
 #' # Get the BeersProjectiveMapping example
 #' data("BeersProjectiveMapping")
 #' aContingenyTable <- vocabulary2CT(BeersProjectiveMapping$Vocabulary)
-#' 
+#' }
 #' @seealso 
 #'  \code{\link[tidytext]{unnest_tokens}}
 #'  \code{\link[dplyr]{count}}
