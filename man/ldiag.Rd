@@ -21,11 +21,6 @@ to diag(\strong{y}) %*% \strong{X}.
 a matrix by a diagonal matrix (with only
  the diagonal elements being given).
 }
-\examples{
-\dontrun{
- Z <- ldiag(y, X)
- }
-}
 \seealso{
 \code{\link{rdiag}}
 }

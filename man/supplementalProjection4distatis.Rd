@@ -27,11 +27,6 @@ of a set of squared matrices.
 of the same type (e.g., distance, correlation) as the matrices 
 used inn the original call to \code{distatis}.
 }
-\examples{
-\dontrun{
-# an Example here
-}
-}
 \author{
 Vincent Guillemot
 }

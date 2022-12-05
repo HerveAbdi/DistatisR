@@ -10,13 +10,16 @@
 \arguments{
 \item{x}{a list: the data set: {sortingWines}}
 
-\item{...}{the rest}
+\item{\dots}{inherited/passed arguments for S3 print method(s).}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for the data set: 
 \code{dataSortingWines}
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{internal}

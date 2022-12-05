@@ -19,7 +19,7 @@ nuclear norm (i.e., the sum of the square root of
 its eigen-values).
 }
 \examples{
-\dontrun{
+\donttest{
 A <- toeplitz(c(1, 0.6))
 NuclearNormedCP(A)
 }

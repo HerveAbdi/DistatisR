@@ -18,7 +18,7 @@ A matrix of either RV coefficients or scalar products.
 Computes the RV coefficient matrix
 }
 \examples{
-\dontrun{
+\donttest{
 D3 <- array(c(0, 1, 2, 1, 0, 1, 2, 1, 0, 
               0, 3, 3, 3, 0, 3, 3, 3, 0), 
             dim = c(3, 3, 2))

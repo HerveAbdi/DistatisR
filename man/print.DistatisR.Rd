@@ -11,6 +11,9 @@
 
 \item{...}{inherited/passed arguments for S3 print method(s).}
 }
+\value{
+an array with results from the analysis. prints to screen
+}
 \description{
 Print DistatisR results.
 }

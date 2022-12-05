@@ -9,7 +9,10 @@
 \arguments{
 \item{x}{an object of the class cubeSort}
 
-\item{...}{the rest}
+\item{...}{dots to pass to the generic print function}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for cubeSort

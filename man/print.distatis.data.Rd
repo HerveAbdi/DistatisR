@@ -11,12 +11,15 @@ class \code{distatis.data} output of\code{read.df.excel}}
 \item{x}{a list: output of \code{distatis.data};
 class \code{distatis.data}.}
 
-\item{...}{everything else for the functions}
+\item{\dots}{inherited/passed arguments for S3 print method(s).}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for bootRatios
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{internal}

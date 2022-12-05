@@ -15,6 +15,9 @@ the function \code{computePartial4Groups}
 \item{\dots}{inherited/passed arguments 
 for S3 print method(s).}
 }
+\value{
+invisible; contents are printed to screen
+}
 \description{
 Print F_alpha_k results
 }

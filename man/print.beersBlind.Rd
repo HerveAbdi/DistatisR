@@ -9,12 +9,15 @@
 \arguments{
 \item{x}{an object of the class 'beersBlind'}
 
-\item{...}{the rest}
+\item{\dots}{inherited/passed arguments for S3 print method(s).}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for class 'beersBlind'
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{internal}

@@ -63,7 +63,7 @@ as the \code{distatis} analysis of the Covariance matrices with
 the option \code{Distance = FALSE}.
 }
 \examples{
-\dontrun{
+\donttest{
 # use the data from the BeersProjectiveMapping dataset
 data("BeersProjectiveMapping") 
 # Create the I*J_k*K brick of data

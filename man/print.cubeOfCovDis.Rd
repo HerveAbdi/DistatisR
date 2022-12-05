@@ -9,13 +9,16 @@
 \arguments{
 \item{x}{a list objects of the class {cubeOfCovDis}}
 
-\item{...}{the rest}
+\item{\dots}{inherited/passed arguments for S3 print method(s).}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for the class \code{cubeOfCovDis}: 
 (output of \code{createCubeOfCovDis}.
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{internal}

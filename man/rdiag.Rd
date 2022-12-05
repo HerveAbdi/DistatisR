@@ -21,11 +21,6 @@ an \eqn{I} by \eqn{J} matrix equal to
 a matrix by a diagonal matrix (with only
  the diagonal elements being given).
 }
-\examples{
-\dontrun{
- Z = rdiag(X,y)
- }
-}
 \seealso{
 \code{\link{ldiag}}
 }

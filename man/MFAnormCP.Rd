@@ -16,7 +16,7 @@ The normalized matrix
 Normalizeq a positive semi-definite matrix matrix product such that its first eigenvalue is equal to one
 }
 \examples{
-\dontrun{
+\donttest{
 A <- toeplitz(c(1, 0.6))
 MFAnormCP(A)
 }

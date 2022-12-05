@@ -42,10 +42,11 @@ In this contingency table, the number at the intersection
  pseudo \emph{Check All That Apply}  (CATA) data set.
 }
 \examples{
+\donttest{
 # Get the BeersProjectiveMapping example
 data("BeersProjectiveMapping")
 aContingenyTable <- vocabulary2CT(BeersProjectiveMapping$Vocabulary)
-
+}
 }
 \seealso{
 \code{\link[tidytext]{unnest_tokens}}

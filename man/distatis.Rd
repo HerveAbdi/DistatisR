@@ -189,7 +189,7 @@ data(DistAlgo)
 #------------------------------------------------------------------
 # 2. Call the DISTATIS routine with the array 
 #  of distance (DistAlgo) as parameter
-# DistatisAlgo <- distatis(DistAlgo)
+DistatisAlgo <- distatis(DistAlgo)
 }
 \references{
 Abdi, H., Valentin, D., O'Toole, A.J., & Edelman, B.

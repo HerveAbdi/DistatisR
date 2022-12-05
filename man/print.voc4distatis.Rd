@@ -9,7 +9,10 @@
 \arguments{
 \item{x}{a list: output of \code{vocabulary2CT}}
 
-\item{...}{everything else for the function}
+\item{\dots}{inherited/passed arguments for S3 print method(s).}
+}
+\value{
+invisible; contents are printed to screen
 }
 \description{
 Change the print function for voc4distatis class
@@ -17,6 +20,6 @@ Change the print function for voc4distatis class
  (e.g.,output of Rv).
 }
 \author{
-Herve Abdi
+Hervé Abdi
 }
 \keyword{internal}

@@ -16,7 +16,7 @@ Normalized matrix
 Normalizes a positive semi-definite matrix (i.e., total intertia=1)
 }
 \examples{
-\dontrun{
+\donttest{
 A <- toeplitz(c(1, 0.6))
 SUMPCAnormCP(A)
 }

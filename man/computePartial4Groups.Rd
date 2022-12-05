@@ -42,13 +42,6 @@ is computed as a weighted
 sums all the alpha coefficients of a group
 to compute each group partial factor scores.
 }
-\examples{
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
-}
 \seealso{
 \code{\link{distatis}}
 }
