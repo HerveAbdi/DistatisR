@@ -116,6 +116,7 @@
 #' and \code{res.Splus}.
 #' Note that items with a * are the only ones sent back
 #' when using the \code{compact = TRUE} option.
+#' @param bulk \code{NULL} (in dev),
 #' 
 #' \item{res.Cmat}{Results for the between 
 #'           distance matrices analysis.}
@@ -246,7 +247,8 @@ distatis <- function(LeCube2Distance,
                      double_centering = TRUE, 
                      RV = TRUE,
                      nfact2keep = 3,
-                     compact = FALSE) {
+                     compact = FALSE,
+                     bulk = NULL) {
   # DISTATIS
   # Implements the standard DISTATIS program as
   # described in Abdi H. et al, 2005, 2007, 2009, & 2012.
@@ -286,7 +288,8 @@ distatis <- function(LeCube2Distance,
   # instead of the scalar product
   
   # eigen of C ----
-  eigC <- eigen(C, symmetric = TRUE) # Eigen-decomposition of C
+  # eigC <- eigen(C, symmetric = TRUE) # Eigen-decomposition of C 
+  eigC <- geigen(C, symmetric = TRUE, bulk = bulk) # Eigen-decomposition of C 
   
   if (compact == FALSE) {
     # All C stuff ----
