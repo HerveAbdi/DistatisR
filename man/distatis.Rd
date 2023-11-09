@@ -15,6 +15,7 @@ distatis(
   double_centering = TRUE,
   RV = TRUE,
   nfact2keep = 3,
+  design = NULL,
   compact = FALSE
 )
 }
@@ -62,6 +63,11 @@ we use the matrix scalar product.}
 \item{nfact2keep}{(default: \code{3}) Number of factors 
 to keep for the computation of the
 factor scores of the observations.}
+
+\item{design}{(default: \code{NULL}) The design vector of tables
+to equalize the contribution of each group to the compromise.
+The alphas will be weighted so that each group will sum to
+1/# of groups.}
 
 \item{compact}{if \code{FALSE} (default),
  \code{distatis} provides detailed output, if

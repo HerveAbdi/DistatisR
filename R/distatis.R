@@ -102,6 +102,10 @@
 #' @param nfact2keep (default: \code{3}) Number of factors 
 #' to keep for the computation of the
 #' factor scores of the observations.
+#' @param design (default: \code{NULL}) The design vector of tables
+#' to equalize the contribution of each group to the compromise.
+#' The alphas will be weighted so that each group will sum to
+#' 1/# of groups.
 #' @param compact if \code{FALSE} (default),
 #'  \code{distatis} provides detailed output, if
 #'  \code{TRUE},  \code{distatis} sends back
@@ -246,6 +250,7 @@ distatis <- function(LeCube2Distance,
                      double_centering = TRUE, 
                      RV = TRUE,
                      nfact2keep = 3,
+                     design = NULL,
                      compact = FALSE) {
   # DISTATIS
   # Implements the standard DISTATIS program as
@@ -310,7 +315,26 @@ distatis <- function(LeCube2Distance,
     eigC$cos2 <- ldiag(1/eigC$d2G, G2) 
   }
   # alpha weights ----
-  alpha <- eigC$vectors[, 1] / sum(eigC$vectors[, 1])
+  if (is.null(design)) {
+      alpha <- eigC$vectors[, 1] / sum(eigC$vectors[, 1])    
+  }else{
+      # check if design is a vector
+      if (is.vector(design) == FALSE) {
+          design <- as.vector(design)
+          warning("Your design is not a vector, `as.vector(design)` was applied.")    
+      }
+      # check if design matches the dimension of eig$vectors
+      if (length(design) != nrow(eigC$vectors)) {
+          stop("The length of `design` does not match the number of tables; or, 
+               there is an error transforming `design` into a vector.")
+      }
+      # make design a factor vector
+      design.fac <- as.factor(design)
+      # compute alpha
+      alpha <- eigC$vectors[, 1]
+      split(alpha, design.fac) <- lapply(split(alpha, design.fac), FUN = function(x) x/(nlevels(design.fac)*sum(x)))
+  }
+  
   # compute compromise ----
   Splus <- ComputeSplus(CP3, alpha)
   if (compact == FALSE) {
