@@ -70,7 +70,7 @@ NULL
 #' Change the print function for the data set: 
 #' \code{str_BeersProjectiveMapping}
 #'
-#' @param x a list: the data set: {str_BeersProjectiveMapping}
+#' @param x a list: the data set: \code{str_BeersProjectiveMapping}
 #' @param \dots inherited/passed arguments for S3 print method(s).
 #' @author Hervé Abdi
 #' @return invisible; contents are printed to screen

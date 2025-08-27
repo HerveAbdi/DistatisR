@@ -8,7 +8,7 @@
 \method{print}{dataAmari}(x, ...)
 }
 \arguments{
-\item{x}{a list: the data set from  {amariSorting}}
+\item{x}{a list: the data set from  \code{amariSorting}}
 
 \item{\dots}{inherited/passed arguments for S3 print method(s).}
 }

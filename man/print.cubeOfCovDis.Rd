@@ -7,7 +7,7 @@
 \method{print}{cubeOfCovDis}(x, ...)
 }
 \arguments{
-\item{x}{a list objects of the class {cubeOfCovDis}}
+\item{x}{a list objects of the class \code{cubeOfCovDis}}
 
 \item{\dots}{inherited/passed arguments for S3 print method(s).}
 }

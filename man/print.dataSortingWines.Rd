@@ -8,7 +8,7 @@
 \method{print}{dataSortingWines}(x, ...)
 }
 \arguments{
-\item{x}{a list: the data set: {sortingWines}}
+\item{x}{a list: the data set: \code{sortingWines}}
 
 \item{\dots}{inherited/passed arguments for S3 print method(s).}
 }

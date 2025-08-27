@@ -33,7 +33,7 @@ participants) of color names for the observations. If NULL (default),
 are not plotted (useful when editing the graphs for publication).}
 
 \item{RvCtr}{Contributions of each participant. 
-If code{NULL} (default), these are
+If \code{NULL} (default), these are
 computed from \code{RvFS}.}
 }
 \value{

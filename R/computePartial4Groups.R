@@ -32,12 +32,9 @@
 #' @param DESIGN A Design vector describing
 #' the groups of observations
 #' @return A list with
-#' \itemize{ 
-#'  \item{"GroupFS: "}{
-#'      The \eqn{K} weighted mean coordinates}
-#'   \item{"groupAlpha: "}{
-#'      The \eqn{K} alpha weights}
-#'     }
+#'  \item{"GroupFS: "}{The \eqn{K} weighted mean coordinates}
+#'  \item{"groupAlpha: "}{The \eqn{K} alpha weights}
+#'
 #' @details In DISTATIS, the compromise
 #' is computed as a weighted 
 #' (with the alpha-coefficients) sum of the 

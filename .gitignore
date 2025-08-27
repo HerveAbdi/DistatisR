@@ -1,5 +1,11 @@
+*.Ruserdata
+*.history
+
+*.Rproj.user
+*.Rhistory
+*.Rprofile
+
+*.RData
+*.DS_Store
+*.Rapp.history
 .Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-.DS_Store

@@ -77,8 +77,8 @@ only 19 experts out the original 27 experts.
 For more details see:
  
 Ballester, J., Abdi, H., Langlois, J., Peyron, D., & Valentin, D.
-(2009). {The odor of colors: Can wine experts and novices
-distinguish the odors of white, red, and rosé wines?}
+(2009). The odor of colors: Can wine experts and novices
+distinguish the odors of white, red, and rosé wines?
 \emph{Chemosensory Perception, 2}, 203-213.
 }
 \author{

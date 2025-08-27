@@ -8,7 +8,7 @@
 \method{print}{str_BeersProjectiveMapping}(x, ...)
 }
 \arguments{
-\item{x}{a list: the data set: {str_BeersProjectiveMapping}}
+\item{x}{a list: the data set: \code{str_BeersProjectiveMapping}}
 
 \item{\dots}{inherited/passed arguments for S3 print method(s).}
 }

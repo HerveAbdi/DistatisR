@@ -20,7 +20,7 @@
 #' @details
 #' The assessors are described by their 5 character
 #' names with the following code: the first letter
-#' {m/f} give the gender of the assessors (male versus female),
+#' (m/f) give the gender of the assessors (male versus female),
 #' the second and third characters go from 01 to 25 and 
 #'  uniquely identify the assessor, 
 #'  the fourth and fifth characters
@@ -80,7 +80,7 @@ NULL
 #' Change the print function for the data set: 
 #' \code{dataAmari}
 #'
-#' @param x a list: the data set from  {amariSorting}
+#' @param x a list: the data set from  \code{amariSorting}
 #' @param \dots inherited/passed arguments for S3 print method(s).
 #' @author Hervé Abdi
 #' @return invisible; contents are printed to screen

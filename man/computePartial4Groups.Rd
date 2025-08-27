@@ -19,12 +19,8 @@ the groups of observations}
 }
 \value{
 A list with
-\itemize{ 
- \item{"GroupFS: "}{
-     The \eqn{K} weighted mean coordinates}
-  \item{"groupAlpha: "}{
-     The \eqn{K} alpha weights}
-    }
+ \item{"GroupFS: "}{The \eqn{K} weighted mean coordinates}
+ \item{"groupAlpha: "}{The \eqn{K} alpha weights}
 }
 \description{
 \code{computePartial4Groups}:

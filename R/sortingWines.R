@@ -75,8 +75,8 @@
 #' For more details see:
 #'  
 #' Ballester, J., Abdi, H., Langlois, J., Peyron, D., & Valentin, D.
-#' (2009). {The odor of colors: Can wine experts and novices
-#' distinguish the odors of white, red, and rosé wines?}
+#' (2009). The odor of colors: Can wine experts and novices
+#' distinguish the odors of white, red, and rosé wines?
 #' \emph{Chemosensory Perception, 2}, 203-213.
 #' 
 #' @keywords datasets DistatisR
@@ -95,7 +95,7 @@ NULL
 #' Change the print function for the data set: 
 #' \code{dataSortingWines}
 #'
-#' @param x a list: the data set: {sortingWines}
+#' @param x a list: the data set: \code{sortingWines}
 #' @param \dots inherited/passed arguments for S3 print method(s).
 #' @author Hervé Abdi
 #' @return invisible; contents are printed to screen

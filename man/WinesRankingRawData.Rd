@@ -19,7 +19,7 @@ The assessor first chooses
 the most relevant dimension for these wines and then
 positions the wines on a scale from 1 to 9 for this dimension.
 The names of the assessors is composed of 4 characters
-of the general composition {w/m}{a/f}{01 : 80}.
+of the general composition (w/m)(a/f)(01 : 80).
 The assessors were 40 men and 40 women (first character w/n)
 and 40 American or 40 French (second character a/f).
 The red wines that were tasted are Irancy, Saint-Brie,

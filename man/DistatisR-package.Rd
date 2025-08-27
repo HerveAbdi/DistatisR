@@ -188,14 +188,14 @@ Hollowood (Eds.),
 London: Wiley-Blackwell.
 }
 \seealso{
-% Optional links to other man pages, e.g.  % \code{\link{}}
+% Optional links to other man pages, e.g.}
 \code{\link{distatis}} \code{\link{BootFactorScores}}
 \code{\link{BootFromCompromise}} \code{\link{DistanceFromSort}}
 \code{\link{distatis}} \code{\link{GraphDistatisAll}}
 \code{\link{GraphDistatisBoot}} \code{\link{GraphDistatisCompromise}}
 \code{\link{GraphDistatisPartial}} \code{\link{GraphDistatisRv}}
 \code{\link{mmds}}
-\code{\link{prettyGraphs}}
+\code{\link[prettyGraphs]{prettyGraphs}}
 }
 \author{
 Derek Beaton [aut, com, ctb], & Herve Abdi

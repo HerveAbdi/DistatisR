@@ -20,19 +20,18 @@
 #'
 #' @name DistatisR-package
 #' @aliases DistatisR-package DistatisR DiSTATISR
-#' @docType package
 #' @author Derek Beaton [aut, com, ctb], & Herve Abdi
 #' [aut, cre]
 #'
 #' Maintainer: Herve Abdi <herve@@utdallas.edu>
-#' @seealso % Optional links to other man pages, e.g.  % \code{\link{}}
+#' @seealso % Optional links to other man pages, e.g.}
 #' \code{\link{distatis}} \code{\link{BootFactorScores}}
 #' \code{\link{BootFromCompromise}} \code{\link{DistanceFromSort}}
 #' \code{\link{distatis}} \code{\link{GraphDistatisAll}}
 #' \code{\link{GraphDistatisBoot}} \code{\link{GraphDistatisCompromise}}
 #' \code{\link{GraphDistatisPartial}} \code{\link{GraphDistatisRv}}
 #' \code{\link{mmds}}
-#' \code{\link{prettyGraphs}}
+#' \code{\link[prettyGraphs]{prettyGraphs}}
 #' @references % Note: these papers are available from
 #'  \url{https://personal.utdallas.edu/~herve/}
 #'
@@ -192,6 +191,6 @@
 #'
 #'
 #'
-NULL
+"_PACKAGE"
 
 

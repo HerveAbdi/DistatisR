@@ -71,7 +71,7 @@
 #' eigenvalue is equal to 1.
 #' @return a list with 1) \code{cubeOfCovariance}
 #' a cube of \eqn{K}  \eqn{I} by \eqn{I} covariance matrices;
-#' and 2) code{cubeOfDistance}
+#' and 2) \code{cubeOfDistance}
 #' a cube of \eqn{K}  \eqn{I} by \eqn{I} 
 #' (squared) Euclidean distance
 #'   matrices. 

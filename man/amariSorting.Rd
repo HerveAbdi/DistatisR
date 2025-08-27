@@ -41,7 +41,7 @@ a data frame:
 \details{
 The assessors are described by their 5 character
 names with the following code: the first letter
-{m/f} give the gender of the assessors (male versus female),
+(m/f) give the gender of the assessors (male versus female),
 the second and third characters go from 01 to 25 and 
  uniquely identify the assessor, 
  the fourth and fifth characters

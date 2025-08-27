@@ -95,7 +95,7 @@ NULL
 #' \code{multiculturalSortingSpices} 
 #' (class \code{dataSortingSpices})
 #'
-#' @param x a list: the data set: {sortingSpices}
+#' @param x a list: the data set: \code{sortingSpices}
 #' @param \dots inherited/passed arguments for S3 print method(s).
 #' @author Hervé Abdi
 #' @return invisible; contents are printed to screen
